@@ -37,6 +37,7 @@ import { JwtGuard } from "./guards/jwt.guard";
 import { LocalGuard } from "./guards/local.guard";
 import { RefreshGuard } from "./guards/refresh.guard";
 import { TwoFactorGuard } from "./guards/two-factor.guard";
+import { WeChatGuard } from "./guards/wechat.guard";
 import { getCookieOptions } from "./utils/cookie";
 import { payloadSchema } from "./utils/payload";
 
@@ -140,6 +141,23 @@ export class AuthController {
   @Get("google/callback")
   @UseGuards(GoogleGuard)
   async googleCallback(
+    @User() user: UserWithSecrets,
+    @Res({ passthrough: true }) response: Response,
+  ) {
+    return this.handleAuthenticationResponse(user, response, false, true);
+  }
+
+  @ApiTags("OAuth", "Wechat")
+  @Get("wechat")
+  @UseGuards(WeChatGuard)
+  wechatLogin() {
+    return;
+  }
+
+  @ApiTags("OAuth", "Wechat")
+  @Get("wechat/callback")
+  @UseGuards(WeChatGuard)
+  async wechatCallback(
     @User() user: UserWithSecrets,
     @Res({ passthrough: true }) response: Response,
   ) {

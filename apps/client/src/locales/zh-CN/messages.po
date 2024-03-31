@@ -56,13 +56,13 @@ msgstr "<0>已启用双重身份验证。</0>您在每次登录时都需要输�
 
 #: apps/client/src/pages/home/page.tsx:24
 #: apps/client/src/pages/home/sections/hero/index.tsx:42
-msgid "A free and open-source resume builder"
-msgstr "免费开源的简历生成器"
+msgid "A simple and fast resume builder"
+msgstr "便捷快速的简历生成器"
 
 #: apps/client/src/pages/home/components/footer.tsx:20
 #: apps/client/src/pages/home/sections/hero/index.tsx:47
-msgid "A free and open-source resume builder that simplifies the process of creating, updating, and sharing your resume."
-msgstr "一款免费开源的简历生成器，可简化创建、更新和共享简历的过程。"
+msgid "A simple and fast resume builder that simplifies the process of creating, updating, and sharing your resume."
+msgstr "一款简单快捷、支持AI生成的简历生成器，可简化创建、更新和共享简历的过程。"
 
 #: apps/client/src/pages/builder/_components/toolbar.tsx:53
 #: apps/client/src/pages/builder/sidebars/right/sections/sharing.tsx:29
@@ -528,7 +528,7 @@ msgstr "如果不方便在经济上进行支持，您也可以给 GitHub 仓库�
 
 #: apps/client/src/pages/home/sections/templates/index.tsx:12
 msgid "Explore the templates available in Reactive Resume and view the resumes crafted with them. They could also serve as examples to help guide the creation of your next resume."
-msgstr "浏览 Reactive Resume 提供的模板，并查看使用这些模板制作的简历。您可以将它们为范例来创建下一份简历。"
+msgstr "浏览 Generative Resume 提供的模板，并查看使用这些模板制作的简历。您可以将它们为范例来创建下一份简历。"
 
 #: apps/client/src/pages/builder/sidebars/right/index.tsx:79
 #: apps/client/src/pages/builder/sidebars/right/sections/export.tsx:40
@@ -544,8 +544,8 @@ msgid "Filetype"
 msgstr "文件类型"
 
 #: apps/client/src/pages/home/sections/hero/index.tsx:40
-msgid "Finally,"
-msgstr "最后，"
+msgid "Absolutely,"
+msgstr "显然，"
 
 #: apps/client/src/components/ai-actions.tsx:90
 msgid "Fix Spelling & Grammar"
@@ -578,6 +578,10 @@ msgstr "遗弃"
 #: apps/client/src/pages/auth/login/page.tsx:120
 msgid "Forgot Password?"
 msgstr "忘记密码？"
+
+#: apps/client/src/pages/auth/login/page.tsx:122
+msgid "Login in by Wechat"
+msgstr "微信扫码登录"
 
 #: apps/client/src/pages/auth/forgot-password/page.tsx:68
 msgid "Forgot your password?"
@@ -1116,11 +1120,11 @@ msgstr "提出问题"
 #: apps/client/src/pages/home/page.tsx:24
 #: apps/client/src/pages/public/page.tsx:71
 #: apps/client/src/pages/public/page.tsx:93
-msgid "Reactive Resume"
-msgstr "及时简历"
+msgid "Generative Resume"
+msgstr "AI生成式简历"
 
 #: apps/client/src/pages/home/sections/logo-cloud/index.tsx:39
-msgid "Reactive Resume has helped people land jobs at these great companies:"
+msgid "Generative Resume has helped people land jobs at these great companies:"
 msgstr "Reactive Resume 已经帮助人们在这些优秀公司中找到了工作："
 
 #: apps/client/src/pages/home/sections/support/index.tsx:12

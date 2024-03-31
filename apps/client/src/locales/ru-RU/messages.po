@@ -56,12 +56,12 @@ msgstr "<0>Двухфакторная аутентификация включе�
 
 #: apps/client/src/pages/home/page.tsx:24
 #: apps/client/src/pages/home/sections/hero/index.tsx:42
-msgid "A free and open-source resume builder"
+msgid "A simple and fast resume builder"
 msgstr "Бесплатный конструктор резюме с открытым исходным кодом"
 
 #: apps/client/src/pages/home/components/footer.tsx:20
 #: apps/client/src/pages/home/sections/hero/index.tsx:47
-msgid "A free and open-source resume builder that simplifies the process of creating, updating, and sharing your resume."
+msgid "A simple and fast resume builder that simplifies the process of creating, updating, and sharing your resume."
 msgstr "Бесплатный конструктор резюме с открытым исходным кодом, который упрощает процесс создания, обновления и публикации вашего резюме."
 
 #: apps/client/src/pages/builder/_components/toolbar.tsx:53
@@ -544,7 +544,7 @@ msgid "Filetype"
 msgstr "Тип файла"
 
 #: apps/client/src/pages/home/sections/hero/index.tsx:40
-msgid "Finally,"
+msgid "Absolutely,"
 msgstr "Наконец-то,"
 
 #: apps/client/src/components/ai-actions.tsx:90
@@ -1116,11 +1116,11 @@ msgstr "Поднять проблему"
 #: apps/client/src/pages/home/page.tsx:24
 #: apps/client/src/pages/public/page.tsx:71
 #: apps/client/src/pages/public/page.tsx:93
-msgid "Reactive Resume"
+msgid "Generative Resume"
 msgstr "Reactive Resume"
 
 #: apps/client/src/pages/home/sections/logo-cloud/index.tsx:39
-msgid "Reactive Resume has helped people land jobs at these great companies:"
+msgid "Generative Resume has helped people land jobs at these great companies:"
 msgstr "Reactive Resume помогло людям устроиться на работу в эти замечательные компании:"
 
 #: apps/client/src/pages/home/sections/support/index.tsx:12

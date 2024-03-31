@@ -56,12 +56,12 @@ msgstr "<0>ಎರಡು ಅಂಶದ ದೃಢೀಕರಣವನ್ನು ಸಕ
 
 #: apps/client/src/pages/home/page.tsx:24
 #: apps/client/src/pages/home/sections/hero/index.tsx:42
-msgid "A free and open-source resume builder"
+msgid "A simple and fast resume builder"
 msgstr "ಉಚಿತ ಮತ್ತು ಮೂಲ ಕೋಡ್ ತೆರೆದಿರುವ ರೇಜ಼ಮೈ ನಿರ್ಮಾಪಕ"
 
 #: apps/client/src/pages/home/components/footer.tsx:20
 #: apps/client/src/pages/home/sections/hero/index.tsx:47
-msgid "A free and open-source resume builder that simplifies the process of creating, updating, and sharing your resume."
+msgid "A simple and fast resume builder that simplifies the process of creating, updating, and sharing your resume."
 msgstr "ನಿಮ್ಮ ರೆಸ್ಯೂಮ್ ಅನ್ನು ರಚಿಸುವ, ನವೀಕರಿಸುವ ಮತ್ತು ಹಂಚಿಕೊಳ್ಳುವ ಪ್ರಕ್ರಿಯೆಯನ್ನು ಸರಳಗೊಳಿಸುವ ಉಚಿತ ಮತ್ತು ಮುಕ್ತ-ಮೂಲ ಪುನರಾರಂಭ ಬಿಲ್ಡರ್."
 
 #: apps/client/src/pages/builder/_components/toolbar.tsx:53
@@ -544,7 +544,7 @@ msgid "Filetype"
 msgstr "ಕಡತದ ವರ್ಗ"
 
 #: apps/client/src/pages/home/sections/hero/index.tsx:40
-msgid "Finally,"
+msgid "Absolutely,"
 msgstr "ಅಂತಿಮವಾಗಿ,"
 
 #: apps/client/src/components/ai-actions.tsx:90
@@ -1116,11 +1116,11 @@ msgstr "ಒಂದು ಸಮಸ್ಯೆಯನ್ನು ಎತ್ತಿಕೊಳ�
 #: apps/client/src/pages/home/page.tsx:24
 #: apps/client/src/pages/public/page.tsx:71
 #: apps/client/src/pages/public/page.tsx:93
-msgid "Reactive Resume"
+msgid "Generative Resume"
 msgstr "ರಿಯಾಕ್ಟಿವ್ ರೆಸ್ಯೂಮೇ"
 
 #: apps/client/src/pages/home/sections/logo-cloud/index.tsx:39
-msgid "Reactive Resume has helped people land jobs at these great companies:"
+msgid "Generative Resume has helped people land jobs at these great companies:"
 msgstr "ರಿಯಾಕ್ಟಿವ್ ರೆಸ್ಯೂಮೇ ಈ ಮಹಾನ್ ಕಂಪನಿಗಳಲ್ಲಿ ಉದ್ಯೋಗಗಳನ್ನು ಪಡೆಯಲು ಜನರಿಗೆ ಸಹಾಯ ಮಾಡಿದೆ:"
 
 #: apps/client/src/pages/home/sections/support/index.tsx:12

@@ -7,7 +7,7 @@ import { ResumeDto } from "@reactive-resume/dto";
 import { getFontUrls } from "@reactive-resume/utils";
 import { ErrorMessage } from "@reactive-resume/utils";
 import retry from "async-retry";
-import { PDFDocument } from "pdf-lib";
+import { degrees, PDFDocument, rgb, StandardFonts ,PageSizes} from "pdf-lib";
 import { connect } from "puppeteer";
 
 import { Config } from "../config/schema";
@@ -98,14 +98,14 @@ export class PrinterService {
       if ([publicUrl, storageUrl].some((url) => url.includes("localhost"))) {
         // Switch client URL from `localhost` to `host.docker.internal` in development
         // This is required because the browser is running in a container and the client is running on the host machine.
-        url = url.replace("localhost", "host.docker.internal");
-
+        // url = url.replace("localhost", "host.docker.internal");
+ 
         await page.setRequestInterception(true);
 
         // Intercept requests of `localhost` to `host.docker.internal` in development
         page.on("request", (request) => {
           if (request.url().startsWith(storageUrl)) {
-            const modifiedUrl = request.url().replace("localhost", `host.docker.internal`);
+            const modifiedUrl = request.url();//.replace("localhost", `host.docker.internal`);
 
             request.continue({ url: modifiedUrl });
           } else {
@@ -172,6 +172,9 @@ export class PrinterService {
 
       for (let index = 0; index < pagesBuffer.length; index++) {
         const page = await PDFDocument.load(pagesBuffer[index]);
+
+        await this.addTextWatermark(page,"gooyoit")
+
         const [copiedPage] = await pdf.copyPages(page, [0]);
         pdf.addPage(copiedPage);
       }
@@ -209,14 +212,14 @@ export class PrinterService {
     if ([publicUrl, storageUrl].some((url) => url.includes("localhost"))) {
       // Switch client URL from `localhost` to `host.docker.internal` in development
       // This is required because the browser is running in a container and the client is running on the host machine.
-      url = url.replace("localhost", "host.docker.internal");
+      // url = url.replace("localhost", "host.docker.internal");
 
       await page.setRequestInterception(true);
 
       // Intercept requests of `localhost` to `host.docker.internal` in development
       page.on("request", (request) => {
         if (request.url().startsWith(storageUrl)) {
-          const modifiedUrl = request.url().replace("localhost", `host.docker.internal`);
+          const modifiedUrl = request.url();//.replace("localhost", `host.docker.internal`);
 
           request.continue({ url: modifiedUrl });
         } else {
@@ -251,5 +254,29 @@ export class PrinterService {
     browser.disconnect();
 
     return previewUrl;
+  }
+
+  // 添加 Text 水印 https://www.jb51.net/article/278064.htm 
+  async addTextWatermark(pdfDoc :PDFDocument, text:string) {
+    // console.log(StandardFonts, 'StandardFonts-->>') // 字体
+    const helveticaFont = await pdfDoc.embedFont(StandardFonts.Helvetica)
+    const pages = pdfDoc.getPages()
+    for(let i = 0; i < pages.length; i++) {
+      let page = pages[i]
+      let { width, height } = page.getSize()
+      for(let i = 0; i < 6; i++) {
+        for(let j = 0; j < 6; j++) {
+          page.drawText(text, {
+            x: j * 100,
+            y: height / 5 + i * 100,
+            size: 30,
+            font: helveticaFont,
+            color: rgb(0.95, 0.1, 0.1),
+            opacity: 0.2,
+            rotate: degrees(-30),
+          })
+        }
+      }
+    }
   }
 }

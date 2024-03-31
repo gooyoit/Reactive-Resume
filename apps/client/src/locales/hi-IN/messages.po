@@ -56,12 +56,12 @@ msgstr "<0>दो-कारक प्रमाणीकरण सक्षम �
 
 #: apps/client/src/pages/home/page.tsx:24
 #: apps/client/src/pages/home/sections/hero/index.tsx:42
-msgid "A free and open-source resume builder"
+msgid "A simple and fast resume builder"
 msgstr "एक मुफ़्त और ओपन-सोर्स रेज़्युमे बिल्डर"
 
 #: apps/client/src/pages/home/components/footer.tsx:20
 #: apps/client/src/pages/home/sections/hero/index.tsx:47
-msgid "A free and open-source resume builder that simplifies the process of creating, updating, and sharing your resume."
+msgid "A simple and fast resume builder that simplifies the process of creating, updating, and sharing your resume."
 msgstr "एक मुफ़्त और ओपन-सोर्स रेज़्यूमे बिल्डर जो आपके रेज़्यूमे को बनाने, अपडेट करने और साझा करने की प्रक्रिया को सरल बनाता है।"
 
 #: apps/client/src/pages/builder/_components/toolbar.tsx:53
@@ -544,7 +544,7 @@ msgid "Filetype"
 msgstr "फाइल का प्रकार"
 
 #: apps/client/src/pages/home/sections/hero/index.tsx:40
-msgid "Finally,"
+msgid "Absolutely,"
 msgstr "अंत में,"
 
 #: apps/client/src/components/ai-actions.tsx:90
@@ -1116,11 +1116,11 @@ msgstr "एक मुद्दा उठाओ"
 #: apps/client/src/pages/home/page.tsx:24
 #: apps/client/src/pages/public/page.tsx:71
 #: apps/client/src/pages/public/page.tsx:93
-msgid "Reactive Resume"
+msgid "Generative Resume"
 msgstr "रिएक्टिव रेज़्यूमे"
 
 #: apps/client/src/pages/home/sections/logo-cloud/index.tsx:39
-msgid "Reactive Resume has helped people land jobs at these great companies:"
+msgid "Generative Resume has helped people land jobs at these great companies:"
 msgstr "रिएक्टिव रेज़्यूमे ने लोगों को इन महान कंपनियों में नौकरियां पाने में मदद की है:"
 
 #: apps/client/src/pages/home/sections/support/index.tsx:12

@@ -10,5 +10,12 @@
       "tools/compose/*"
     ]
   },
-  "i18n-ally.localesPaths": ["apps/client/src/locales"]
+  "i18n-ally.localesPaths": [
+    "apps/client/src/locales"
+  ],
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#0B3337",
+    "titleBar.activeBackground": "#10474C",
+    "titleBar.activeForeground": "#F5FCFD"
+  }
 }

@@ -25,7 +25,7 @@ export const Icon = ({ size = 32, className }: Props) => {
       src={src}
       width={size}
       height={size}
-      alt="Reactive Resume"
+      alt="Generative Resume"
       className={cn("rounded-sm", className)}
     />
   );

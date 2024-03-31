@@ -52,7 +52,7 @@ export const LoginPage = () => {
     <div className="space-y-8">
       <Helmet>
         <title>
-          {t`Sign in to your account`} - {t`Reactive Resume`}
+          {t`Sign in to your account`} - {t`Generative Resume`}
         </title>
       </Helmet>
 
@@ -105,6 +105,9 @@ export const LoginPage = () => {
                       Hold <code className="text-xs font-bold">Ctrl</code> to display your password
                       temporarily.
                     </Trans>
+                    <Button asChild variant="link" className="px-1 text-xs font-bold">
+                      <Link to="/auth/forgot-password">{t`Forgot Password?`} </Link>
+                    </Button>
                   </FormDescription>
                   <FormMessage />
                 </FormItem>
@@ -117,7 +120,7 @@ export const LoginPage = () => {
               </Button>
 
               <Button asChild variant="link" className="px-4">
-                <Link to="/auth/forgot-password">{t`Forgot Password?`}</Link>
+                <Link to="/auth/wechat">{t`Login in by Wechat`}</Link>
               </Button>
             </div>
           </form>

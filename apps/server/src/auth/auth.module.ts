@@ -16,6 +16,8 @@ import { JwtStrategy } from "./strategy/jwt.strategy";
 import { LocalStrategy } from "./strategy/local.strategy";
 import { RefreshStrategy } from "./strategy/refresh.strategy";
 import { TwoFactorStrategy } from "./strategy/two-factor.strategy";
+import { WechatStrategy } from "./strategy/wechat.strategy";
+import { get } from "http";
 
 @Module({})
 export class AuthModule {
@@ -58,6 +60,20 @@ export class AuthModule {
               const callbackURL = configService.getOrThrow("GOOGLE_CALLBACK_URL");
 
               return new GoogleStrategy(clientID, clientSecret, callbackURL, userService);
+            } catch (error) {
+              return new DummyStrategy();
+            }
+          },
+        },
+        {
+          provide: WechatStrategy,
+          inject: [ConfigService, UserService],
+          useFactory: (configService: ConfigService<Config>, userService: UserService) => {
+            try {
+              const clientID = configService.getOrThrow("WECHAT_APP_ID");
+              const clientSecret = configService.getOrThrow("WECHAT_APP_SECRET");
+              const callbackURL = configService.getOrThrow("WECHAT_CALLBACK_URL");
+              return new WechatStrategy(clientID, clientSecret, callbackURL, userService);
             } catch (error) {
               return new DummyStrategy();
             }

@@ -1,6 +1,6 @@
 {
   "name": "@reactive-resume/source",
-  "description": "A free and open-source resume builder that simplifies the process of creating, updating, and sharing your resume.",
+  "description": "A simple and fast resume builder that simplifies the process of creating, updating, and sharing your resume.",
   "version": "4.0.9",
   "license": "MIT",
   "private": true,
@@ -112,7 +112,8 @@
     "typescript": "~5.4.3",
     "vite": "~5.2.2",
     "vite-plugin-dts": "~3.7.3",
-    "vitest": "~1.4.0"
+    "vitest": "~1.4.0",
+    "passport-wechat": "^2.0.4"
   },
   "dependencies": {
     "@dnd-kit/core": "^6.1.0",
@@ -211,6 +212,7 @@
     "passport-google-oauth20": "^2.0.0",
     "passport-jwt": "^4.0.1",
     "passport-local": "^1.0.0",
+    "passport-wechat": "^2.0.4",
     "pdf-lib": "^1.17.1",
     "prisma": "^5.11.0",
     "puppeteer": "^22.6.0",

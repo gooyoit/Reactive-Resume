@@ -26,7 +26,7 @@ export const ProfileSettings = () => {
 
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
-    defaultValues: { theme, locale: "en-US" },
+    defaultValues: { theme, locale: "zh-CN" },
   });
 
   useEffect(() => {

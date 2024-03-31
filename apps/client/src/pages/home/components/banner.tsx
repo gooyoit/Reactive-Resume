@@ -3,9 +3,9 @@
 import { HandHeart } from "@phosphor-icons/react";
 import { motion } from "framer-motion";
 
-export const DonationBanner = () => {
+export const Banner = () => {
   return (
-    <a href="https://opencollective.com/Reactive-Resume" target="_blank" rel="noreferrer">
+    <a href="https://gooyoit.com/Reactive-Resume" target="_blank" rel="noreferrer">
       <motion.div
         whileHover={{ height: 48 }}
         initial={{ opacity: 0, y: -50, height: 32 }}
@@ -14,8 +14,9 @@ export const DonationBanner = () => {
       >
         <HandHeart weight="bold" size={14} className="shrink-0" />
         <span>
-          If this project has helped you, please consider donating to Reactive Resume as we're
-          running out of server resources with the increasing number of users.
+          If this you feel this helped you,please consider subscribe VIP service. or you can go to our website to know more products.
+          {/* If this project has helped you, please consider donating to Reactive Resume as we're
+          running out of server resources with the increasing number of users. */}
         </span>
       </motion.div>
     </a>

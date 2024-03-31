@@ -12,7 +12,7 @@ export const Copyright = ({ className }: Props) => (
       className,
     )}
   >
-    <span>
+    {/*<span>
       <Trans>
         Licensed under{" "}
         <a
@@ -32,10 +32,10 @@ export const Copyright = ({ className }: Props) => (
           Amruth Pillai
         </a>
       </Trans>
-    </span>
+    </span> */}
 
     <span className="mt-4">
-      {t`Reactive Resume`} {"v" + appVersion}
+      {t`Generative Resume`} {"v" + appVersion}
     </span>
   </div>
 );
