@@ -1,5 +1,5 @@
 import { t } from "@lingui/macro";
-import { GithubLogo, GoogleLogo } from "@phosphor-icons/react";
+import { GithubLogo, GoogleLogo, WechatLogo } from "@phosphor-icons/react";
 import { Button } from "@reactive-resume/ui";
 
 import { useAuthProviders } from "@/client/services/auth/providers";
@@ -16,6 +16,15 @@ export const SocialAuth = () => {
           <a href="/api/auth/github">
             <GithubLogo className="mr-3 size-4" />
             {t`GitHub`}
+          </a>
+        </Button>
+      )}
+
+      {providers.includes("wechat") && (
+        <Button asChild size="lg" className="w-full !bg-[#209969] !text-white hover:!bg-[#222]/80">
+          <a href="/api/auth/wechat">
+            <WechatLogo className="mr-3 size-4" />
+            {t`Wechat`}
           </a>
         </Button>
       )}

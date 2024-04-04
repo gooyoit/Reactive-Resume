@@ -8,6 +8,7 @@ import {
   Patch,
   Post,
   Query,
+  Req,
   Res,
   UseGuards,
 } from "@nestjs/common";
@@ -37,7 +38,7 @@ import { JwtGuard } from "./guards/jwt.guard";
 import { LocalGuard } from "./guards/local.guard";
 import { RefreshGuard } from "./guards/refresh.guard";
 import { TwoFactorGuard } from "./guards/two-factor.guard";
-import { WeChatGuard } from "./guards/wechat.guard";
+import { WechatGuard } from "./guards/wechat.guard";
 import { getCookieOptions } from "./utils/cookie";
 import { payloadSchema } from "./utils/payload";
 
@@ -149,14 +150,14 @@ export class AuthController {
 
   @ApiTags("OAuth", "Wechat")
   @Get("wechat")
-  @UseGuards(WeChatGuard)
-  wechatLogin() {
+  @UseGuards(WechatGuard)
+  wechatLogin(@Req() _req: Request) {
     return;
   }
 
   @ApiTags("OAuth", "Wechat")
   @Get("wechat/callback")
-  @UseGuards(WeChatGuard)
+  @UseGuards(WechatGuard)
   async wechatCallback(
     @User() user: UserWithSecrets,
     @Res({ passthrough: true }) response: Response,
@@ -253,7 +254,7 @@ export class AuthController {
   @Post("2fa/backup")
   @UseGuards(JwtGuard)
   async useBackup2FACode(
-    @User("id") id: string,
+    @User("id") _id: string,
     @User("email") email: string,
     @Body() { code }: TwoFactorBackupDto,
     @Res({ passthrough: true }) response: Response,

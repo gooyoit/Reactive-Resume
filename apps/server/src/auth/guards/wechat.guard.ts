@@ -2,4 +2,4 @@ import { Injectable } from "@nestjs/common";
 import { AuthGuard } from "@nestjs/passport";
 
 @Injectable()
-export class WeChatGuard extends AuthGuard("wechat") {}
+export class WechatGuard extends AuthGuard("wechat") {}

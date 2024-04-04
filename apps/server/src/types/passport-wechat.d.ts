@@ -1,8 +1,9 @@
 declare module "passport-wechat" {
-  import { AuthenticateOptions, Profile, Strategy } from "passport";
+  import { Profile } from "passport";
+  import passport = require("passport");
 
-  interface WechatAuthProfile extends Profile {
-    openid: striing; //普通用户的标识，对当前开发者账号唯一
+  interface WechatProfile extends Profile {
+    openid: string; //普通用户的标识，对当前开发者账号唯一
     nickname: string; //普通用户昵称
     sex: number; //普通用户性别，1为男性，2为女性
     province: string; //普通用户个人资料填写的省份
@@ -15,8 +16,8 @@ declare module "passport-wechat" {
   }
 
   interface WechatStrategyOptions {
-    clientID: string;
-    clientSecret: string;
+    appID: string;
+    appSecret: string;
     callbackURL: string;
     scope?: string;
     state?: string;
@@ -26,9 +27,17 @@ declare module "passport-wechat" {
     passReqToCallback?: boolean;
   }
 
-  type VerifyCallback = (error: any, user?: any, info?: any) => void;
+  interface WechatAuthenticateOptions extends passport.AuthenticateOptions {
+    callbackURL?: string;
+  }
 
-  export class Strategy extends PassportStrategy {
+  export type VerifyCallback = (
+    err?: string | Error | null,
+    user?: Express.User,
+    info?: any,
+  ) => void;
+
+  export class Strategy extends passport.Strategy {
     constructor(
       options: WechatStrategyOptions,
       verify: (
@@ -38,6 +47,6 @@ declare module "passport-wechat" {
         done: VerifyCallback,
       ) => void,
     );
-    authenticate(req: any, options?: AuthenticateOptions): void;
+    authenticate(req: express.Request, options?: WechatAuthenticateOptions): void;
   }
 }

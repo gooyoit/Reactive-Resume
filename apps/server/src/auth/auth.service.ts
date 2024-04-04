@@ -150,7 +150,7 @@ export class AuthService {
     });
 
     const url = `${this.utils.getUrl()}/auth/reset-password?token=${token}`;
-    const subject = "Reset your Reactive Resume password";
+    const subject = "Reset your Generative Resume password";
     const text = `Please click on the link below to reset your password:\n\n${url}`;
 
     await this.mailService.sendEmail({ to: email, subject, text });
@@ -194,6 +194,14 @@ export class AuthService {
       this.configService.get("GOOGLE_CALLBACK_URL")
     ) {
       providers.push("google");
+    }
+
+    if (
+      this.configService.get("WECHAT_APP_ID") &&
+      this.configService.get("WECHAT_APP_SECRET") &&
+      this.configService.get("WECHAT_CALLBACK_URL")
+    ) {
+      providers.push("wechat");
     }
 
     return providers;

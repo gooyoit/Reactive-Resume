@@ -17,6 +17,18 @@ dependencies:
   '@dnd-kit/utilities':
     specifier: ^3.2.2
     version: 3.2.2(react@18.2.0)
+  '@feathersjs/authentication':
+    specifier: ^2.1.7
+    version: 2.1.16
+  '@feathersjs/authentication-jwt':
+    specifier: ^2.0.0
+    version: 2.0.10
+  '@feathersjs/authentication-local':
+    specifier: ^1.1.0
+    version: 1.2.9
+  '@feathersjs/authentication-oauth2':
+    specifier: ^1.2.4
+    version: 1.3.1
   '@fontsource/ibm-plex-sans':
     specifier: ^5.0.19
     version: 5.0.19
@@ -2758,6 +2770,106 @@ packages:
     resolution: {integrity: sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
+
+  /@feathersjs/authentication-jwt@2.0.10:
+    resolution: {integrity: sha512-4IVBXDa4w17rroWiSM6LpSzUVG9Za1x1t7fioSObYt60PTkY7QunZt77GkdWfTNLNFvV++VVZ5tGFN6kfIKqCA==}
+    engines: {node: '>= 6'}
+    dependencies:
+      '@feathersjs/errors': 3.3.6
+      debug: 4.3.4
+      lodash.merge: 4.6.2
+      lodash.omit: 4.5.0
+      lodash.pick: 4.4.0
+      passport-jwt: 4.0.1
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
+  /@feathersjs/authentication-local@1.2.9:
+    resolution: {integrity: sha512-EqUuUgiULpfe46oprIeHkY4CjlWIT+abtMnVOOeRmaJTPRDnPe72wJoQ3jomSTJpr7KARkWog6sAUZa+NMC3UA==}
+    engines: {node: '>= 6'}
+    dependencies:
+      '@feathersjs/errors': 3.3.6
+      bcryptjs: 2.4.3
+      debug: 4.3.4
+      lodash: 4.17.21
+      passport-local: 1.0.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
+  /@feathersjs/authentication-oauth2@1.3.1:
+    resolution: {integrity: sha512-NiKQZioganfaDCooODfIBGNcviBlm65Ovsy1E2UaKoNdsv4tb9JU222azKIYt/tqUogaGZU6WKUzwTiC51azxg==}
+    engines: {node: '>= 6'}
+    dependencies:
+      '@feathersjs/commons': 4.5.16
+      '@feathersjs/errors': 3.3.6
+      '@feathersjs/express': 1.3.1
+      debug: 4.3.4
+      lodash.merge: 4.6.2
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
+  /@feathersjs/authentication@2.1.16:
+    resolution: {integrity: sha512-TZ9rUySi8/aatHPuL1e9GUHFT/VXz14UInE9aJ1lOShTKG1OkfTaYLxjZ8i0glZkNJXkf2jwGPqXahVbGdCsFQ==}
+    engines: {node: '>= 6'}
+    dependencies:
+      '@feathersjs/commons': 4.5.16
+      '@feathersjs/errors': 3.3.6
+      '@feathersjs/socket-commons': 3.1.5
+      debug: 4.3.4
+      jsonwebtoken: 8.5.1
+      lodash.clone: 4.5.0
+      lodash.merge: 4.6.2
+      lodash.omit: 4.5.0
+      lodash.pick: 4.4.0
+      long-timeout: 0.1.1
+      ms: 2.1.3
+      passport: 0.4.1
+      uuid: 3.4.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
+  /@feathersjs/commons@4.5.16:
+    resolution: {integrity: sha512-FXKAcGApcd9w3M42gjLi8+oaPijabS8qbD4ynQK3PM8J7BqpbSdCzURsI7EpReoQxFxdhrR4jix8cQIC/iAeuw==}
+    engines: {node: '>= 10'}
+    dev: false
+
+  /@feathersjs/errors@3.3.6:
+    resolution: {integrity: sha512-VCohY/AQU13xYyZGl6rfdUgE+2bjaI76a4aEb6reIphHKgb4mnjYlg2PzS1/hcU1qUNi515kY9yQa5HsE7J1dQ==}
+    engines: {node: '>= 6'}
+    dependencies:
+      debug: 4.3.4
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
+  /@feathersjs/express@1.3.1:
+    resolution: {integrity: sha512-7Bj3pWj0/p2G5bpK9+0b4D9SR6LnpDxkWQcrkFQrHuMuiuPMZlnxfVgNogUUj5CaKNAKiRpXe+g/qwQGw60J6A==}
+    engines: {node: '>= 6'}
+    dependencies:
+      '@feathersjs/commons': 4.5.16
+      '@feathersjs/errors': 3.3.6
+      debug: 4.3.4
+      express: 4.18.3
+      uberproto: 2.0.6
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
+  /@feathersjs/socket-commons@3.1.5:
+    resolution: {integrity: sha512-cnMqVNGR0fOM00UqRmslmPiUZ2UKToTxesoGwZvhvq4unF032KzS4gz8bZ7qYsin9HmAP/E2gs2v0119CR7LKQ==}
+    engines: {node: '>= 6'}
+    dependencies:
+      '@feathersjs/errors': 3.3.6
+      debug: 3.2.7
+      lodash: 4.17.21
+      url-pattern: 1.0.3
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
 
   /@floating-ui/core@1.6.0:
     resolution: {integrity: sha512-PcF++MykgmTj3CIyOQbKA/hDzOAiqI3mhuoN44WRCopIs1sgoDoU4oty4Jtqaj/y3oDU6fnVSm4QG0a3t5i0+g==}
@@ -9869,7 +9981,6 @@ packages:
         optional: true
     dependencies:
       ms: 2.1.3
-    dev: true
 
   /debug@4.3.4:
     resolution: {integrity: sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==}
@@ -13176,6 +13287,22 @@ packages:
     optionalDependencies:
       graceful-fs: 4.2.11
 
+  /jsonwebtoken@8.5.1:
+    resolution: {integrity: sha512-XjwVfRS6jTMsqYs0EsuJ4LGxXV14zQybNd4L2r0UvbVnSF9Af8x7p5MzbJ90Ioz/9TI41/hTCvznF/loiSzn8w==}
+    engines: {node: '>=4', npm: '>=1.4.28'}
+    dependencies:
+      jws: 3.2.2
+      lodash.includes: 4.3.0
+      lodash.isboolean: 3.0.3
+      lodash.isinteger: 4.0.4
+      lodash.isnumber: 3.0.3
+      lodash.isplainobject: 4.0.6
+      lodash.isstring: 4.0.1
+      lodash.once: 4.1.1
+      ms: 2.1.3
+      semver: 5.7.2
+    dev: false
+
   /jsonwebtoken@9.0.2:
     resolution: {integrity: sha512-PRp66vJ865SSqOlgqS8hujT5U4AOgMfhrwYIuIhfKaoSCZcirrmASQr8CX7cUg+RMih+hgznrjp99o+W4pJLHQ==}
     engines: {node: '>=12', npm: '>=6'}
@@ -13491,6 +13618,10 @@ packages:
     resolution: {integrity: sha512-aVx8ztPv7/2ULbArGJ2Y42bG1mEQ5mGjpdvrbJcJFU3TbYybe+QlLS4pst9zV52ymy2in1KpFPiZnAOATxD4+Q==}
     dev: true
 
+  /lodash.clone@4.5.0:
+    resolution: {integrity: sha512-GhrVeweiTD6uTmmn5hV/lzgCQhccwReIVRLHp7LT4SopOjqEZ5BbX8b5WWEtAKasjmy8hR7ZPwsYlxRCku5odg==}
+    dev: false
+
   /lodash.debounce@4.0.8:
     resolution: {integrity: sha512-FT1yDzDYEoYWhnSGnpE/4Kj1fLZkDFyqRb7fNt6FdYOSxlUWAtp42Eh6Wb0rGIv/m9Bgo7x4GhQbm5Ys4SG5ow==}
 
@@ -13538,10 +13669,17 @@ packages:
 
   /lodash.merge@4.6.2:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
-    dev: true
+
+  /lodash.omit@4.5.0:
+    resolution: {integrity: sha512-XeqSp49hNGmlkj2EJlfrQFIzQ6lXdNro9sddtQzcJY8QaoC2GO0DT7xaIokHeyM+mIT0mPMlPvkYzg2xCuHdZg==}
+    dev: false
 
   /lodash.once@4.1.1:
     resolution: {integrity: sha512-Sb487aTOCr9drQVL8pIxOzVhafOjZN9UU54hiN8PU3uAiSV7lx1yYNpbNmex2PK6dSJoNTSJUUswT651yww3Mg==}
+    dev: false
+
+  /lodash.pick@4.4.0:
+    resolution: {integrity: sha512-hXt6Ul/5yWjfklSGvLQl8vM//l3FtyHZeuelpzK6mm99pNvN9yTDruNZPEJZD1oWrqo+izBmB7oUfWgcCX7s4Q==}
     dev: false
 
   /lodash.set@4.3.2:
@@ -13565,6 +13703,10 @@ packages:
     dependencies:
       chalk: 4.1.2
       is-unicode-supported: 0.1.0
+
+  /long-timeout@0.1.1:
+    resolution: {integrity: sha512-BFRuQUqc7x2NWxfJBCyUrN8iYUYznzL9JROmRz1gZ6KlOIgmoD+njPVbb+VNn2nGMKggMsK79iUNErillsrx7w==}
+    dev: false
 
   /loose-envify@1.4.0:
     resolution: {integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==}
@@ -15151,6 +15293,14 @@ packages:
 
   /passport@0.3.2:
     resolution: {integrity: sha512-aqgxMQxuRz79M4LVo8fl3/bsh6Ozcb34G8MVDs7Oavy88ROLSVvTgYoWnX3TpxdQg66HiXvpb+lcuFPnDrmiOA==}
+    engines: {node: '>= 0.4.0'}
+    dependencies:
+      passport-strategy: 1.0.0
+      pause: 0.0.1
+    dev: false
+
+  /passport@0.4.1:
+    resolution: {integrity: sha512-IxXgZZs8d7uFSt3eqNjM9NQ3g3uQCW5avD8mRNoXV99Yig50vjuaez6dQK2qC0kVWPRTujxY0dWgGfT09adjYg==}
     engines: {node: '>= 0.4.0'}
     dependencies:
       passport-strategy: 1.0.0
@@ -18218,6 +18368,10 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
+  /uberproto@2.0.6:
+    resolution: {integrity: sha512-68H97HffZoFaa3HFtpstahWorN9dSp5uTU6jo3GjIQ6JkJBR3hC2Nx/e/HFOoYHdUyT/Z1MRWfxN1EiQJZUyCQ==}
+    dev: false
+
   /uc.micro@2.1.0:
     resolution: {integrity: sha512-ARDJmphmdvUk6Glw7y9DQ2bFkKBHwQHLi2lsaH6PPmz/Ka9sFOBsBluozhDltWmnv9u/cF6Rt87znRTPV+yp/A==}
     dev: false
@@ -18355,6 +18509,11 @@ packages:
       requires-port: 1.0.0
     dev: true
 
+  /url-pattern@1.0.3:
+    resolution: {integrity: sha512-uQcEj/2puA4aq1R3A2+VNVBgaWYR24FdWjl7VNW83rnWftlhyzOZ/tBjezRiC2UkIzuxC8Top3IekN3vUf1WxA==}
+    engines: {node: '>=0.12.0'}
+    dev: false
+
   /urllib@2.41.0:
     resolution: {integrity: sha512-pNXdxEv52L67jahLT+/7QE+Fup1y2Gc6EdmrAhQ6OpQIC2rl14oWwv9hvk1GXOZqEnJNwRXHABuwgPOs1CtL7g==}
     engines: {node: '>= 0.10.0'}
@@ -18482,6 +18641,12 @@ packages:
   /utils-merge@1.0.1:
     resolution: {integrity: sha512-pMZTvIkT1d+TFGvDOqodOclx0QWkkgi6Tdoa8gC8ffGAAqz9pzPTZWAybbsHHoED/ztMtkv/VoYTYyShUn81hA==}
     engines: {node: '>= 0.4.0'}
+
+  /uuid@3.4.0:
+    resolution: {integrity: sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==}
+    deprecated: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+    hasBin: true
+    dev: false
 
   /uuid@8.3.2:
     resolution: {integrity: sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==}

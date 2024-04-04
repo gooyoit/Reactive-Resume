@@ -113,6 +113,10 @@
     "vite": "~5.2.2",
     "vite-plugin-dts": "~3.7.3",
     "vitest": "~1.4.0",
+    "@feathersjs/authentication": "^2.1.7",
+    "@feathersjs/authentication-jwt": "^2.0.0",
+    "@feathersjs/authentication-local": "^1.1.0",
+    "@feathersjs/authentication-oauth2": "^1.2.4",
     "passport-wechat": "^2.0.4"
   },
   "dependencies": {
@@ -212,6 +216,10 @@
     "passport-google-oauth20": "^2.0.0",
     "passport-jwt": "^4.0.1",
     "passport-local": "^1.0.0",
+    "@feathersjs/authentication": "^2.1.7",
+    "@feathersjs/authentication-jwt": "^2.0.0",
+    "@feathersjs/authentication-local": "^1.1.0",
+    "@feathersjs/authentication-oauth2": "^1.2.4",
     "passport-wechat": "^2.0.4",
     "pdf-lib": "^1.17.1",
     "prisma": "^5.11.0",

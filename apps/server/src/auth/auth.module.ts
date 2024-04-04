@@ -2,6 +2,8 @@ import { DynamicModule, Module } from "@nestjs/common";
 import { ConfigService } from "@nestjs/config";
 import { JwtModule } from "@nestjs/jwt";
 import { PassportModule } from "@nestjs/passport";
+import { get } from "http";
+import passport from "passport";
 
 import { Config } from "../config/schema";
 import { MailModule } from "../mail/mail.module";
@@ -17,7 +19,6 @@ import { LocalStrategy } from "./strategy/local.strategy";
 import { RefreshStrategy } from "./strategy/refresh.strategy";
 import { TwoFactorStrategy } from "./strategy/two-factor.strategy";
 import { WechatStrategy } from "./strategy/wechat.strategy";
-import { get } from "http";
 
 @Module({})
 export class AuthModule {
@@ -32,7 +33,6 @@ export class AuthModule {
         JwtStrategy,
         RefreshStrategy,
         TwoFactorStrategy,
-
         // OAuth2 Strategies
         {
           provide: GitHubStrategy,
@@ -65,15 +65,17 @@ export class AuthModule {
             }
           },
         },
+
         {
           provide: WechatStrategy,
           inject: [ConfigService, UserService],
           useFactory: (configService: ConfigService<Config>, userService: UserService) => {
             try {
-              const clientID = configService.getOrThrow("WECHAT_APP_ID");
-              const clientSecret = configService.getOrThrow("WECHAT_APP_SECRET");
+              const appID = configService.getOrThrow("WECHAT_APP_ID");
+              const appSecret = configService.getOrThrow("WECHAT_APP_SECRET");
               const callbackURL = configService.getOrThrow("WECHAT_CALLBACK_URL");
-              return new WechatStrategy(clientID, clientSecret, callbackURL, userService);
+
+              new WechatStrategy(appID, appSecret, callbackURL, userService);
             } catch (error) {
               return new DummyStrategy();
             }

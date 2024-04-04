@@ -24,6 +24,7 @@ import {
   Swatches,
   TextAa,
   Translate,
+  WechatLogo,
 } from "@phosphor-icons/react";
 import { cn, languages, templatesList } from "@reactive-resume/utils";
 import { motion } from "framer-motion";
@@ -52,6 +53,7 @@ export const FeaturesSection = () => {
     { icon: <Brain />, title: t`OpenAI Integration` },
     { icon: <GithubLogo />, title: t`Sign in with GitHub` },
     { icon: <GoogleLogo />, title: t`Sign in with Google` },
+    { icon: <WechatLogo />, title: t`Sign in with Wechat` },
     { icon: <EnvelopeSimple />, title: t`Sign in with Email` },
     { icon: <Lock />, title: t`Secure with two-factor authentication` },
     { icon: <StackSimple />, title: t`${templatesCount} resume templates to choose from` },
