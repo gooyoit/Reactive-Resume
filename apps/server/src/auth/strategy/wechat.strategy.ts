@@ -2,21 +2,30 @@ import { BadRequestException, Injectable, UnauthorizedException } from "@nestjs/
 import { PassportStrategy } from "@nestjs/passport";
 import { User } from "@prisma/client";
 import { ErrorMessage } from "@reactive-resume/utils";
-import { Strategy, WechatProfile, WechatStrategyOptions } from "passport-wechat";
+import { Strategy, WechatProfile, WechatStrategyOptions } from "passport-wechat-public";
 
 import { UserService } from "@/server/user/user.service";
+
+import { AuthService } from "../auth.service";
 
 @Injectable()
 export class WechatStrategy extends PassportStrategy(Strategy, "wechat") {
   constructor(
-    readonly appID: string,
+    readonly appId: string,
     readonly appSecret: string,
     readonly callbackURL: string,
     private readonly userService: UserService,
+    private readonly authService: AuthService,
   ) {
-    super({ appID, appSecret, callbackURL, scope: "snsapi_login" } as WechatStrategyOptions);
+    super({
+      appId,
+      appSecret,
+      callbackURL,
+      state: authService.generateState(5),
+      agent: "wchat-public",
+      scope: "snsapi_login",
+    } as WechatStrategyOptions);
   }
-
   async validate(
     _accessToken: string,
     _refreshToken: string,
@@ -45,7 +54,7 @@ export class WechatStrategy extends PassportStrategy(Strategy, "wechat") {
           picture,
           locale: "en-US",
           name: nickname,
-          provider: "github",
+          provider: "wechat",
           emailVerified: false, // auto-verify emails
           username: nickname,
           secrets: { create: {} },

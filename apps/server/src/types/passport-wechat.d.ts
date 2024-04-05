@@ -1,6 +1,6 @@
-declare module "passport-wechat" {
+declare module "passport-wechat-public" {
   import { Profile } from "passport";
-  import passport = require("passport");
+  import passport = require("passport-strategy");
 
   interface WechatProfile extends Profile {
     openid: string; //普通用户的标识，对当前开发者账号唯一
@@ -16,19 +16,26 @@ declare module "passport-wechat" {
   }
 
   interface WechatStrategyOptions {
-    appID: string;
+    appId: string;
     appSecret: string;
     callbackURL: string;
     scope?: string;
     state?: string;
-    authorizationURL?: string;
-    tokenURL?: string;
-    userProfileURL?: string;
+    agent?: string;
+    // authorizationURL?: string;
+    // tokenURL?: string;
+    // userProfileURL?: string;
     passReqToCallback?: boolean;
   }
 
-  interface WechatAuthenticateOptions extends passport.AuthenticateOptions {
+  interface WechatAuthenticateOptions {
+    openid?: string;
     callbackURL?: string;
+    scope?: string;
+    state?: string;
+    successRedirect?: string | undefined;
+    failureRedirect?: string | undefined;
+    passReqToCallback?: boolean | undefined;
   }
 
   export type VerifyCallback = (

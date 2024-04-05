@@ -68,14 +68,18 @@ export class AuthModule {
 
         {
           provide: WechatStrategy,
-          inject: [ConfigService, UserService],
-          useFactory: (configService: ConfigService<Config>, userService: UserService) => {
+          inject: [ConfigService, UserService, AuthService],
+          useFactory: (
+            configService: ConfigService<Config>,
+            userService: UserService,
+            authService: AuthService,
+          ) => {
             try {
               const appID = configService.getOrThrow("WECHAT_APP_ID");
               const appSecret = configService.getOrThrow("WECHAT_APP_SECRET");
               const callbackURL = configService.getOrThrow("WECHAT_CALLBACK_URL");
 
-              new WechatStrategy(appID, appSecret, callbackURL, userService);
+              new WechatStrategy(appID, appSecret, callbackURL, userService, authService);
             } catch (error) {
               return new DummyStrategy();
             }
