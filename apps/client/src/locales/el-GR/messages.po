@@ -61,7 +61,7 @@ msgstr "Ένας δωρεάν και ανοικτού κώδικα κατασκ�
 
 #: apps/client/src/pages/home/components/footer.tsx:20
 #: apps/client/src/pages/home/sections/hero/index.tsx:47
-msgid "A simple and fast resume builder that simplifies the process of creating, updating, and sharing your resume."
+msgid "A simple, fast and AI supported resume builder that simplifies the process of creating, updating, and sharing your resume."
 msgstr "Ένας δωρεάν κατασκευαστής βιογραφικών σημειωμάτων ανοικτού κώδικα που απλοποιεί τη διαδικασία δημιουργίας, ενημέρωσης και κοινοποίησης του βιογραφικού σας σημειώματος."
 
 #: apps/client/src/pages/builder/_components/toolbar.tsx:53

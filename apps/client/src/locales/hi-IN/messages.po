@@ -61,7 +61,7 @@ msgstr "एक मुफ़्त और ओपन-सोर्स रेज़�
 
 #: apps/client/src/pages/home/components/footer.tsx:20
 #: apps/client/src/pages/home/sections/hero/index.tsx:47
-msgid "A simple and fast resume builder that simplifies the process of creating, updating, and sharing your resume."
+msgid "A simple, fast and AI supported resume builder that simplifies the process of creating, updating, and sharing your resume."
 msgstr "एक मुफ़्त और ओपन-सोर्स रेज़्यूमे बिल्डर जो आपके रेज़्यूमे को बनाने, अपडेट करने और साझा करने की प्रक्रिया को सरल बनाता है।"
 
 #: apps/client/src/pages/builder/_components/toolbar.tsx:53

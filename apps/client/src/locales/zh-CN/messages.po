@@ -57,11 +57,11 @@ msgstr "<0>已启用双重身份验证。</0>您在每次登录时都需要输�
 #: apps/client/src/pages/home/page.tsx:24
 #: apps/client/src/pages/home/sections/hero/index.tsx:42
 msgid "A simple and fast resume builder"
-msgstr "便捷快速的简历生成器"
+msgstr "AI响应式简历生成器"
 
 #: apps/client/src/pages/home/components/footer.tsx:20
 #: apps/client/src/pages/home/sections/hero/index.tsx:47
-msgid "A simple and fast resume builder that simplifies the process of creating, updating, and sharing your resume."
+msgid "A simple, fast and AI supported resume builder that simplifies the process of creating, updating, and sharing your resume."
 msgstr "一款简单快捷、支持AI生成的简历生成器，可简化创建、更新和共享简历的过程。"
 
 #: apps/client/src/pages/builder/_components/toolbar.tsx:53

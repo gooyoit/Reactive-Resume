@@ -17,7 +17,7 @@ export const Footer = () => (
         <h2 className="text-xl font-medium">{t`Generative Resume`}</h2>
 
         <p className="prose prose-sm prose-zinc leading-relaxed opacity-60 dark:prose-invert">
-          {t`A simple and fast resume builder that simplifies the process of creating, updating, and sharing your resume.`}
+          {t`A simple, fast and AI supported resume builder that simplifies the process of creating, updating, and sharing your resume.`}
         </p>
 
         <Copyright className="mt-6" />

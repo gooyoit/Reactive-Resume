@@ -21,7 +21,11 @@ export const SocialAuth = () => {
       )}
 
       {providers.includes("wechat") && (
-        <Button asChild size="lg" className="w-full !bg-[#209969] !text-white hover:!bg-[#222]/80">
+        <Button
+          asChild
+          size="lg"
+          className="w-full !bg-[#209969] !text-white hover:!bg-[#4285F4]/80"
+        >
           <a href="/api/auth/wechat">
             <WechatLogo className="mr-3 size-4" />
             {t`Wechat`}

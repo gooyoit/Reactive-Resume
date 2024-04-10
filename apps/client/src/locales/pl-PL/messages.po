@@ -61,7 +61,7 @@ msgstr "Darmowy kreator CV typu open-source"
 
 #: apps/client/src/pages/home/components/footer.tsx:20
 #: apps/client/src/pages/home/sections/hero/index.tsx:47
-msgid "A simple and fast resume builder that simplifies the process of creating, updating, and sharing your resume."
+msgid "A simple, fast and AI supported resume builder that simplifies the process of creating, updating, and sharing your resume."
 msgstr "Darmowy i open-source'owy kreator CV, który upraszcza proces tworzenia, aktualizowania i udostępniania CV."
 
 #: apps/client/src/pages/builder/_components/toolbar.tsx:53

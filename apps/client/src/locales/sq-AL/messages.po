@@ -61,7 +61,7 @@ msgstr "Një ndërtues i CV-së falas dhe open source"
 
 #: apps/client/src/pages/home/components/footer.tsx:20
 #: apps/client/src/pages/home/sections/hero/index.tsx:47
-msgid "A simple and fast resume builder that simplifies the process of creating, updating, and sharing your resume."
+msgid "A simple, fast and AI supported resume builder that simplifies the process of creating, updating, and sharing your resume."
 msgstr "Një ndërtues i CV-së, falas dhe open-source që thjeshtëson procesin e krijimit, përditësimit dhe shpërndarjes së CV-së tuaj."
 
 #: apps/client/src/pages/builder/_components/toolbar.tsx:53

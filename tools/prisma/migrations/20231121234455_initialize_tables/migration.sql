@@ -11,6 +11,7 @@ CREATE TABLE "User" (
     "picture" TEXT,
     "username" TEXT NOT NULL,
     "email" TEXT NOT NULL,
+    "phone" TEXT,
     "locale" TEXT NOT NULL DEFAULT 'zh-CN',
     "emailVerified" BOOLEAN NOT NULL DEFAULT false,
     "twoFactorEnabled" BOOLEAN NOT NULL DEFAULT false,

@@ -14,7 +14,8 @@ export const Banner = () => {
       >
         <HandHeart weight="bold" size={14} className="shrink-0" />
         <span>
-          If this you feel this helped you,please consider subscribe VIP service. or you can go to our website to know more products.
+          If this website helped you,please consider subscribe VIP service. or you can go to the
+          website to know more products.
           {/* If this project has helped you, please consider donating to Reactive Resume as we're
           running out of server resources with the increasing number of users. */}
         </span>

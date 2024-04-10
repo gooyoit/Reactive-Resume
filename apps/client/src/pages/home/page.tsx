@@ -21,12 +21,12 @@ export const HomePage = () => {
         <html lang={i18n.locale} />
 
         <title>
-          {t`Reactive Resume`} - {t`A simple and fast resume builder`}
+          {t`Generative Resume`} - {t`A simple and fast resume builder`}
         </title>
 
         <meta
           name="description"
-          content="A simple and fast resume builder that simplifies the process of creating, updating, and sharing your resume."
+          content="A simple fast resume builder that simplifies the process of creating, updating, and sharing your resume."
         />
       </Helmet>
 

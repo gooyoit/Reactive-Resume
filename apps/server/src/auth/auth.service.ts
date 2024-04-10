@@ -114,6 +114,7 @@ export class AuthService {
         provider: "email",
         emailVerified: false, // Set to true if you don't want to verify user's email
         secrets: { create: { password: hashedPassword } },
+        phone: "",
       });
 
       // Do not `await` this function, otherwise the user will have to wait for the email to be sent before the response is returned
@@ -262,7 +263,7 @@ export class AuthService {
     }
 
     const secret = authenticator.generateSecret();
-    const uri = authenticator.keyuri(email, "Reactive Resume", secret);
+    const uri = authenticator.keyuri(email, "Generative Resume", secret);
 
     await this.userService.updateByEmail(email, {
       secrets: { update: { twoFactorSecret: secret } },

@@ -19,6 +19,7 @@ export const userSchema = z.object({
   picture: z.literal("").or(z.null()).or(z.string().url()),
   username: usernameSchema,
   email: z.string().email(),
+  phone: z.string(),
   locale: z.string().default("zh-CN"),
   emailVerified: z.boolean().default(false),
   twoFactorEnabled: z.boolean().default(false),

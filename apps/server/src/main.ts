@@ -67,7 +67,7 @@ async function bootstrap() {
   const config = new DocumentBuilder()
     .setTitle("Generative Resume")
     .setDescription(
-      "Reactive Resume is a free and open source resume builder that's built to make the mundane tasks of creating, updating and sharing your resume as easy as 1, 2, 3.",
+      "Generative Resume is a free and open source resume builder that's built to make the mundane tasks of creating, updating and sharing your resume as easy as 1, 2, 3.",
     )
     .addCookieAuth("Authentication", { type: "http", in: "cookie", scheme: "Bearer" })
     .setVersion("4.0.0")

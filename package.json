@@ -1,6 +1,8 @@
 {
   "name": "@reactive-resume/source",
-  "description": "A simple and fast resume builder that simplifies the process of creating, updating, and sharing your resume.",
+
+  "description": "A simple, fast and AI supported resume builder that simplifies the process of creating, updating, and sharing your resume.",
+
   "version": "4.0.10",
   "license": "MIT",
   "private": true,
