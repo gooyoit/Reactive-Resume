@@ -1,53 +1,27 @@
-import { zodResolver } from "@hookform/resolvers/zod";
-import { t, Trans } from "@lingui/macro";
-import { ArrowRight } from "@phosphor-icons/react";
-import { loginSchema } from "@reactive-resume/dto";
-import { usePasswordToggle } from "@reactive-resume/hooks";
+import { t } from "@lingui/macro";
+import { ArrowRight, User, WechatLogo } from "@phosphor-icons/react";
 import {
   Button,
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-  Input,
+  Card,
+  CardContent,
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
 } from "@reactive-resume/ui";
-import { cn } from "@reactive-resume/utils";
-import { useRef } from "react";
+import { useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
-import { z } from "zod";
 
-import { useLogin } from "@/client/services/auth";
-import { useAuthProviders } from "@/client/services/auth/providers";
+// import { useLogin } from "@/client/services/auth";
+// import { useAuthProviders } from "@/client/services/auth/providers";
+import { LocalAuth } from ".././_components/local-auth";
+import { WechatAuth } from ".././_components/wechat-auth";
 
-type FormValues = z.infer<typeof loginSchema>;
-
+type Layout = "wechat" | "local";
 export const LoginPage = () => {
-  const { login, loading } = useLogin();
-
-  const { providers } = useAuthProviders();
-  const emailAuthDisabled = !providers || !providers.includes("email");
-
-  const formRef = useRef<HTMLFormElement>(null);
-  usePasswordToggle(formRef);
-
-  const form = useForm<FormValues>({
-    resolver: zodResolver(loginSchema),
-    defaultValues: { identifier: "", password: "" },
-  });
-
-  const onSubmit = async (data: FormValues) => {
-    try {
-      await login(data);
-    } catch (error) {
-      form.reset();
-    }
-  };
-
+  // const { login, loading } = useLogin();
+  const [layout, setLayout] = useState<Layout>("wechat");
   return (
     <div className="space-y-8">
       <Helmet>
@@ -58,7 +32,7 @@ export const LoginPage = () => {
 
       <div className="space-y-1.5">
         <h2 className="text-2xl font-semibold tracking-tight">{t`Sign in to your account`}</h2>
-        <h6 className={cn(emailAuthDisabled && "hidden")}>
+        <h6>
           <span className="opacity-75">{t`Don't have an account?`}</span>
           <Button asChild variant="link" className="px-1.5">
             <Link to="/auth/register">
@@ -68,61 +42,34 @@ export const LoginPage = () => {
           </Button>
         </h6>
       </div>
-
-      <div className={cn(emailAuthDisabled && "hidden")}>
-        <Form {...form}>
-          <form
-            ref={formRef}
-            className="flex flex-col gap-y-4"
-            onSubmit={form.handleSubmit(onSubmit)}
+      <Card className="space-y-1">
+        <CardContent className="space-y-4">
+          <Tabs
+            value={layout}
+            onValueChange={(value) => setLayout(value as Layout)}
+            className="space-y-4"
           >
-            <FormField
-              name="identifier"
-              control={form.control}
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>{t`Email`}</FormLabel>
-                  <FormControl>
-                    <Input placeholder="john.doe@example.com" {...field} />
-                  </FormControl>
-                  <FormDescription>{t`You can also enter your username.`}</FormDescription>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-
-            <FormField
-              name="password"
-              control={form.control}
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>{t`Password`}</FormLabel>
-                  <FormControl>
-                    <Input type="password" {...field} />
-                  </FormControl>
-                  <FormDescription>
-                    <Trans>
-                      Hold <code className="text-xs font-bold">Ctrl</code> to display your password
-                      temporarily.
-                    </Trans>
-                  </FormDescription>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-
-            <div className="mt-4 flex items-center gap-x-4">
-              <Button type="submit" disabled={loading} className="flex-1">
-                {t`Sign in`}
-              </Button>
-
-              <Button asChild variant="link" className="px-4">
-                <Link to="/auth/forgot-password">{t`Forgot Password?`}</Link>
-              </Button>
+            <div className="flex items-center justify-between">
+              <TabsList>
+                <TabsTrigger value="wechat" className="size-32 p-0 sm:h-8 sm:w-auto sm:px-16">
+                  <User />
+                  <span className="ml-2 hidden sm:block">{t`Grid`}</span>
+                </TabsTrigger>
+                <TabsTrigger value="local" className="size-32 p-0 sm:h-8 sm:w-auto sm:px-16">
+                  <WechatLogo />
+                  <span className="ml-2 hidden sm:block">{t`List`}</span>
+                </TabsTrigger>
+              </TabsList>
             </div>
-          </form>
-        </Form>
-      </div>
+            <TabsContent value="wechat">
+              <WechatAuth />
+            </TabsContent>
+            <TabsContent value="local">
+              <LocalAuth />
+            </TabsContent>
+          </Tabs>
+        </CardContent>
+      </Card>
     </div>
   );
 };

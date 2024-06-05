@@ -36,9 +36,9 @@ export const HomePage = () => {
       <FeaturesSection />
       <TemplatesSection />
       <TestimonialsSection />
-      {/* <SupportSection /> */}
-      {/* <FAQSection /> */}
-      {/* <ContributorsSection /> */}
+      <SupportSection />
+      <FAQSection />
+      <ContributorsSection />
     </main>
   );
 };

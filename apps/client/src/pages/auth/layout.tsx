@@ -39,7 +39,7 @@ export const AuthLayout = () => {
 
         <Outlet />
 
-        {isAuthRoute && (
+        {/* {isAuthRoute && (
           <>
             <div className={cn("flex items-center gap-x-4", hideDivider && "hidden")}>
               <hr className="flex-1" />
@@ -55,7 +55,7 @@ export const AuthLayout = () => {
 
             <SocialAuth />
           </>
-        )}
+        )} */}
       </div>
 
       <div className="relative hidden lg:block lg:flex-1">
