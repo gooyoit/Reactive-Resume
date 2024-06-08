@@ -1,6 +1,8 @@
 import { t } from "@lingui/macro";
 import { ArrowRight, User, WechatLogo } from "@phosphor-icons/react";
 import {
+  Alert,
+  AlertTitle,
   Button,
   Card,
   CardContent,
@@ -12,16 +14,34 @@ import {
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import { z } from "zod";
 
-// import { useLogin } from "@/client/services/auth";
-// import { useAuthProviders } from "@/client/services/auth/providers";
-import { LocalAuth } from ".././_components/local-auth";
-import { WechatAuth } from ".././_components/wechat-auth";
+import { useLogin } from "@/client/services/auth";
+import { useAuthProviders } from "@/client/services/auth/providers";
 
 type Layout = "wechat" | "local";
 export const LoginPage = () => {
-  // const { login, loading } = useLogin();
-  const [layout, setLayout] = useState<Layout>("wechat");
+  const { login, loading } = useLogin();
+
+  const { providers } = useAuthProviders();
+  const emailAuthDisabled = !providers || !providers.includes("email");
+
+  const formRef = useRef<HTMLFormElement>(null);
+  usePasswordToggle(formRef);
+
+  const form = useForm<FormValues>({
+    resolver: zodResolver(loginSchema),
+    defaultValues: { identifier: "", password: "" },
+  });
+
+  const onSubmit = async (data: FormValues) => {
+    try {
+      await login(data);
+    } catch (error) {
+      form.reset();
+    }
+  };
+
   return (
     <div className="space-y-8">
       <Helmet>
@@ -42,24 +62,57 @@ export const LoginPage = () => {
           </Button>
         </h6>
       </div>
-      <Card className="space-y-1">
-        <CardContent className="space-y-4">
-          <Tabs
-            value={layout}
-            onValueChange={(value) => setLayout(value as Layout)}
-            className="space-y-4"
+
+      <div className={cn(emailAuthDisabled && "hidden")}>
+        <Form {...form}>
+          <form
+            ref={formRef}
+            className="flex flex-col gap-y-4"
+            onSubmit={form.handleSubmit(onSubmit)}
           >
-            <div className="flex items-center justify-between">
-              <TabsList>
-                <TabsTrigger value="wechat" className="size-32 p-0 sm:h-8 sm:w-auto sm:px-16">
-                  <User />
-                  <span className="ml-2 hidden sm:block">{t`Grid`}</span>
-                </TabsTrigger>
-                <TabsTrigger value="local" className="size-32 p-0 sm:h-8 sm:w-auto sm:px-16">
-                  <WechatLogo />
-                  <span className="ml-2 hidden sm:block">{t`List`}</span>
-                </TabsTrigger>
-              </TabsList>
+            <FormField
+              name="identifier"
+              control={form.control}
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>{t`Email`}</FormLabel>
+                  <FormControl>
+                    <Input placeholder="john.doe@example.com" {...field} />
+                  </FormControl>
+                  <FormDescription>{t`You can also enter your username.`}</FormDescription>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            <FormField
+              name="password"
+              control={form.control}
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>{t`Password`}</FormLabel>
+                  <FormControl>
+                    <Input type="password" {...field} />
+                  </FormControl>
+                  <FormDescription>
+                    <Trans>
+                      Hold <code className="text-xs font-bold">Ctrl</code> to display your password
+                      temporarily.
+                    </Trans>
+                  </FormDescription>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            <div className="mt-4 flex items-center gap-x-4">
+              <Button type="submit" disabled={loading} className="flex-1">
+                {t`Sign in`}
+              </Button>
+
+              <Button asChild variant="link" className="px-4">
+                <Link to="/auth/forgot-password">{t`Forgot Password?`}</Link>
+              </Button>
             </div>
             <TabsContent value="wechat">
               <WechatAuth />

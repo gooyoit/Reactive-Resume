@@ -44,7 +44,7 @@ export class AuthModule {
               const callbackURL = configService.getOrThrow("GITHUB_CALLBACK_URL");
 
               return new GitHubStrategy(clientID, clientSecret, callbackURL, userService);
-            } catch (error) {
+            } catch {
               return new DummyStrategy();
             }
           },
@@ -60,7 +60,7 @@ export class AuthModule {
               const callbackURL = configService.getOrThrow("GOOGLE_CALLBACK_URL");
 
               return new GoogleStrategy(clientID, clientSecret, callbackURL, userService);
-            } catch (error) {
+            } catch {
               return new DummyStrategy();
             }
           },
