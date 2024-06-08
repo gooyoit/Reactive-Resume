@@ -22,7 +22,7 @@ msgstr ""
 msgid "You have enabled two-factor authentication successfully."
 msgstr "U hebt tweefactorauthenticatie succesvol ingeschakeld."
 
-#: apps/client/src/pages/home/sections/features/index.tsx:57
+#: apps/client/src/pages/home/sections/features/index.tsx:59
 msgid "{templatesCount} resume templates to choose from"
 msgstr "{templatesCount} CV-sjablonen om uit te kiezen"
 
@@ -54,24 +54,10 @@ msgstr "<0>Tweefactorauthenticatie is momenteel uitgeschakeld.</0> U kunt dit in
 msgid "<0>Two-factor authentication is enabled.</0> You will be asked to enter a code every time you sign in."
 msgstr "<0>Tweefactorauthenticatie is ingeschakeld.</0> Elke keer dat u zich aanmeldt, wordt u gevraagd een code in te voeren."
 
-#: apps/client/src/pages/home/page.tsx:24
-#: apps/client/src/pages/home/sections/hero/index.tsx:40
-msgid "A free and open-source resume builder"
-msgstr "Een gratis en open-source cv-bouwer"
-
-#: apps/client/src/pages/home/components/footer.tsx:21
-#: apps/client/src/pages/home/sections/hero/index.tsx:45
-msgid "A free and open-source resume builder that simplifies the process of creating, updating, and sharing your resume."
-msgstr "Een gratis en open-source cv-bouwer die het proces van het maken, bijwerken en delen van uw cv vereenvoudigt."
-
 #: apps/client/src/pages/builder/_components/toolbar.tsx:53
 #: apps/client/src/pages/builder/sidebars/right/sections/sharing.tsx:29
 msgid "A link has been copied to your clipboard."
 msgstr "Er is een link naar uw klembord gekopieerd."
-
-#: apps/client/src/components/copyright.tsx:29
-msgid "A passion project by <0>Amruth Pillai</0>"
-msgstr "Een passieproject van <0>Amruth Pillai</0>"
 
 #: apps/client/src/pages/auth/forgot-password/page.tsx:57
 msgid "A password reset link should have been sent to your inbox, if an account existed with the email you provided."
@@ -80,6 +66,16 @@ msgstr "Er zou een link om het wachtwoord opnieuw in te stellen naar uw Postvak 
 #: apps/client/src/services/errors/translate-error.ts:43
 msgid "A resume with this slug already exists, please pick a different unique identifier."
 msgstr "Er bestaat al een cv met deze slug, kies een andere unieke identificatie."
+
+#: apps/client/src/pages/home/page.tsx:24
+#: apps/client/src/pages/home/sections/hero/index.tsx:40
+msgid "A simple and fast resume builder"
+msgstr ""
+
+#: apps/client/src/pages/home/components/footer.tsx:21
+#: apps/client/src/pages/home/sections/hero/index.tsx:45
+msgid "A simple, fast and AI supported resume builder that simplifies the process of creating, updating, and sharing your resume."
+msgstr ""
 
 #: apps/client/src/services/errors/translate-error.ts:10
 msgid "A user with this email address and/or username already exists."
@@ -133,7 +129,7 @@ msgstr "Heeft u al een account?"
 msgid "An error occurred while validating the file."
 msgstr "Er is een fout opgetreden tijdens het valideren van het bestand."
 
-#: apps/client/src/pages/home/sections/features/index.tsx:134
+#: apps/client/src/pages/home/sections/features/index.tsx:136
 msgid "and many more..."
 msgstr "en nog veel meer..."
 
@@ -183,7 +179,7 @@ msgstr "Studierichting"
 msgid "Aspect Ratio"
 msgstr "Verhouding"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:51
+#: apps/client/src/pages/home/sections/features/index.tsx:52
 msgid "Available in {languagesCount} languages"
 msgstr "Beschikbaar in {languagesCount} talen"
 
@@ -230,7 +226,6 @@ msgstr "Grensradius"
 msgid "Built with"
 msgstr "Ontwikkeld met"
 
-#: apps/client/src/components/copyright.tsx:27
 #: apps/client/src/pages/home/sections/contributors/index.tsx:20
 msgid "By the community, for the community."
 msgstr "Door de gemeenschap, voor de gemeenschap."
@@ -338,7 +333,7 @@ msgstr "Maak een nieuw item aan"
 msgid "Create a new resume"
 msgstr "Maak een nieuwe CV aan"
 
-#: apps/client/src/pages/auth/login/page.tsx:65
+#: apps/client/src/pages/auth/login/page.tsx:39
 msgctxt "This is a link to create a new account"
 msgid "Create one now"
 msgstr "Maak er nu één aan"
@@ -347,7 +342,7 @@ msgstr "Maak er nu één aan"
 msgid "Create Sample Resume"
 msgstr "Maak een Voorbeeld CV aan"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:62
+#: apps/client/src/pages/home/sections/features/index.tsx:64
 msgid "Custom resume sections"
 msgstr "Aangepaste CV-secties"
 
@@ -355,11 +350,11 @@ msgstr "Aangepaste CV-secties"
 msgid "Custom Section"
 msgstr "Aangepaste Sectie"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:60
+#: apps/client/src/pages/home/sections/features/index.tsx:62
 msgid "Customisable colour palettes"
 msgstr "Aanpasbare kleurpaletten"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:61
+#: apps/client/src/pages/home/sections/features/index.tsx:63
 msgid "Customisable layouts"
 msgstr "Aanpasbare lay-outs"
 
@@ -406,7 +401,7 @@ msgstr "Account Verwijderen"
 msgid "Description"
 msgstr "Beschrijving"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:58
+#: apps/client/src/pages/home/sections/features/index.tsx:60
 msgid "Design single/multi page resumes"
 msgstr "Ontwerp CV's met één of meerdere pagina's"
 
@@ -429,7 +424,7 @@ msgstr "Verwijder"
 msgid "Documentation"
 msgstr "Documentatie"
 
-#: apps/client/src/pages/auth/login/page.tsx:62
+#: apps/client/src/pages/auth/login/page.tsx:36
 msgid "Don't have an account?"
 msgstr "Nog geen account?"
 
@@ -486,8 +481,9 @@ msgstr "Wijzigen"
 msgid "Effects"
 msgstr "Effecten"
 
+#: apps/client/src/pages/auth/_components/local-auth.tsx:56
+#: apps/client/src/pages/auth/_components/wechat-auth.tsx:56
 #: apps/client/src/pages/auth/forgot-password/page.tsx:82
-#: apps/client/src/pages/auth/login/page.tsx:90
 #: apps/client/src/pages/auth/register/page.tsx:140
 #: apps/client/src/pages/builder/sidebars/left/sections/basics.tsx:54
 #: apps/client/src/pages/dashboard/settings/_sections/account.tsx:180
@@ -547,10 +543,6 @@ msgstr "Bestand"
 msgid "Filetype"
 msgstr "Bestandstype"
 
-#: apps/client/src/pages/home/sections/hero/index.tsx:38
-msgid "Finally,"
-msgstr "Tenslotte,"
-
 #: apps/client/src/components/ai-actions.tsx:90
 msgid "Fix Spelling & Grammar"
 msgstr "Spelling en Grammatica Verbeteren"
@@ -579,7 +571,8 @@ msgstr "Hier kunt u bijvoorbeeld informatie noteren over naar welke bedrijven u 
 msgid "Forget"
 msgstr "Vergeten"
 
-#: apps/client/src/pages/auth/login/page.tsx:126
+#: apps/client/src/pages/auth/_components/local-auth.tsx:89
+#: apps/client/src/pages/auth/_components/wechat-auth.tsx:89
 msgid "Forgot Password?"
 msgstr "Wachtwoord Vergeten?"
 
@@ -596,7 +589,7 @@ msgstr "Formaat"
 msgid "Found a bug, or have an idea for a new feature?"
 msgstr "Heb je een bug gevonden of heb je een idee voor een nieuwe functie?"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:46
+#: apps/client/src/pages/home/sections/features/index.tsx:47
 msgid "Free, forever"
 msgstr "Gratis, voor altijd"
 
@@ -612,6 +605,19 @@ msgstr "Volledige Naam"
 #: apps/client/src/pages/dashboard/resumes/_dialogs/resume.tsx:200
 msgid "Generate a random title for your resume"
 msgstr "Genereer een willekeurige titel voor uw CV"
+
+#: apps/client/src/components/copyright.tsx:35
+#: apps/client/src/pages/dashboard/settings/page.tsx:16
+#: apps/client/src/pages/home/components/footer.tsx:18
+#: apps/client/src/pages/home/page.tsx:24
+#: apps/client/src/pages/public/page.tsx:73
+#: apps/client/src/pages/public/page.tsx:94
+msgid "Generative Resume"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/logo-cloud/index.tsx:39
+msgid "Generative Resume has helped people land jobs at these great companies:"
+msgstr "Reactive Resume heeft mensen aan een baan geholpen bij deze geweldige bedrijven:"
 
 #: apps/client/src/pages/home/sections/hero/call-to-action.tsx:32
 msgid "Get Started"
@@ -634,7 +640,7 @@ msgstr "Geef uw oude CV een nieuwe naam."
 msgid "Go to Dashboard"
 msgstr "Ga naar het Dashboard"
 
-#: apps/client/src/pages/auth/_components/social-auth.tsx:31
+#: apps/client/src/pages/auth/_components/social-auth.tsx:44
 msgid "Google"
 msgstr "Google"
 
@@ -642,6 +648,7 @@ msgstr "Google"
 msgid "Grayscale"
 msgstr "Grijswaarden"
 
+#: apps/client/src/pages/auth/login/page.tsx:56
 #: apps/client/src/pages/dashboard/resumes/page.tsx:43
 msgid "Grid"
 msgstr "Raster"
@@ -672,7 +679,8 @@ msgstr "Verbergen"
 msgid "Hide Icons"
 msgstr "Pictogrammen Verbergen"
 
-#: apps/client/src/pages/auth/login/page.tsx:110
+#: apps/client/src/pages/auth/_components/local-auth.tsx:75
+#: apps/client/src/pages/auth/_components/wechat-auth.tsx:75
 #: apps/client/src/pages/auth/register/page.tsx:166
 #: apps/client/src/pages/auth/reset-password/page.tsx:88
 msgid "Hold <0>Ctrl</0> to display your password temporarily."
@@ -682,7 +690,7 @@ msgstr "Houd <0>Ctrl</0> ingedrukt om uw wachtwoord tijdelijk weer te geven."
 msgid "Horizontal"
 msgstr "Horizontaal"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:67
+#: apps/client/src/pages/home/sections/features/index.tsx:69
 msgid "Host your resume publicly"
 msgstr "Publiceer uw CV"
 
@@ -832,15 +840,11 @@ msgstr "Brief"
 msgid "Level"
 msgstr "Niveau"
 
-#: apps/client/src/components/copyright.tsx:16
-msgid "Licensed under <0>MIT</0>"
-msgstr "Gelicentieerd onder <0>MIT</0>"
-
 #: apps/client/src/pages/dashboard/settings/_sections/profile.tsx:86
 msgid "Light"
 msgstr "Licht"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:69
+#: apps/client/src/pages/home/sections/features/index.tsx:71
 msgid "Light or dark theme"
 msgstr "Licht of donker thema"
 
@@ -853,6 +857,7 @@ msgstr "Regelafstand"
 msgid "LinkedIn, JSON Resume, etc."
 msgstr "LinkedIn, JSON CV, enz."
 
+#: apps/client/src/pages/auth/login/page.tsx:60
 #: apps/client/src/pages/dashboard/resumes/page.tsx:47
 msgid "List"
 msgstr "Lijst"
@@ -871,7 +876,7 @@ msgstr "Locatie"
 msgid "Lock"
 msgstr "Vergrendelen"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:64
+#: apps/client/src/pages/home/sections/features/index.tsx:66
 msgid "Lock a resume to prevent editing"
 msgstr "Vergrendel een CV om bewerking te voorkomen"
 
@@ -892,7 +897,7 @@ msgstr "Bent u uw apparaat kwijt?"
 msgid "Main"
 msgstr "Algemeen"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:59
+#: apps/client/src/pages/home/sections/features/index.tsx:61
 msgid "Manage multiple resumes"
 msgstr "Meerdere CV's beheren"
 
@@ -914,7 +919,7 @@ msgstr "maart 2023 - Heden"
 msgid "Margin"
 msgstr "Marge"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:48
+#: apps/client/src/pages/home/sections/features/index.tsx:49
 msgid "MIT License"
 msgstr "MIT Licentie"
 
@@ -948,7 +953,7 @@ msgstr "Nieuw Wachtwoord"
 msgid "No results found"
 msgstr "Geen resultaten gevonden"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:49
+#: apps/client/src/pages/home/sections/features/index.tsx:50
 msgid "No user tracking or advertising"
 msgstr "Geen tracking van gebruikers en geen reclame"
 
@@ -978,7 +983,7 @@ msgstr "Oeps, de server gaf een fout."
 msgid "Open"
 msgstr "Open"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:47
+#: apps/client/src/pages/home/sections/features/index.tsx:48
 msgid "Open Source"
 msgstr "Open Source"
 
@@ -989,7 +994,7 @@ msgid "OpenAI did not return any choices for your text."
 msgstr "OpenAI gaf geen keuzen voor uw text."
 
 #: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:52
-#: apps/client/src/pages/home/sections/features/index.tsx:52
+#: apps/client/src/pages/home/sections/features/index.tsx:53
 msgid "OpenAI Integration"
 msgstr "OpenAI-Integratie"
 
@@ -997,11 +1002,6 @@ msgstr "OpenAI-Integratie"
 #: apps/client/src/pages/builder/sidebars/right/sections/typography.tsx:168
 msgid "Options"
 msgstr "Opties"
-
-#: apps/client/src/pages/auth/layout.tsx:47
-msgctxt "The user can either login with email/password, or continue with GitHub or Google."
-msgid "or continue with"
-msgstr "of ga verder met"
 
 #: apps/client/src/pages/builder/sidebars/left/dialogs/volunteer.tsx:39
 msgid "Organization"
@@ -1016,7 +1016,8 @@ msgstr "Pagina"
 msgid "Page {0}"
 msgstr "Pagina {0}"
 
-#: apps/client/src/pages/auth/login/page.tsx:105
+#: apps/client/src/pages/auth/_components/local-auth.tsx:70
+#: apps/client/src/pages/auth/_components/wechat-auth.tsx:70
 #: apps/client/src/pages/auth/register/page.tsx:161
 #: apps/client/src/pages/auth/reset-password/page.tsx:83
 #: apps/client/src/pages/dashboard/settings/_sections/security.tsx:76
@@ -1027,7 +1028,7 @@ msgstr "Wachtwoord"
 msgid "PDF"
 msgstr "PDF"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:63
+#: apps/client/src/pages/home/sections/features/index.tsx:65
 msgid "Personal notes for each resume"
 msgstr "Persoonlijke notities voor elk CV"
 
@@ -1039,7 +1040,7 @@ msgstr "Telefoon"
 msgid "Photograph by Patrick Tomasso"
 msgstr "Foto door Patrick Tomasso"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:66
+#: apps/client/src/pages/home/sections/features/index.tsx:68
 msgid "Pick any font from Google Fonts"
 msgstr "Kies een lettertype uit Google Fonts"
 
@@ -1073,7 +1074,7 @@ msgstr "Positie"
 msgid "Position"
 msgstr "Positie"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:96
+#: apps/client/src/pages/home/sections/features/index.tsx:98
 msgid "Powered by"
 msgstr "Mogelijk gemaakt door"
 
@@ -1112,34 +1113,24 @@ msgstr "Uitgever"
 msgid "Raise an issue"
 msgstr "Probleem aankaarten"
 
-#: apps/client/src/components/copyright.tsx:35
 #: apps/client/src/pages/auth/backup-otp/page.tsx:52
 #: apps/client/src/pages/auth/forgot-password/page.tsx:49
-#: apps/client/src/pages/auth/login/page.tsx:55
+#: apps/client/src/pages/auth/login/page.tsx:29
 #: apps/client/src/pages/auth/register/page.tsx:64
 #: apps/client/src/pages/auth/reset-password/page.tsx:60
 #: apps/client/src/pages/auth/verify-email/page.tsx:43
 #: apps/client/src/pages/auth/verify-otp/page.tsx:52
 #: apps/client/src/pages/builder/page.tsx:43
 #: apps/client/src/pages/dashboard/resumes/page.tsx:20
-#: apps/client/src/pages/dashboard/settings/page.tsx:16
-#: apps/client/src/pages/home/components/footer.tsx:18
 #: apps/client/src/pages/home/meta/privacy-policy/page.tsx:10
-#: apps/client/src/pages/home/page.tsx:24
-#: apps/client/src/pages/public/page.tsx:73
-#: apps/client/src/pages/public/page.tsx:94
 msgid "Reactive Resume"
 msgstr "Reactive Resume"
-
-#: apps/client/src/pages/home/sections/logo-cloud/index.tsx:39
-msgid "Generative Resume has helped people land jobs at these great companies:"
-msgstr "Reactive Resume heeft mensen aan een baan geholpen bij deze geweldige bedrijven:"
 
 #: apps/client/src/pages/home/sections/support/index.tsx:12
 msgid "Reactive Resume is a free and open-source project crafted mostly by me, and your support would be greatly appreciated. If you're inclined to contribute, and only if you can afford to, consider making a donation through any of the listed platforms. Additionally, donations to Reactive Resume through Open Collective are tax-exempt, as the project is fiscally hosted by Open Collective Europe."
 msgstr "Reactive Resume is een gratis en open-source project dat grotendeels door mij is gemaakt, en uw steun zou zeer op prijs worden gesteld. Als u wilt bijdragen, en alleen als u het zich kunt veroorloven, overweeg dan een donatie te doen via één van de genoemde platforms. Bovendien zijn donaties aan Reactive Resume via Open Collective belastingvrij, omdat het project fiscaal gehost wordt door Open Collective Europe."
 
-#: apps/client/src/pages/home/sections/features/index.tsx:107
+#: apps/client/src/pages/home/sections/features/index.tsx:109
 msgid "Reactive Resume is a passion project of over 3 years of hard work, and with that comes a number of re-iterated ideas and features that have been built to (near) perfection."
 msgstr "Reactief Resume is een passieproject van meer dan 3 jaar hard werk, en daar komen een aantal ideeën en functies bij kijken die - na vele iteraties - (bijna) tot perfectie zijn uitgebouwd."
 
@@ -1198,7 +1189,7 @@ msgstr "CV's"
 msgid "Resumes Generated"
 msgstr "CV's Gegenereerd"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:105
+#: apps/client/src/pages/home/sections/features/index.tsx:107
 msgid "Rich in features, not in pricing."
 msgstr "Rijk aan functies, niet aan prijzen."
 
@@ -1238,7 +1229,7 @@ msgstr "Zoeken naar een lettertype-variant"
 msgid "Search for a language"
 msgstr "Een taal zoeken"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:56
+#: apps/client/src/pages/home/sections/features/index.tsx:58
 msgid "Secure with two-factor authentication"
 msgstr "Beveiligen met tweestapsverificatie"
 
@@ -1246,7 +1237,7 @@ msgstr "Beveiligen met tweestapsverificatie"
 msgid "Security"
 msgstr "Beveiliging"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:50
+#: apps/client/src/pages/home/sections/features/index.tsx:51
 msgid "Self-host with Docker"
 msgstr "Zelf hosten met Docker"
 
@@ -1294,8 +1285,9 @@ msgstr "Paginanummers Weergeven"
 msgid "Sidebar"
 msgstr "Zijbalk"
 
+#: apps/client/src/pages/auth/_components/local-auth.tsx:86
+#: apps/client/src/pages/auth/_components/wechat-auth.tsx:86
 #: apps/client/src/pages/auth/backup-otp/page.tsx:102
-#: apps/client/src/pages/auth/login/page.tsx:122
 #: apps/client/src/pages/auth/verify-otp/page.tsx:92
 msgid "Sign in"
 msgstr "Inloggen"
@@ -1304,30 +1296,30 @@ msgstr "Inloggen"
 msgid "Sign in now"
 msgstr "Nu inloggen"
 
-#: apps/client/src/pages/auth/login/page.tsx:55
-#: apps/client/src/pages/auth/login/page.tsx:60
+#: apps/client/src/pages/auth/login/page.tsx:29
+#: apps/client/src/pages/auth/login/page.tsx:34
 msgid "Sign in to your account"
 msgstr "Log in op uw account"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:55
+#: apps/client/src/pages/home/sections/features/index.tsx:57
 msgid "Sign in with Email"
 msgstr "Log in met je E-mailadres"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:53
+#: apps/client/src/pages/home/sections/features/index.tsx:54
 msgid "Sign in with GitHub"
 msgstr "Log in met GitHub"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:54
+#: apps/client/src/pages/home/sections/features/index.tsx:55
 msgid "Sign in with Google"
 msgstr "Log in met Google"
+
+#: apps/client/src/pages/home/sections/features/index.tsx:56
+msgid "Sign in with Wechat"
+msgstr ""
 
 #: apps/client/src/pages/auth/register/page.tsx:177
 msgid "Sign up"
 msgstr "Registreren"
-
-#: apps/client/src/pages/auth/login/page.tsx:74
-msgid "Signing in via email is currently disabled by the administrator."
-msgstr "Aanmelden via e-mail is momenteel uitgeschakeld door de beheerder."
 
 #: apps/client/src/pages/auth/register/page.tsx:82
 msgid "Signups are currently disabled by the administrator."
@@ -1408,7 +1400,7 @@ msgstr "Steun de app door te doneren naar uw vermogen!"
 msgid "Supporting Reactive Resume"
 msgstr "Reactive Resume steunen"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:65
+#: apps/client/src/pages/home/sections/features/index.tsx:67
 msgid "Supports A4/Letter page formats"
 msgstr "Ondersteunt A4/Brief pagina-indelingen"
 
@@ -1496,7 +1488,7 @@ msgstr "Schakel Pagina-Einde Lijn Aan of Uit"
 msgid "Toggle Page Numbers"
 msgstr "Paginanummers Aan- of Uitzetten"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:68
+#: apps/client/src/pages/home/sections/features/index.tsx:70
 msgid "Track views and downloads"
 msgstr "Houd weergaven en downloads bij"
 
@@ -1615,10 +1607,6 @@ msgstr "Controleer of tweestapsverificatie correct is ingesteld"
 msgid "Verify your email address"
 msgstr "Verifieër uw e-mailadres"
 
-#: apps/client/src/pages/home/sections/hero/index.tsx:26
-msgid "Version 4"
-msgstr "Versie 4"
-
 #: apps/client/src/pages/builder/sidebars/right/sections/statistics.tsx:51
 msgid "Views"
 msgstr "Weergaven"
@@ -1645,9 +1633,9 @@ msgstr "Wij verifiëren uw e-mailadres enkel om ervoor te zorgen dat wij u een l
 msgid "Website"
 msgstr "Website"
 
-#: apps/client/src/pages/home/sections/hero/index.tsx:32
-msgid "What's new in the latest version"
-msgstr "Wat is er nieuw in de laatste versie"
+#: apps/client/src/pages/auth/_components/social-auth.tsx:31
+msgid "Wechat"
+msgstr ""
 
 #: apps/client/src/pages/builder/sidebars/left/dialogs/custom-section.tsx:157
 #: apps/client/src/pages/builder/sidebars/left/dialogs/interests.tsx:68
@@ -1656,7 +1644,8 @@ msgstr "Wat is er nieuw in de laatste versie"
 msgid "You can add multiple keywords by separating them with a comma or pressing enter."
 msgstr "U kunt meerdere trefwoorden toevoegen door ze te scheiden met een komma of door op enter te drukken."
 
-#: apps/client/src/pages/auth/login/page.tsx:94
+#: apps/client/src/pages/auth/_components/local-auth.tsx:60
+#: apps/client/src/pages/auth/_components/wechat-auth.tsx:60
 msgid "You can also enter your username."
 msgstr "U kunt ook uw gebruikersnaam invoeren."
 
@@ -1673,8 +1662,8 @@ msgid "You have the option to <0>obtain your own OpenAI API key</0>. This key em
 msgstr "U heeft de mogelijkheid om <0>uw eigen OpenAI API-sleutel te verkrijgen</0>. Met deze sleutel kunt u de API naar eigen inzicht gebruiken. Als u de AI-functies in Reactive Resume helemaal wilt uitschakelen, kunt u de sleutel ook gewoon uit uw instellingen verwijderen."
 
 #: apps/client/src/pages/auth/verify-email/page.tsx:50
-msgid "You should have received an email from <0>Reactive Resume</0> with a link to verify your account."
-msgstr "U zou een e-mail van <0>Reactive Resume</0> moeten hebben ontvangen met een koppeling om uw account te verifiëren."
+msgid "You should have received an email from <0>Generative Resume</0> with a link to verify your account."
+msgstr ""
 
 #: apps/client/src/pages/auth/forgot-password/page.tsx:49
 #: apps/client/src/pages/auth/forgot-password/page.tsx:54
@@ -1708,4 +1697,3 @@ msgstr "Inzoomen"
 #: apps/client/src/pages/builder/_components/toolbar.tsx:100
 msgid "Zoom Out"
 msgstr "Uitzoomen"
-

@@ -22,7 +22,7 @@ msgstr ""
 msgid "You have enabled two-factor authentication successfully."
 msgstr "आपने दो-कारक प्रमाणीकरण सफलतापूर्वक सक्षम कर लिया है।"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:57
+#: apps/client/src/pages/home/sections/features/index.tsx:59
 msgid "{templatesCount} resume templates to choose from"
 msgstr "चुनने के लिए {templatesCount} बायोडाटा टेम्प्लेट"
 
@@ -54,24 +54,10 @@ msgstr "<0>दो-कारक प्रमाणीकरण वर्तमा
 msgid "<0>Two-factor authentication is enabled.</0> You will be asked to enter a code every time you sign in."
 msgstr "<0>दो-कारक प्रमाणीकरण सक्षम है।</0> हर बार साइन इन करने पर आपसे एक कोड दर्ज करने के लिए कहा जाएगा।"
 
-#: apps/client/src/pages/home/page.tsx:24
-#: apps/client/src/pages/home/sections/hero/index.tsx:40
-msgid "A free and open-source resume builder"
-msgstr "एक मुफ़्त और ओपन-सोर्स रेज़्युमे बिल्डर"
-
-#: apps/client/src/pages/home/components/footer.tsx:21
-#: apps/client/src/pages/home/sections/hero/index.tsx:45
-msgid "A free and open-source resume builder that simplifies the process of creating, updating, and sharing your resume."
-msgstr "एक मुफ़्त और ओपन-सोर्स रेज़्यूमे बिल्डर जो आपके रेज़्यूमे को बनाने, अपडेट करने और साझा करने की प्रक्रिया को सरल बनाता है।"
-
 #: apps/client/src/pages/builder/_components/toolbar.tsx:53
 #: apps/client/src/pages/builder/sidebars/right/sections/sharing.tsx:29
 msgid "A link has been copied to your clipboard."
 msgstr "लिंक को क्लिपबोर्ड में कॉपी किया गया है।"
-
-#: apps/client/src/components/copyright.tsx:29
-msgid "A passion project by <0>Amruth Pillai</0>"
-msgstr "<0>अमृत पिल्लई</0> का एक जुनूनी प्रोजेक्ट"
 
 #: apps/client/src/pages/auth/forgot-password/page.tsx:57
 msgid "A password reset link should have been sent to your inbox, if an account existed with the email you provided."
@@ -80,6 +66,16 @@ msgstr "यदि आपके द्वारा प्रदान किए �
 #: apps/client/src/services/errors/translate-error.ts:43
 msgid "A resume with this slug already exists, please pick a different unique identifier."
 msgstr "इस स्लग के साथ एक बायोडाटा पहले से मौजूद है, कृपया एक अलग विशिष्ट पहचानकर्ता चुनें।"
+
+#: apps/client/src/pages/home/page.tsx:24
+#: apps/client/src/pages/home/sections/hero/index.tsx:40
+msgid "A simple and fast resume builder"
+msgstr ""
+
+#: apps/client/src/pages/home/components/footer.tsx:21
+#: apps/client/src/pages/home/sections/hero/index.tsx:45
+msgid "A simple, fast and AI supported resume builder that simplifies the process of creating, updating, and sharing your resume."
+msgstr ""
 
 #: apps/client/src/services/errors/translate-error.ts:10
 msgid "A user with this email address and/or username already exists."
@@ -133,7 +129,7 @@ msgstr "क्या आपके पास पहले से एक खात
 msgid "An error occurred while validating the file."
 msgstr "फ़ाइल बनाते समय कोई त्रुटि आई"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:134
+#: apps/client/src/pages/home/sections/features/index.tsx:136
 msgid "and many more..."
 msgstr "और भी कई..."
 
@@ -183,7 +179,7 @@ msgstr "अध्ययन का क्षेत्र"
 msgid "Aspect Ratio"
 msgstr "आकार अनुपात"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:51
+#: apps/client/src/pages/home/sections/features/index.tsx:52
 msgid "Available in {languagesCount} languages"
 msgstr "{languagesCount} भाषाओं में उपलब्ध है"
 
@@ -230,7 +226,6 @@ msgstr "सीमा त्रिज्या"
 msgid "Built with"
 msgstr "के साथ निर्मित"
 
-#: apps/client/src/components/copyright.tsx:27
 #: apps/client/src/pages/home/sections/contributors/index.tsx:20
 msgid "By the community, for the community."
 msgstr "समुदाय द्वारा, समुदाय के लिए."
@@ -338,7 +333,7 @@ msgstr "एक नया आइटम बनाएं"
 msgid "Create a new resume"
 msgstr "नमूना बायोडाटा बनाएं"
 
-#: apps/client/src/pages/auth/login/page.tsx:65
+#: apps/client/src/pages/auth/login/page.tsx:39
 msgctxt "This is a link to create a new account"
 msgid "Create one now"
 msgstr "अभी एक बनाएं"
@@ -347,7 +342,7 @@ msgstr "अभी एक बनाएं"
 msgid "Create Sample Resume"
 msgstr "नमूना बायोडाटा बनाएं"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:62
+#: apps/client/src/pages/home/sections/features/index.tsx:64
 msgid "Custom resume sections"
 msgstr "कस्टम बायोडाटा अनुभाग"
 
@@ -355,11 +350,11 @@ msgstr "कस्टम बायोडाटा अनुभाग"
 msgid "Custom Section"
 msgstr "कस्टम अनुभाग"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:60
+#: apps/client/src/pages/home/sections/features/index.tsx:62
 msgid "Customisable colour palettes"
 msgstr "अनुकूलन योग्य रंग पट्टियाँ"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:61
+#: apps/client/src/pages/home/sections/features/index.tsx:63
 msgid "Customisable layouts"
 msgstr "अनुकूलन योग्य लेआउट"
 
@@ -406,7 +401,7 @@ msgstr "खाता हटाएँ|"
 msgid "Description"
 msgstr "विवरण"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:58
+#: apps/client/src/pages/home/sections/features/index.tsx:60
 msgid "Design single/multi page resumes"
 msgstr "सिंगल/मल्टी पेज बायोडाटा डिज़ाइन करें"
 
@@ -429,7 +424,7 @@ msgstr "रद्द करें"
 msgid "Documentation"
 msgstr "आलेख"
 
-#: apps/client/src/pages/auth/login/page.tsx:62
+#: apps/client/src/pages/auth/login/page.tsx:36
 msgid "Don't have an account?"
 msgstr "आपका खाता नहीं है?"
 
@@ -486,8 +481,9 @@ msgstr "एडिट करें"
 msgid "Effects"
 msgstr "प्रभाव"
 
+#: apps/client/src/pages/auth/_components/local-auth.tsx:56
+#: apps/client/src/pages/auth/_components/wechat-auth.tsx:56
 #: apps/client/src/pages/auth/forgot-password/page.tsx:82
-#: apps/client/src/pages/auth/login/page.tsx:90
 #: apps/client/src/pages/auth/register/page.tsx:140
 #: apps/client/src/pages/builder/sidebars/left/sections/basics.tsx:54
 #: apps/client/src/pages/dashboard/settings/_sections/account.tsx:180
@@ -547,10 +543,6 @@ msgstr "फ़ाइल"
 msgid "Filetype"
 msgstr "फाइल का प्रकार"
 
-#: apps/client/src/pages/home/sections/hero/index.tsx:38
-msgid "Finally,"
-msgstr "अंत में,"
-
 #: apps/client/src/components/ai-actions.tsx:90
 msgid "Fix Spelling & Grammar"
 msgstr "वर्तनी और व्याकरण ठीक करें"
@@ -579,7 +571,8 @@ msgstr "उदाहरण के लिए, आपने किन कंपन
 msgid "Forget"
 msgstr "हटाएं"
 
-#: apps/client/src/pages/auth/login/page.tsx:126
+#: apps/client/src/pages/auth/_components/local-auth.tsx:89
+#: apps/client/src/pages/auth/_components/wechat-auth.tsx:89
 msgid "Forgot Password?"
 msgstr "पासवर्ड भूल गए?"
 
@@ -596,7 +589,7 @@ msgstr "फॉर्मेट"
 msgid "Found a bug, or have an idea for a new feature?"
 msgstr "कोई बग मिला, या किसी नई सुविधा के बारे में कोई विचार है?"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:46
+#: apps/client/src/pages/home/sections/features/index.tsx:47
 msgid "Free, forever"
 msgstr "हमेशा के लिए मुफ़्त"
 
@@ -612,6 +605,19 @@ msgstr "पूरा नाम"
 #: apps/client/src/pages/dashboard/resumes/_dialogs/resume.tsx:200
 msgid "Generate a random title for your resume"
 msgstr "अपने बायोडाटा के लिए एक यादृच्छिक शीर्षक बनाएं"
+
+#: apps/client/src/components/copyright.tsx:35
+#: apps/client/src/pages/dashboard/settings/page.tsx:16
+#: apps/client/src/pages/home/components/footer.tsx:18
+#: apps/client/src/pages/home/page.tsx:24
+#: apps/client/src/pages/public/page.tsx:73
+#: apps/client/src/pages/public/page.tsx:94
+msgid "Generative Resume"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/logo-cloud/index.tsx:39
+msgid "Generative Resume has helped people land jobs at these great companies:"
+msgstr "रिएक्टिव रेज़्यूमे ने लोगों को इन महान कंपनियों में नौकरियां पाने में मदद की है:"
 
 #: apps/client/src/pages/home/sections/hero/call-to-action.tsx:32
 msgid "Get Started"
@@ -634,7 +640,7 @@ msgstr "अपने पुराने बायोडाटा को नय�
 msgid "Go to Dashboard"
 msgstr "डैशबोर्ड पर जाएँ"
 
-#: apps/client/src/pages/auth/_components/social-auth.tsx:31
+#: apps/client/src/pages/auth/_components/social-auth.tsx:44
 msgid "Google"
 msgstr "गूगल"
 
@@ -642,6 +648,7 @@ msgstr "गूगल"
 msgid "Grayscale"
 msgstr "ग्रेस्केल"
 
+#: apps/client/src/pages/auth/login/page.tsx:56
 #: apps/client/src/pages/dashboard/resumes/page.tsx:43
 msgid "Grid"
 msgstr "ग्रिड"
@@ -672,7 +679,8 @@ msgstr "छुपायें"
 msgid "Hide Icons"
 msgstr "ऑइकन छुपायें"
 
-#: apps/client/src/pages/auth/login/page.tsx:110
+#: apps/client/src/pages/auth/_components/local-auth.tsx:75
+#: apps/client/src/pages/auth/_components/wechat-auth.tsx:75
 #: apps/client/src/pages/auth/register/page.tsx:166
 #: apps/client/src/pages/auth/reset-password/page.tsx:88
 msgid "Hold <0>Ctrl</0> to display your password temporarily."
@@ -682,7 +690,7 @@ msgstr "<0>Ctrl दबाए रखें</0> अपना पासवर्ड
 msgid "Horizontal"
 msgstr "क्षैतिज"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:67
+#: apps/client/src/pages/home/sections/features/index.tsx:69
 msgid "Host your resume publicly"
 msgstr "अपना बायोडाटा सार्वजनिक रूप से होस्ट करें"
 
@@ -832,15 +840,11 @@ msgstr "अक्षर"
 msgid "Level"
 msgstr "स्तर"
 
-#: apps/client/src/components/copyright.tsx:16
-msgid "Licensed under <0>MIT</0>"
-msgstr "<0>एमआईटी के तहत लाइसेंस प्राप्त</0>"
-
 #: apps/client/src/pages/dashboard/settings/_sections/profile.tsx:86
 msgid "Light"
 msgstr "हल्का रंग"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:69
+#: apps/client/src/pages/home/sections/features/index.tsx:71
 msgid "Light or dark theme"
 msgstr "प्रकाश या अंधेरा थीम"
 
@@ -853,6 +857,7 @@ msgstr "पंक्ति ऊँचाई"
 msgid "LinkedIn, JSON Resume, etc."
 msgstr "लिंक्डइन, JSON बायोडाटा, आदि।"
 
+#: apps/client/src/pages/auth/login/page.tsx:60
 #: apps/client/src/pages/dashboard/resumes/page.tsx:47
 msgid "List"
 msgstr "सूची"
@@ -871,7 +876,7 @@ msgstr "स्थान"
 msgid "Lock"
 msgstr "लॉक करें"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:64
+#: apps/client/src/pages/home/sections/features/index.tsx:66
 msgid "Lock a resume to prevent editing"
 msgstr "संपादन को रोकने के लिए बायोडाटा को लॉक करें"
 
@@ -892,7 +897,7 @@ msgstr "क्या आपका उपकरण खो गया?"
 msgid "Main"
 msgstr "मुख्‍य"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:59
+#: apps/client/src/pages/home/sections/features/index.tsx:61
 msgid "Manage multiple resumes"
 msgstr "एकाधिक बायोडाटा प्रबंधित करें"
 
@@ -914,7 +919,7 @@ msgstr "मार्च 2023 - वर्तमान"
 msgid "Margin"
 msgstr "अंतर"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:48
+#: apps/client/src/pages/home/sections/features/index.tsx:49
 msgid "MIT License"
 msgstr "मआईटी लाईसन्स"
 
@@ -948,7 +953,7 @@ msgstr "नया पासवर्ड"
 msgid "No results found"
 msgstr "कोई परिणाम नहीं मिला"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:49
+#: apps/client/src/pages/home/sections/features/index.tsx:50
 msgid "No user tracking or advertising"
 msgstr "कोई उपयोगकर्ता ट्रैकिंग या विज्ञापन नहीं"
 
@@ -978,7 +983,7 @@ msgstr "ओह, सर्वर ने एक त्रुटि लौटा �
 msgid "Open"
 msgstr "खोलें"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:47
+#: apps/client/src/pages/home/sections/features/index.tsx:48
 msgid "Open Source"
 msgstr "खुला स्त्रोत"
 
@@ -989,7 +994,7 @@ msgid "OpenAI did not return any choices for your text."
 msgstr "OpenAI ने आपके टेक्स्ट के लिए कोई विकल्प नहीं लौटाया।"
 
 #: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:52
-#: apps/client/src/pages/home/sections/features/index.tsx:52
+#: apps/client/src/pages/home/sections/features/index.tsx:53
 msgid "OpenAI Integration"
 msgstr "OpenAI एकीकरण"
 
@@ -997,11 +1002,6 @@ msgstr "OpenAI एकीकरण"
 #: apps/client/src/pages/builder/sidebars/right/sections/typography.tsx:168
 msgid "Options"
 msgstr "विकल्प"
-
-#: apps/client/src/pages/auth/layout.tsx:47
-msgctxt "The user can either login with email/password, or continue with GitHub or Google."
-msgid "or continue with"
-msgstr "या जारी रखें"
 
 #: apps/client/src/pages/builder/sidebars/left/dialogs/volunteer.tsx:39
 msgid "Organization"
@@ -1016,7 +1016,8 @@ msgstr "पृष्ठ"
 msgid "Page {0}"
 msgstr "पृष्ठ {0}"
 
-#: apps/client/src/pages/auth/login/page.tsx:105
+#: apps/client/src/pages/auth/_components/local-auth.tsx:70
+#: apps/client/src/pages/auth/_components/wechat-auth.tsx:70
 #: apps/client/src/pages/auth/register/page.tsx:161
 #: apps/client/src/pages/auth/reset-password/page.tsx:83
 #: apps/client/src/pages/dashboard/settings/_sections/security.tsx:76
@@ -1027,7 +1028,7 @@ msgstr "पासवर्ड"
 msgid "PDF"
 msgstr "पीडीएफ"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:63
+#: apps/client/src/pages/home/sections/features/index.tsx:65
 msgid "Personal notes for each resume"
 msgstr "प्रत्येक बायोडाटा के लिए व्यक्तिगत नोट्स"
 
@@ -1039,7 +1040,7 @@ msgstr "फ़ोन"
 msgid "Photograph by Patrick Tomasso"
 msgstr "फ़ोटोग्राफ़ पैट्रिक टोमासो द्वारा"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:66
+#: apps/client/src/pages/home/sections/features/index.tsx:68
 msgid "Pick any font from Google Fonts"
 msgstr "Google फ़ॉन्ट्स से कोई भी फ़ॉन्ट चुनें"
 
@@ -1073,7 +1074,7 @@ msgstr "स्थान"
 msgid "Position"
 msgstr "स्थान"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:96
+#: apps/client/src/pages/home/sections/features/index.tsx:98
 msgid "Powered by"
 msgstr "द्वारा संचालित"
 
@@ -1112,34 +1113,24 @@ msgstr "प्रकाशक"
 msgid "Raise an issue"
 msgstr "एक मुद्दा उठाओ"
 
-#: apps/client/src/components/copyright.tsx:35
 #: apps/client/src/pages/auth/backup-otp/page.tsx:52
 #: apps/client/src/pages/auth/forgot-password/page.tsx:49
-#: apps/client/src/pages/auth/login/page.tsx:55
+#: apps/client/src/pages/auth/login/page.tsx:29
 #: apps/client/src/pages/auth/register/page.tsx:64
 #: apps/client/src/pages/auth/reset-password/page.tsx:60
 #: apps/client/src/pages/auth/verify-email/page.tsx:43
 #: apps/client/src/pages/auth/verify-otp/page.tsx:52
 #: apps/client/src/pages/builder/page.tsx:43
 #: apps/client/src/pages/dashboard/resumes/page.tsx:20
-#: apps/client/src/pages/dashboard/settings/page.tsx:16
-#: apps/client/src/pages/home/components/footer.tsx:18
 #: apps/client/src/pages/home/meta/privacy-policy/page.tsx:10
-#: apps/client/src/pages/home/page.tsx:24
-#: apps/client/src/pages/public/page.tsx:73
-#: apps/client/src/pages/public/page.tsx:94
 msgid "Reactive Resume"
 msgstr "रिएक्टिव रेज़्यूमे"
-
-#: apps/client/src/pages/home/sections/logo-cloud/index.tsx:39
-msgid "Generative Resume has helped people land jobs at these great companies:"
-msgstr "रिएक्टिव रेज़्यूमे ने लोगों को इन महान कंपनियों में नौकरियां पाने में मदद की है:"
 
 #: apps/client/src/pages/home/sections/support/index.tsx:12
 msgid "Reactive Resume is a free and open-source project crafted mostly by me, and your support would be greatly appreciated. If you're inclined to contribute, and only if you can afford to, consider making a donation through any of the listed platforms. Additionally, donations to Reactive Resume through Open Collective are tax-exempt, as the project is fiscally hosted by Open Collective Europe."
 msgstr "रिएक्टिव रेज़्यूमे एक स्वतंत्र और ओपन-सोर्स प्रोजेक्ट है जिसे ज्यादातर मेरे द्वारा तैयार किया गया है, और आपके समर्थन की बहुत सराहना की जाएगी। यदि आप योगदान करने के इच्छुक हैं, और यदि आप इसे वहन कर सकते हैं, तो किसी भी सूचीबद्ध प्लेटफ़ॉर्म के माध्यम से दान करने पर विचार करें। इसके अतिरिक्त, ओपन कलेक्टिव के माध्यम से रिएक्टिव रेज़्यूमे में दान कर-मुक्त है, क्योंकि परियोजना को ओपन कलेक्टिव यूरोप द्वारा वित्तीय रूप से होस्ट किया गया है।"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:107
+#: apps/client/src/pages/home/sections/features/index.tsx:109
 msgid "Reactive Resume is a passion project of over 3 years of hard work, and with that comes a number of re-iterated ideas and features that have been built to (near) perfection."
 msgstr "रिएक्टिव रेज़्युमे 3 वर्षों से अधिक की कड़ी मेहनत का एक जुनूनी प्रोजेक्ट है, और इसके साथ कई बार दोहराए गए विचार और विशेषताएं आती हैं जिन्हें (लगभग) पूर्णता के लिए बनाया गया है।"
 
@@ -1198,7 +1189,7 @@ msgstr "बायोडाटा"
 msgid "Resumes Generated"
 msgstr "बायोडाटा तैयार किया गया"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:105
+#: apps/client/src/pages/home/sections/features/index.tsx:107
 msgid "Rich in features, not in pricing."
 msgstr "सुविधाओं से भरपूर, कीमत से नहीं।"
 
@@ -1238,7 +1229,7 @@ msgstr "फ़ॉन्ट प्रकार खोजें"
 msgid "Search for a language"
 msgstr "एक भाषा के लिए खोज करे"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:56
+#: apps/client/src/pages/home/sections/features/index.tsx:58
 msgid "Secure with two-factor authentication"
 msgstr "दो-कारक प्रमाणीकरण के साथ सुरक्षित"
 
@@ -1246,7 +1237,7 @@ msgstr "दो-कारक प्रमाणीकरण के साथ स�
 msgid "Security"
 msgstr "सुरक्षा"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:50
+#: apps/client/src/pages/home/sections/features/index.tsx:51
 msgid "Self-host with Docker"
 msgstr "डॉकर के साथ स्व-मेज़बान"
 
@@ -1294,8 +1285,9 @@ msgstr "पृष्ठ क्रमांक दिखाएँ"
 msgid "Sidebar"
 msgstr "साइडबार"
 
+#: apps/client/src/pages/auth/_components/local-auth.tsx:86
+#: apps/client/src/pages/auth/_components/wechat-auth.tsx:86
 #: apps/client/src/pages/auth/backup-otp/page.tsx:102
-#: apps/client/src/pages/auth/login/page.tsx:122
 #: apps/client/src/pages/auth/verify-otp/page.tsx:92
 msgid "Sign in"
 msgstr "साइन इन"
@@ -1304,30 +1296,30 @@ msgstr "साइन इन"
 msgid "Sign in now"
 msgstr "साइन इन करें"
 
-#: apps/client/src/pages/auth/login/page.tsx:55
-#: apps/client/src/pages/auth/login/page.tsx:60
+#: apps/client/src/pages/auth/login/page.tsx:29
+#: apps/client/src/pages/auth/login/page.tsx:34
 msgid "Sign in to your account"
 msgstr "अपने अकाउंट मे साइन इन करें."
 
-#: apps/client/src/pages/home/sections/features/index.tsx:55
+#: apps/client/src/pages/home/sections/features/index.tsx:57
 msgid "Sign in with Email"
 msgstr "ईमेल के साथ साइन इन करें"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:53
+#: apps/client/src/pages/home/sections/features/index.tsx:54
 msgid "Sign in with GitHub"
 msgstr "GitHub के साथ साइन इन करें!"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:54
+#: apps/client/src/pages/home/sections/features/index.tsx:55
 msgid "Sign in with Google"
 msgstr "गूगल से साइन इन करें"
+
+#: apps/client/src/pages/home/sections/features/index.tsx:56
+msgid "Sign in with Wechat"
+msgstr ""
 
 #: apps/client/src/pages/auth/register/page.tsx:177
 msgid "Sign up"
 msgstr "रजिस्ट्रेशन"
-
-#: apps/client/src/pages/auth/login/page.tsx:74
-msgid "Signing in via email is currently disabled by the administrator."
-msgstr ""
 
 #: apps/client/src/pages/auth/register/page.tsx:82
 msgid "Signups are currently disabled by the administrator."
@@ -1408,7 +1400,7 @@ msgstr "आप जो कर सकते हैं दान करके ऐ�
 msgid "Supporting Reactive Resume"
 msgstr "रिएक्टिव रेज़्यूमे समर्थन"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:65
+#: apps/client/src/pages/home/sections/features/index.tsx:67
 msgid "Supports A4/Letter page formats"
 msgstr "A4/लेटर पेज फॉर्मेट का समर्थन करता है"
 
@@ -1496,7 +1488,7 @@ msgstr "पेज ब्रेक लाइन टॉगल करें"
 msgid "Toggle Page Numbers"
 msgstr "पेज नंबर टॉगल करें"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:68
+#: apps/client/src/pages/home/sections/features/index.tsx:70
 msgid "Track views and downloads"
 msgstr "दृश्य और डाउनलोड ट्रैक करें"
 
@@ -1615,10 +1607,6 @@ msgstr "सत्यापित करें कि दो-कारक प्�
 msgid "Verify your email address"
 msgstr "अपने ईमेल पते की पुष्टि करें"
 
-#: apps/client/src/pages/home/sections/hero/index.tsx:26
-msgid "Version 4"
-msgstr "संस्करण 4"
-
 #: apps/client/src/pages/builder/sidebars/right/sections/statistics.tsx:51
 msgid "Views"
 msgstr "दृश्य"
@@ -1645,9 +1633,9 @@ msgstr "हम आपके ईमेल पते को केवल यह �
 msgid "Website"
 msgstr "वेबसाइट"
 
-#: apps/client/src/pages/home/sections/hero/index.tsx:32
-msgid "What's new in the latest version"
-msgstr "नवीनतम संस्करण में नया क्या है"
+#: apps/client/src/pages/auth/_components/social-auth.tsx:31
+msgid "Wechat"
+msgstr ""
 
 #: apps/client/src/pages/builder/sidebars/left/dialogs/custom-section.tsx:157
 #: apps/client/src/pages/builder/sidebars/left/dialogs/interests.tsx:68
@@ -1656,7 +1644,8 @@ msgstr "नवीनतम संस्करण में नया क्य�
 msgid "You can add multiple keywords by separating them with a comma or pressing enter."
 msgstr "आप एकाधिक कीवर्ड को अल्पविराम से अलग करके या एंटर दबाकर जोड़ सकते हैं।"
 
-#: apps/client/src/pages/auth/login/page.tsx:94
+#: apps/client/src/pages/auth/_components/local-auth.tsx:60
+#: apps/client/src/pages/auth/_components/wechat-auth.tsx:60
 msgid "You can also enter your username."
 msgstr "आप अपना उपयोगकर्ता नाम भी दर्ज कर सकते हैं."
 
@@ -1673,8 +1662,8 @@ msgid "You have the option to <0>obtain your own OpenAI API key</0>. This key em
 msgstr "आपके पास <0>अपनी स्वयं की OpenAI API कुंजी प्राप्त करने का विकल्प है</0>. यह कुंजी आपको अपनी इच्छानुसार एपीआई का लाभ उठाने का अधिकार देती है। वैकल्पिक रूप से, यदि आप रिएक्टिव रेज़्यूमे में एआई सुविधाओं को पूरी तरह से अक्षम करना चाहते हैं, तो आप बस अपनी सेटिंग्स से कुंजी को हटा सकते हैं।"
 
 #: apps/client/src/pages/auth/verify-email/page.tsx:50
-msgid "You should have received an email from <0>Reactive Resume</0> with a link to verify your account."
-msgstr "आपको अपने खाते को सत्यापित करने के लिंक के साथ <0>रिएक्टिव रेज़्यूमे</0> से एक ईमेल प्राप्त होना चाहिए था।"
+msgid "You should have received an email from <0>Generative Resume</0> with a link to verify your account."
+msgstr ""
 
 #: apps/client/src/pages/auth/forgot-password/page.tsx:49
 #: apps/client/src/pages/auth/forgot-password/page.tsx:54
@@ -1708,4 +1697,3 @@ msgstr "ज़ूम इन"
 #: apps/client/src/pages/builder/_components/toolbar.tsx:100
 msgid "Zoom Out"
 msgstr "ज़ूम आउट"
-

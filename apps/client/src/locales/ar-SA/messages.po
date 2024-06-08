@@ -22,7 +22,7 @@ msgstr ""
 msgid "You have enabled two-factor authentication successfully."
 msgstr "لقد فعلت المصادقة الثنائية بنجاح."
 
-#: apps/client/src/pages/home/sections/features/index.tsx:57
+#: apps/client/src/pages/home/sections/features/index.tsx:59
 msgid "{templatesCount} resume templates to choose from"
 msgstr "{templatesCount} قوالب السيرة الذاتية للاختيار من بينها"
 
@@ -54,24 +54,10 @@ msgstr "<0>المصادقة الثنائية معطلة حاليا.</0> يمكن
 msgid "<0>Two-factor authentication is enabled.</0> You will be asked to enter a code every time you sign in."
 msgstr "<0>المصادقة الثنائية عامل مفعل.</0> سوف يطلب منك إدخال رمز في كل مرة تقوم فيها بتسجيل الدخول."
 
-#: apps/client/src/pages/home/page.tsx:24
-#: apps/client/src/pages/home/sections/hero/index.tsx:40
-msgid "A free and open-source resume builder"
-msgstr "أداة إنشاء سيرة ذاتية مجانية ومفتوحة المصدر"
-
-#: apps/client/src/pages/home/components/footer.tsx:21
-#: apps/client/src/pages/home/sections/hero/index.tsx:45
-msgid "A free and open-source resume builder that simplifies the process of creating, updating, and sharing your resume."
-msgstr "أداة إنشاء سيرة ذاتية مجانية ومفتوحة المصدر تعمل على تبسيط عملية إنشاء سيرتك الذاتية وتحديثها ومشاركتها."
-
 #: apps/client/src/pages/builder/_components/toolbar.tsx:53
 #: apps/client/src/pages/builder/sidebars/right/sections/sharing.tsx:29
 msgid "A link has been copied to your clipboard."
 msgstr "تم نسخ الرابط إلى الحافظة الخاصة بك."
-
-#: apps/client/src/components/copyright.tsx:29
-msgid "A passion project by <0>Amruth Pillai</0>"
-msgstr "مشروع طموح بواسطة <0> أمروث بيلاي</0>"
 
 #: apps/client/src/pages/auth/forgot-password/page.tsx:57
 msgid "A password reset link should have been sent to your inbox, if an account existed with the email you provided."
@@ -80,6 +66,16 @@ msgstr "من المفترض أن يتم إرسال رابط إعادة تعيي�
 #: apps/client/src/services/errors/translate-error.ts:43
 msgid "A resume with this slug already exists, please pick a different unique identifier."
 msgstr "السيرة الذاتية التي تحتوي على هذه العبارة موجودة بالفعل، يرجى اختيار معرف فريد مختلف."
+
+#: apps/client/src/pages/home/page.tsx:24
+#: apps/client/src/pages/home/sections/hero/index.tsx:40
+msgid "A simple and fast resume builder"
+msgstr ""
+
+#: apps/client/src/pages/home/components/footer.tsx:21
+#: apps/client/src/pages/home/sections/hero/index.tsx:45
+msgid "A simple, fast and AI supported resume builder that simplifies the process of creating, updating, and sharing your resume."
+msgstr ""
 
 #: apps/client/src/services/errors/translate-error.ts:10
 msgid "A user with this email address and/or username already exists."
@@ -133,7 +129,7 @@ msgstr "لديك حساب مسبقا؟"
 msgid "An error occurred while validating the file."
 msgstr "حدث خطأ أثناء التحقق من صحة الملف."
 
-#: apps/client/src/pages/home/sections/features/index.tsx:134
+#: apps/client/src/pages/home/sections/features/index.tsx:136
 msgid "and many more..."
 msgstr "وأكثر من ذلك..."
 
@@ -183,7 +179,7 @@ msgstr "مجال الدراسة"
 msgid "Aspect Ratio"
 msgstr "تناسب الأبعاد"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:51
+#: apps/client/src/pages/home/sections/features/index.tsx:52
 msgid "Available in {languagesCount} languages"
 msgstr "متوفر في {languagesCount} لغات"
 
@@ -230,7 +226,6 @@ msgstr "زوايا الحدود"
 msgid "Built with"
 msgstr "بنيت باستخدام"
 
-#: apps/client/src/components/copyright.tsx:27
 #: apps/client/src/pages/home/sections/contributors/index.tsx:20
 msgid "By the community, for the community."
 msgstr "من قبل المجتمع، من أجل المجتمع."
@@ -338,7 +333,7 @@ msgstr "إنشاء عنصر جديد"
 msgid "Create a new resume"
 msgstr "إنشاء سيرة ذاتية جديدة"
 
-#: apps/client/src/pages/auth/login/page.tsx:65
+#: apps/client/src/pages/auth/login/page.tsx:39
 msgctxt "This is a link to create a new account"
 msgid "Create one now"
 msgstr "قم بإنشاء واحدة الآن"
@@ -347,7 +342,7 @@ msgstr "قم بإنشاء واحدة الآن"
 msgid "Create Sample Resume"
 msgstr "إنشاء نموذج السيرة الذاتية"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:62
+#: apps/client/src/pages/home/sections/features/index.tsx:64
 msgid "Custom resume sections"
 msgstr "أقسام السيرة الذاتية المخصصة"
 
@@ -355,11 +350,11 @@ msgstr "أقسام السيرة الذاتية المخصصة"
 msgid "Custom Section"
 msgstr "قسم مخصص"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:60
+#: apps/client/src/pages/home/sections/features/index.tsx:62
 msgid "Customisable colour palettes"
 msgstr "لوحات الألوان قابلة للتخصيص"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:61
+#: apps/client/src/pages/home/sections/features/index.tsx:63
 msgid "Customisable layouts"
 msgstr "تصميمات قابلة للتخصيص"
 
@@ -406,7 +401,7 @@ msgstr "حذف الحساب"
 msgid "Description"
 msgstr "الوصف"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:58
+#: apps/client/src/pages/home/sections/features/index.tsx:60
 msgid "Design single/multi page resumes"
 msgstr "تصميم السيرة الذاتية بصفحة واحدة/متعددة"
 
@@ -429,7 +424,7 @@ msgstr "تجاهل"
 msgid "Documentation"
 msgstr "إرشادات الإستخدام"
 
-#: apps/client/src/pages/auth/login/page.tsx:62
+#: apps/client/src/pages/auth/login/page.tsx:36
 msgid "Don't have an account?"
 msgstr "ليس لديك حساب؟"
 
@@ -486,8 +481,9 @@ msgstr "عدّل"
 msgid "Effects"
 msgstr "المؤثرات"
 
+#: apps/client/src/pages/auth/_components/local-auth.tsx:56
+#: apps/client/src/pages/auth/_components/wechat-auth.tsx:56
 #: apps/client/src/pages/auth/forgot-password/page.tsx:82
-#: apps/client/src/pages/auth/login/page.tsx:90
 #: apps/client/src/pages/auth/register/page.tsx:140
 #: apps/client/src/pages/builder/sidebars/left/sections/basics.tsx:54
 #: apps/client/src/pages/dashboard/settings/_sections/account.tsx:180
@@ -547,10 +543,6 @@ msgstr "الملف"
 msgid "Filetype"
 msgstr "نوع الملف"
 
-#: apps/client/src/pages/home/sections/hero/index.tsx:38
-msgid "Finally,"
-msgstr "أخيرًا،"
-
 #: apps/client/src/components/ai-actions.tsx:90
 msgid "Fix Spelling & Grammar"
 msgstr "إصلاح الإملاء والنحو"
@@ -579,7 +571,8 @@ msgstr "فعلى سبيل المثال، يمكن الإشارة هنا إلى �
 msgid "Forget"
 msgstr "نسيان"
 
-#: apps/client/src/pages/auth/login/page.tsx:126
+#: apps/client/src/pages/auth/_components/local-auth.tsx:89
+#: apps/client/src/pages/auth/_components/wechat-auth.tsx:89
 msgid "Forgot Password?"
 msgstr "أنسيت كلمة المرور؟"
 
@@ -596,7 +589,7 @@ msgstr "الصيغة"
 msgid "Found a bug, or have an idea for a new feature?"
 msgstr "هل وجدت خطأ، أم لديك فكرة لميزة جديدة؟"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:46
+#: apps/client/src/pages/home/sections/features/index.tsx:47
 msgid "Free, forever"
 msgstr "مجاني، للأبد"
 
@@ -612,6 +605,19 @@ msgstr "الاسم الكامل"
 #: apps/client/src/pages/dashboard/resumes/_dialogs/resume.tsx:200
 msgid "Generate a random title for your resume"
 msgstr "أنشئ عنوانًا عشوائيًا لسيرتك الذاتية"
+
+#: apps/client/src/components/copyright.tsx:35
+#: apps/client/src/pages/dashboard/settings/page.tsx:16
+#: apps/client/src/pages/home/components/footer.tsx:18
+#: apps/client/src/pages/home/page.tsx:24
+#: apps/client/src/pages/public/page.tsx:73
+#: apps/client/src/pages/public/page.tsx:94
+msgid "Generative Resume"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/logo-cloud/index.tsx:39
+msgid "Generative Resume has helped people land jobs at these great companies:"
+msgstr ""
 
 #: apps/client/src/pages/home/sections/hero/call-to-action.tsx:32
 msgid "Get Started"
@@ -634,7 +640,7 @@ msgstr "امنح سيرتك الذاتية القديمة اسماً جديدا�
 msgid "Go to Dashboard"
 msgstr "الذهاب إلى لوحة التحكم"
 
-#: apps/client/src/pages/auth/_components/social-auth.tsx:31
+#: apps/client/src/pages/auth/_components/social-auth.tsx:44
 msgid "Google"
 msgstr "جوجل"
 
@@ -642,6 +648,7 @@ msgstr "جوجل"
 msgid "Grayscale"
 msgstr "تدرج رمادي"
 
+#: apps/client/src/pages/auth/login/page.tsx:56
 #: apps/client/src/pages/dashboard/resumes/page.tsx:43
 msgid "Grid"
 msgstr "الشبكة"
@@ -672,7 +679,8 @@ msgstr "إخفاء"
 msgid "Hide Icons"
 msgstr "إخفاء الأيقونات"
 
-#: apps/client/src/pages/auth/login/page.tsx:110
+#: apps/client/src/pages/auth/_components/local-auth.tsx:75
+#: apps/client/src/pages/auth/_components/wechat-auth.tsx:75
 #: apps/client/src/pages/auth/register/page.tsx:166
 #: apps/client/src/pages/auth/reset-password/page.tsx:88
 msgid "Hold <0>Ctrl</0> to display your password temporarily."
@@ -682,7 +690,7 @@ msgstr "اضغط <0>Ctrl</0> لعرض كلمة المرور الخاصة بك م
 msgid "Horizontal"
 msgstr "أفقي"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:67
+#: apps/client/src/pages/home/sections/features/index.tsx:69
 msgid "Host your resume publicly"
 msgstr "استضف سيرتك الذاتية علناً"
 
@@ -832,15 +840,11 @@ msgstr "رسالة"
 msgid "Level"
 msgstr "المستوى"
 
-#: apps/client/src/components/copyright.tsx:16
-msgid "Licensed under <0>MIT</0>"
-msgstr "مرخص بموجب <0>MIT</0>"
-
 #: apps/client/src/pages/dashboard/settings/_sections/profile.tsx:86
 msgid "Light"
 msgstr "مضيئ"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:69
+#: apps/client/src/pages/home/sections/features/index.tsx:71
 msgid "Light or dark theme"
 msgstr "سمة مضيئة أو داكنة"
 
@@ -853,6 +857,7 @@ msgstr "ارتفاع الخط"
 msgid "LinkedIn, JSON Resume, etc."
 msgstr "لينكد إن، JSON Resume، إلخ."
 
+#: apps/client/src/pages/auth/login/page.tsx:60
 #: apps/client/src/pages/dashboard/resumes/page.tsx:47
 msgid "List"
 msgstr "قائمة"
@@ -871,7 +876,7 @@ msgstr "الموقع"
 msgid "Lock"
 msgstr "قفل"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:64
+#: apps/client/src/pages/home/sections/features/index.tsx:66
 msgid "Lock a resume to prevent editing"
 msgstr "قفل السيرة الذاتية لمنع التحرير"
 
@@ -892,7 +897,7 @@ msgstr "أفقدت جهازك؟"
 msgid "Main"
 msgstr "رئيسي"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:59
+#: apps/client/src/pages/home/sections/features/index.tsx:61
 msgid "Manage multiple resumes"
 msgstr "أدر سيرًا ذاتية متعددة"
 
@@ -914,7 +919,7 @@ msgstr "مارس 2023 - حتى الآن"
 msgid "Margin"
 msgstr "هامش"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:48
+#: apps/client/src/pages/home/sections/features/index.tsx:49
 msgid "MIT License"
 msgstr "رخصة MIT"
 
@@ -948,7 +953,7 @@ msgstr "كلمة مرور جديدة"
 msgid "No results found"
 msgstr "لم نعثر على نتائج"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:49
+#: apps/client/src/pages/home/sections/features/index.tsx:50
 msgid "No user tracking or advertising"
 msgstr "لا يوجد تتبع للمستخدم ولا إعلانات"
 
@@ -978,7 +983,7 @@ msgstr "عذرًا، أرجع الخادم خطأ."
 msgid "Open"
 msgstr "افتح"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:47
+#: apps/client/src/pages/home/sections/features/index.tsx:48
 msgid "Open Source"
 msgstr "مفتوح المصدر"
 
@@ -989,7 +994,7 @@ msgid "OpenAI did not return any choices for your text."
 msgstr "لم يُرجع OpenAI أي اختيارات للنص الخاص بك."
 
 #: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:52
-#: apps/client/src/pages/home/sections/features/index.tsx:52
+#: apps/client/src/pages/home/sections/features/index.tsx:53
 msgid "OpenAI Integration"
 msgstr "تكامل مع OpenAI"
 
@@ -997,11 +1002,6 @@ msgstr "تكامل مع OpenAI"
 #: apps/client/src/pages/builder/sidebars/right/sections/typography.tsx:168
 msgid "Options"
 msgstr "خيارات"
-
-#: apps/client/src/pages/auth/layout.tsx:47
-msgctxt "The user can either login with email/password, or continue with GitHub or Google."
-msgid "or continue with"
-msgstr "أو تابع عبر"
 
 #: apps/client/src/pages/builder/sidebars/left/dialogs/volunteer.tsx:39
 msgid "Organization"
@@ -1016,7 +1016,8 @@ msgstr "صفحة"
 msgid "Page {0}"
 msgstr "صفحة {0}"
 
-#: apps/client/src/pages/auth/login/page.tsx:105
+#: apps/client/src/pages/auth/_components/local-auth.tsx:70
+#: apps/client/src/pages/auth/_components/wechat-auth.tsx:70
 #: apps/client/src/pages/auth/register/page.tsx:161
 #: apps/client/src/pages/auth/reset-password/page.tsx:83
 #: apps/client/src/pages/dashboard/settings/_sections/security.tsx:76
@@ -1027,7 +1028,7 @@ msgstr "كلمة المرور"
 msgid "PDF"
 msgstr "PDF"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:63
+#: apps/client/src/pages/home/sections/features/index.tsx:65
 msgid "Personal notes for each resume"
 msgstr "ملاحظات شخصية لكل استئناف"
 
@@ -1039,7 +1040,7 @@ msgstr "الهاتف"
 msgid "Photograph by Patrick Tomasso"
 msgstr "صورة من قبل باتريك توماسو"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:66
+#: apps/client/src/pages/home/sections/features/index.tsx:68
 msgid "Pick any font from Google Fonts"
 msgstr "اختر أي خط من خطوط جوجل"
 
@@ -1073,7 +1074,7 @@ msgstr "الموضع"
 msgid "Position"
 msgstr "الموضع"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:96
+#: apps/client/src/pages/home/sections/features/index.tsx:98
 msgid "Powered by"
 msgstr "مدعوم من قبل"
 
@@ -1112,34 +1113,24 @@ msgstr "الناشر"
 msgid "Raise an issue"
 msgstr "طرح مشكلة"
 
-#: apps/client/src/components/copyright.tsx:35
 #: apps/client/src/pages/auth/backup-otp/page.tsx:52
 #: apps/client/src/pages/auth/forgot-password/page.tsx:49
-#: apps/client/src/pages/auth/login/page.tsx:55
+#: apps/client/src/pages/auth/login/page.tsx:29
 #: apps/client/src/pages/auth/register/page.tsx:64
 #: apps/client/src/pages/auth/reset-password/page.tsx:60
 #: apps/client/src/pages/auth/verify-email/page.tsx:43
 #: apps/client/src/pages/auth/verify-otp/page.tsx:52
 #: apps/client/src/pages/builder/page.tsx:43
 #: apps/client/src/pages/dashboard/resumes/page.tsx:20
-#: apps/client/src/pages/dashboard/settings/page.tsx:16
-#: apps/client/src/pages/home/components/footer.tsx:18
 #: apps/client/src/pages/home/meta/privacy-policy/page.tsx:10
-#: apps/client/src/pages/home/page.tsx:24
-#: apps/client/src/pages/public/page.tsx:73
-#: apps/client/src/pages/public/page.tsx:94
 msgid "Reactive Resume"
 msgstr "استئناف مفعل"
-
-#: apps/client/src/pages/home/sections/logo-cloud/index.tsx:39
-msgid "Reactive Resume has helped people land jobs at these great companies:"
-msgstr "Reactive Resume ساعد الناس على استغلال الوظائف في هذه الشركات العظيمة:"
 
 #: apps/client/src/pages/home/sections/support/index.tsx:12
 msgid "Reactive Resume is a free and open-source project crafted mostly by me, and your support would be greatly appreciated. If you're inclined to contribute, and only if you can afford to, consider making a donation through any of the listed platforms. Additionally, donations to Reactive Resume through Open Collective are tax-exempt, as the project is fiscally hosted by Open Collective Europe."
 msgstr "الإستئناف التفاعلي هو مشروع مجاني ومفتوح المصدر قام بصياغته غالبا، وسيكون دعمك عظيم التقدير. إذا كنت تميل إلى المساهمة، وفقط إذا كنت تستطيع ذلك، فكر في تقديم تبرع من خلال أي من المنصات المدرجة في القائمة. وبالإضافة إلى ذلك، فإن التبرعات للاستئناف التفاعلي من خلال مجموعة مفتوحة معفاة من الضرائب، لأن المشروع تستضيفه أوروبا الجماعية المفتوحة مالياً."
 
-#: apps/client/src/pages/home/sections/features/index.tsx:107
+#: apps/client/src/pages/home/sections/features/index.tsx:109
 msgid "Reactive Resume is a passion project of over 3 years of hard work, and with that comes a number of re-iterated ideas and features that have been built to (near) perfection."
 msgstr "الإستئناف التفاعلي هو مشروع عاطفي لأكثر من 3 سنوات من العمل الشاق، ويأتي مع ذلك عدد من الأفكار والمميزات المعاد تكرارها والتي تم بناؤها إلى الكمال (القريب)."
 
@@ -1198,7 +1189,7 @@ msgstr "السير الذاتية"
 msgid "Resumes Generated"
 msgstr "السير الذاتية التي تم إنشاؤها"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:105
+#: apps/client/src/pages/home/sections/features/index.tsx:107
 msgid "Rich in features, not in pricing."
 msgstr "غني بالميزات وليس بالسعر."
 
@@ -1238,7 +1229,7 @@ msgstr "ابحث عن متغير الخط"
 msgid "Search for a language"
 msgstr "ابحث عن لغة"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:56
+#: apps/client/src/pages/home/sections/features/index.tsx:58
 msgid "Secure with two-factor authentication"
 msgstr "أمّن بالمصادقة الثنائية"
 
@@ -1246,7 +1237,7 @@ msgstr "أمّن بالمصادقة الثنائية"
 msgid "Security"
 msgstr "الأمان"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:50
+#: apps/client/src/pages/home/sections/features/index.tsx:51
 msgid "Self-host with Docker"
 msgstr "الاستضافة الذاتية مع Docker"
 
@@ -1294,8 +1285,9 @@ msgstr "إظهار أرقام الصفحات"
 msgid "Sidebar"
 msgstr "الشريط الجانبي"
 
+#: apps/client/src/pages/auth/_components/local-auth.tsx:86
+#: apps/client/src/pages/auth/_components/wechat-auth.tsx:86
 #: apps/client/src/pages/auth/backup-otp/page.tsx:102
-#: apps/client/src/pages/auth/login/page.tsx:122
 #: apps/client/src/pages/auth/verify-otp/page.tsx:92
 msgid "Sign in"
 msgstr "تسجل الدخول"
@@ -1304,30 +1296,30 @@ msgstr "تسجل الدخول"
 msgid "Sign in now"
 msgstr "سجل الدخول الآن"
 
-#: apps/client/src/pages/auth/login/page.tsx:55
-#: apps/client/src/pages/auth/login/page.tsx:60
+#: apps/client/src/pages/auth/login/page.tsx:29
+#: apps/client/src/pages/auth/login/page.tsx:34
 msgid "Sign in to your account"
 msgstr "تسجيل الدخول إلى حسابك"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:55
+#: apps/client/src/pages/home/sections/features/index.tsx:57
 msgid "Sign in with Email"
 msgstr "تسجيل الدخول باستخدام البريد الإلكتروني"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:53
+#: apps/client/src/pages/home/sections/features/index.tsx:54
 msgid "Sign in with GitHub"
 msgstr "تسجيل الدخول باستخدام GitHub"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:54
+#: apps/client/src/pages/home/sections/features/index.tsx:55
 msgid "Sign in with Google"
 msgstr "تسجيل الدخول باستخدام جوجل"
+
+#: apps/client/src/pages/home/sections/features/index.tsx:56
+msgid "Sign in with Wechat"
+msgstr ""
 
 #: apps/client/src/pages/auth/register/page.tsx:177
 msgid "Sign up"
 msgstr "تسجيل الدخول"
-
-#: apps/client/src/pages/auth/login/page.tsx:74
-msgid "Signing in via email is currently disabled by the administrator."
-msgstr ""
 
 #: apps/client/src/pages/auth/register/page.tsx:82
 msgid "Signups are currently disabled by the administrator."
@@ -1408,7 +1400,7 @@ msgstr "دعم التطبيق عن طريق التبرع بما يمكنك!"
 msgid "Supporting Reactive Resume"
 msgstr "دعم الإستئناف"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:65
+#: apps/client/src/pages/home/sections/features/index.tsx:67
 msgid "Supports A4/Letter page formats"
 msgstr "يدعم تنسيقات صفحة A4/رسالة"
 
@@ -1496,7 +1488,7 @@ msgstr "تبديل سطر كسر الصفحة"
 msgid "Toggle Page Numbers"
 msgstr "تبديل أرقام الصفحة"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:68
+#: apps/client/src/pages/home/sections/features/index.tsx:70
 msgid "Track views and downloads"
 msgstr "تتبع وجهات النظر والتنزيلات"
 
@@ -1615,10 +1607,6 @@ msgstr "تحقق من أن المصادقة ذات العاملين قد تم إ
 msgid "Verify your email address"
 msgstr "تحقق من عنوان بريدك الإلكتروني"
 
-#: apps/client/src/pages/home/sections/hero/index.tsx:26
-msgid "Version 4"
-msgstr "الإصدار 4"
-
 #: apps/client/src/pages/builder/sidebars/right/sections/statistics.tsx:51
 msgid "Views"
 msgstr "المشاهدات"
@@ -1645,9 +1633,9 @@ msgstr "نحن نقوم بالتحقق من عنوان البريد الإلكت
 msgid "Website"
 msgstr "الموقع"
 
-#: apps/client/src/pages/home/sections/hero/index.tsx:32
-msgid "What's new in the latest version"
-msgstr "ما هو الجديد في أحدث إصدار"
+#: apps/client/src/pages/auth/_components/social-auth.tsx:31
+msgid "Wechat"
+msgstr ""
 
 #: apps/client/src/pages/builder/sidebars/left/dialogs/custom-section.tsx:157
 #: apps/client/src/pages/builder/sidebars/left/dialogs/interests.tsx:68
@@ -1656,7 +1644,8 @@ msgstr "ما هو الجديد في أحدث إصدار"
 msgid "You can add multiple keywords by separating them with a comma or pressing enter."
 msgstr "يمكنك إضافة عدة كلمات مفتاحية عن طريق فصلها بفاصلة أو الضغط على إدخال."
 
-#: apps/client/src/pages/auth/login/page.tsx:94
+#: apps/client/src/pages/auth/_components/local-auth.tsx:60
+#: apps/client/src/pages/auth/_components/wechat-auth.tsx:60
 msgid "You can also enter your username."
 msgstr "يمكنك أيضًا إدخال اسم المستخدم الخاص بك."
 
@@ -1673,8 +1662,8 @@ msgid "You have the option to <0>obtain your own OpenAI API key</0>. This key em
 msgstr "لديك خيار <0>الحصول على مفتاح API OpenAI الخاص بك </0>. هذا المفتاح يمكّنك من استخدام API كما تراه مناسباً. بدلاً من ذلك، إذا كنت ترغب في تعطيل ميزات الذكاء الاصطناعي في الاستئناف التفاعلي تماماً، يمكنك ببساطة إزالة المفتاح من الإعدادات الخاصة بك."
 
 #: apps/client/src/pages/auth/verify-email/page.tsx:50
-msgid "You should have received an email from <0>Reactive Resume</0> with a link to verify your account."
-msgstr "كان يجب أن تتلقى رسالة بريد إلكتروني من <0>Reactive Resume</0> مع رابط للتحقق من حسابك."
+msgid "You should have received an email from <0>Generative Resume</0> with a link to verify your account."
+msgstr ""
 
 #: apps/client/src/pages/auth/forgot-password/page.tsx:49
 #: apps/client/src/pages/auth/forgot-password/page.tsx:54
@@ -1708,4 +1697,3 @@ msgstr "تكبير في"
 #: apps/client/src/pages/builder/_components/toolbar.tsx:100
 msgid "Zoom Out"
 msgstr "تكبير خارج"
-

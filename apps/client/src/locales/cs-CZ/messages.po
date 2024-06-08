@@ -22,7 +22,7 @@ msgstr ""
 msgid "You have enabled two-factor authentication successfully."
 msgstr "Úspěšně jste povolili dvou faktorové ověřování."
 
-#: apps/client/src/pages/home/sections/features/index.tsx:57
+#: apps/client/src/pages/home/sections/features/index.tsx:59
 msgid "{templatesCount} resume templates to choose from"
 msgstr "{templatesCount} šablon životopisů, ze kterých si můžete vybrat"
 
@@ -54,24 +54,10 @@ msgstr "<0>Dvoufaktorové ověřování je v současné době zakázáno.</0> M�
 msgid "<0>Two-factor authentication is enabled.</0> You will be asked to enter a code every time you sign in."
 msgstr "<0>Je povoleno dvoufaktorové ověřování.</0> Při každém přihlášení budete vyzváni k zadání kódu."
 
-#: apps/client/src/pages/home/page.tsx:24
-#: apps/client/src/pages/home/sections/hero/index.tsx:40
-msgid "A free and open-source resume builder"
-msgstr "Bezplatný nástroj pro tvorbu životopisů s otevřeným zdrojovým kódem"
-
-#: apps/client/src/pages/home/components/footer.tsx:21
-#: apps/client/src/pages/home/sections/hero/index.tsx:45
-msgid "A free and open-source resume builder that simplifies the process of creating, updating, and sharing your resume."
-msgstr "Bezplatný nástroj pro tvorbu životopisů s otevřeným zdrojovým kódem, který zjednodušuje proces vytváření, aktualizace a sdílení životopisů."
-
 #: apps/client/src/pages/builder/_components/toolbar.tsx:53
 #: apps/client/src/pages/builder/sidebars/right/sections/sharing.tsx:29
 msgid "A link has been copied to your clipboard."
 msgstr "Odkaz byl zkopírován do vašeho clipboardu."
-
-#: apps/client/src/components/copyright.tsx:29
-msgid "A passion project by <0>Amruth Pillai</0>"
-msgstr "Osobní projekt <0>Amruth Pillai</0>"
 
 #: apps/client/src/pages/auth/forgot-password/page.tsx:57
 msgid "A password reset link should have been sent to your inbox, if an account existed with the email you provided."
@@ -80,6 +66,16 @@ msgstr "Do vaší e-mailové schránky by měl být zaslán odkaz na obnovení h
 #: apps/client/src/services/errors/translate-error.ts:43
 msgid "A resume with this slug already exists, please pick a different unique identifier."
 msgstr "Životopis s tímto hashtagem již existuje, zvolte prosím jiný jedinečný identifikátor."
+
+#: apps/client/src/pages/home/page.tsx:24
+#: apps/client/src/pages/home/sections/hero/index.tsx:40
+msgid "A simple and fast resume builder"
+msgstr ""
+
+#: apps/client/src/pages/home/components/footer.tsx:21
+#: apps/client/src/pages/home/sections/hero/index.tsx:45
+msgid "A simple, fast and AI supported resume builder that simplifies the process of creating, updating, and sharing your resume."
+msgstr ""
 
 #: apps/client/src/services/errors/translate-error.ts:10
 msgid "A user with this email address and/or username already exists."
@@ -133,7 +129,7 @@ msgstr "Již máte účet?"
 msgid "An error occurred while validating the file."
 msgstr "Při nahrávání souboru došlo k chybě."
 
-#: apps/client/src/pages/home/sections/features/index.tsx:134
+#: apps/client/src/pages/home/sections/features/index.tsx:136
 msgid "and many more..."
 msgstr "a mnoho dalších..."
 
@@ -183,7 +179,7 @@ msgstr "Vzdělání"
 msgid "Aspect Ratio"
 msgstr "Poměr Stran"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:51
+#: apps/client/src/pages/home/sections/features/index.tsx:52
 msgid "Available in {languagesCount} languages"
 msgstr "Dostupné v {languagesCount} jazycích"
 
@@ -230,7 +226,6 @@ msgstr "Poměr ohraničení"
 msgid "Built with"
 msgstr "Vytvořeno s"
 
-#: apps/client/src/components/copyright.tsx:27
 #: apps/client/src/pages/home/sections/contributors/index.tsx:20
 msgid "By the community, for the community."
 msgstr "Vytvořeno komunitou pro komunitu."
@@ -338,7 +333,7 @@ msgstr "Vytvořit novou položku"
 msgid "Create a new resume"
 msgstr "Vytvořte nový životopis"
 
-#: apps/client/src/pages/auth/login/page.tsx:65
+#: apps/client/src/pages/auth/login/page.tsx:39
 msgctxt "This is a link to create a new account"
 msgid "Create one now"
 msgstr "Vytvořit nyní"
@@ -347,7 +342,7 @@ msgstr "Vytvořit nyní"
 msgid "Create Sample Resume"
 msgstr "Vytvořit ukázkový životopis"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:62
+#: apps/client/src/pages/home/sections/features/index.tsx:64
 msgid "Custom resume sections"
 msgstr "Vlastní sekce životopisů"
 
@@ -355,11 +350,11 @@ msgstr "Vlastní sekce životopisů"
 msgid "Custom Section"
 msgstr "Vlastní sekce"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:60
+#: apps/client/src/pages/home/sections/features/index.tsx:62
 msgid "Customisable colour palettes"
 msgstr "Přizpůsobitelné barevné palety"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:61
+#: apps/client/src/pages/home/sections/features/index.tsx:63
 msgid "Customisable layouts"
 msgstr "Přizpůsobitelné rozvržení"
 
@@ -406,7 +401,7 @@ msgstr "Odstranit účet"
 msgid "Description"
 msgstr "L 343, 22.12.2009, s. 1)."
 
-#: apps/client/src/pages/home/sections/features/index.tsx:58
+#: apps/client/src/pages/home/sections/features/index.tsx:60
 msgid "Design single/multi page resumes"
 msgstr "Obnovení jedné nebo více stránek"
 
@@ -429,7 +424,7 @@ msgstr "Zahodit"
 msgid "Documentation"
 msgstr "Dokumentace"
 
-#: apps/client/src/pages/auth/login/page.tsx:62
+#: apps/client/src/pages/auth/login/page.tsx:36
 msgid "Don't have an account?"
 msgstr "Nemáte účet?"
 
@@ -486,8 +481,9 @@ msgstr "Upravit"
 msgid "Effects"
 msgstr "Efekty"
 
+#: apps/client/src/pages/auth/_components/local-auth.tsx:56
+#: apps/client/src/pages/auth/_components/wechat-auth.tsx:56
 #: apps/client/src/pages/auth/forgot-password/page.tsx:82
-#: apps/client/src/pages/auth/login/page.tsx:90
 #: apps/client/src/pages/auth/register/page.tsx:140
 #: apps/client/src/pages/builder/sidebars/left/sections/basics.tsx:54
 #: apps/client/src/pages/dashboard/settings/_sections/account.tsx:180
@@ -547,10 +543,6 @@ msgstr "Soubor"
 msgid "Filetype"
 msgstr "Typ souboru"
 
-#: apps/client/src/pages/home/sections/hero/index.tsx:38
-msgid "Finally,"
-msgstr "Konečně"
-
 #: apps/client/src/components/ai-actions.tsx:90
 msgid "Fix Spelling & Grammar"
 msgstr "Fix Spelling & Grammar"
@@ -579,7 +571,8 @@ msgstr "Například informace o tom, které společnosti, které jste zaslali te
 msgid "Forget"
 msgstr "Zapomenout"
 
-#: apps/client/src/pages/auth/login/page.tsx:126
+#: apps/client/src/pages/auth/_components/local-auth.tsx:89
+#: apps/client/src/pages/auth/_components/wechat-auth.tsx:89
 msgid "Forgot Password?"
 msgstr "Zapomněli jste heslo?"
 
@@ -596,7 +589,7 @@ msgstr "Formát"
 msgid "Found a bug, or have an idea for a new feature?"
 msgstr "Nalezena chyba, nebo máte nápad na novou funkci?"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:46
+#: apps/client/src/pages/home/sections/features/index.tsx:47
 msgid "Free, forever"
 msgstr "Volné, navždy"
 
@@ -612,6 +605,19 @@ msgstr "Celé jméno"
 #: apps/client/src/pages/dashboard/resumes/_dialogs/resume.tsx:200
 msgid "Generate a random title for your resume"
 msgstr "Vygenerovat náhodný název pro obnovení"
+
+#: apps/client/src/components/copyright.tsx:35
+#: apps/client/src/pages/dashboard/settings/page.tsx:16
+#: apps/client/src/pages/home/components/footer.tsx:18
+#: apps/client/src/pages/home/page.tsx:24
+#: apps/client/src/pages/public/page.tsx:73
+#: apps/client/src/pages/public/page.tsx:94
+msgid "Generative Resume"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/logo-cloud/index.tsx:39
+msgid "Generative Resume has helped people land jobs at these great companies:"
+msgstr ""
 
 #: apps/client/src/pages/home/sections/hero/call-to-action.tsx:32
 msgid "Get Started"
@@ -634,7 +640,7 @@ msgstr "Dejte svému starému obnovit nový název."
 msgid "Go to Dashboard"
 msgstr "Přejít na nástěnku"
 
-#: apps/client/src/pages/auth/_components/social-auth.tsx:31
+#: apps/client/src/pages/auth/_components/social-auth.tsx:44
 msgid "Google"
 msgstr "Google"
 
@@ -642,6 +648,7 @@ msgstr "Google"
 msgid "Grayscale"
 msgstr "Grayscale"
 
+#: apps/client/src/pages/auth/login/page.tsx:56
 #: apps/client/src/pages/dashboard/resumes/page.tsx:43
 msgid "Grid"
 msgstr "Mřížka"
@@ -672,7 +679,8 @@ msgstr "Skrýt"
 msgid "Hide Icons"
 msgstr "Skrýt ikony"
 
-#: apps/client/src/pages/auth/login/page.tsx:110
+#: apps/client/src/pages/auth/_components/local-auth.tsx:75
+#: apps/client/src/pages/auth/_components/wechat-auth.tsx:75
 #: apps/client/src/pages/auth/register/page.tsx:166
 #: apps/client/src/pages/auth/reset-password/page.tsx:88
 msgid "Hold <0>Ctrl</0> to display your password temporarily."
@@ -682,7 +690,7 @@ msgstr "Podržte <0>Ctrl</0> pro dočasné zobrazení hesla."
 msgid "Horizontal"
 msgstr "Horizontální"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:67
+#: apps/client/src/pages/home/sections/features/index.tsx:69
 msgid "Host your resume publicly"
 msgstr "Hostujte váš obnovený účet veřejně"
 
@@ -832,15 +840,11 @@ msgstr "Dopis"
 msgid "Level"
 msgstr "Úrovně"
 
-#: apps/client/src/components/copyright.tsx:16
-msgid "Licensed under <0>MIT</0>"
-msgstr "Licencováno pod <0>MIT</0>"
-
 #: apps/client/src/pages/dashboard/settings/_sections/profile.tsx:86
 msgid "Light"
 msgstr "Světlý"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:69
+#: apps/client/src/pages/home/sections/features/index.tsx:71
 msgid "Light or dark theme"
 msgstr "Světlý nebo tmavý motiv"
 
@@ -853,6 +857,7 @@ msgstr "Výška řádku"
 msgid "LinkedIn, JSON Resume, etc."
 msgstr "LinkedIn, JSON Resume, atd."
 
+#: apps/client/src/pages/auth/login/page.tsx:60
 #: apps/client/src/pages/dashboard/resumes/page.tsx:47
 msgid "List"
 msgstr "Seznam"
@@ -871,7 +876,7 @@ msgstr "Poloha"
 msgid "Lock"
 msgstr "Zamknout"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:64
+#: apps/client/src/pages/home/sections/features/index.tsx:66
 msgid "Lock a resume to prevent editing"
 msgstr "Zamknout pokračování pro zabránění úpravám"
 
@@ -892,7 +897,7 @@ msgstr "Zapomněli jste své zařízení?"
 msgid "Main"
 msgstr "Hlavní"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:59
+#: apps/client/src/pages/home/sections/features/index.tsx:61
 msgid "Manage multiple resumes"
 msgstr "Správa vícenásobných obnovení"
 
@@ -914,7 +919,7 @@ msgstr "březen 2023 - Současný"
 msgid "Margin"
 msgstr "Okraj"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:48
+#: apps/client/src/pages/home/sections/features/index.tsx:49
 msgid "MIT License"
 msgstr "MIT licence"
 
@@ -948,7 +953,7 @@ msgstr "Nové heslo"
 msgid "No results found"
 msgstr "Nebyly nalezeny žádné výsledky"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:49
+#: apps/client/src/pages/home/sections/features/index.tsx:50
 msgid "No user tracking or advertising"
 msgstr "Žádné sledování nebo reklama uživatele"
 
@@ -978,7 +983,7 @@ msgstr "Jejda, server vrátil chybu."
 msgid "Open"
 msgstr "Otevřít"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:47
+#: apps/client/src/pages/home/sections/features/index.tsx:48
 msgid "Open Source"
 msgstr "Open Source"
 
@@ -989,7 +994,7 @@ msgid "OpenAI did not return any choices for your text."
 msgstr "OpenAI nevrátil žádné volby pro tvůj text."
 
 #: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:52
-#: apps/client/src/pages/home/sections/features/index.tsx:52
+#: apps/client/src/pages/home/sections/features/index.tsx:53
 msgid "OpenAI Integration"
 msgstr "OpenAI integrace"
 
@@ -997,11 +1002,6 @@ msgstr "OpenAI integrace"
 #: apps/client/src/pages/builder/sidebars/right/sections/typography.tsx:168
 msgid "Options"
 msgstr "Možnosti"
-
-#: apps/client/src/pages/auth/layout.tsx:47
-msgctxt "The user can either login with email/password, or continue with GitHub or Google."
-msgid "or continue with"
-msgstr "nebo pokračovat s"
 
 #: apps/client/src/pages/builder/sidebars/left/dialogs/volunteer.tsx:39
 msgid "Organization"
@@ -1016,7 +1016,8 @@ msgstr "Stránka"
 msgid "Page {0}"
 msgstr "Stránka {0}"
 
-#: apps/client/src/pages/auth/login/page.tsx:105
+#: apps/client/src/pages/auth/_components/local-auth.tsx:70
+#: apps/client/src/pages/auth/_components/wechat-auth.tsx:70
 #: apps/client/src/pages/auth/register/page.tsx:161
 #: apps/client/src/pages/auth/reset-password/page.tsx:83
 #: apps/client/src/pages/dashboard/settings/_sections/security.tsx:76
@@ -1027,7 +1028,7 @@ msgstr "Heslo"
 msgid "PDF"
 msgstr "PDF"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:63
+#: apps/client/src/pages/home/sections/features/index.tsx:65
 msgid "Personal notes for each resume"
 msgstr "Osobní poznámky pro každé obnovení"
 
@@ -1039,7 +1040,7 @@ msgstr "Telefon"
 msgid "Photograph by Patrick Tomasso"
 msgstr "Fotografie Patricka Tomassa"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:66
+#: apps/client/src/pages/home/sections/features/index.tsx:68
 msgid "Pick any font from Google Fonts"
 msgstr "Vyberte libovolné písmo z Google písma"
 
@@ -1073,7 +1074,7 @@ msgstr "Pozice"
 msgid "Position"
 msgstr "Pozice"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:96
+#: apps/client/src/pages/home/sections/features/index.tsx:98
 msgid "Powered by"
 msgstr "Běží na"
 
@@ -1112,34 +1113,24 @@ msgstr "Vydavatel"
 msgid "Raise an issue"
 msgstr "Vyvolat problém"
 
-#: apps/client/src/components/copyright.tsx:35
 #: apps/client/src/pages/auth/backup-otp/page.tsx:52
 #: apps/client/src/pages/auth/forgot-password/page.tsx:49
-#: apps/client/src/pages/auth/login/page.tsx:55
+#: apps/client/src/pages/auth/login/page.tsx:29
 #: apps/client/src/pages/auth/register/page.tsx:64
 #: apps/client/src/pages/auth/reset-password/page.tsx:60
 #: apps/client/src/pages/auth/verify-email/page.tsx:43
 #: apps/client/src/pages/auth/verify-otp/page.tsx:52
 #: apps/client/src/pages/builder/page.tsx:43
 #: apps/client/src/pages/dashboard/resumes/page.tsx:20
-#: apps/client/src/pages/dashboard/settings/page.tsx:16
-#: apps/client/src/pages/home/components/footer.tsx:18
 #: apps/client/src/pages/home/meta/privacy-policy/page.tsx:10
-#: apps/client/src/pages/home/page.tsx:24
-#: apps/client/src/pages/public/page.tsx:73
-#: apps/client/src/pages/public/page.tsx:94
 msgid "Reactive Resume"
 msgstr "Reaktivní obnovení"
-
-#: apps/client/src/pages/home/sections/logo-cloud/index.tsx:39
-msgid "Reactive Resume has helped people land jobs at these great companies:"
-msgstr "Reactive Resume pomáhal lidem při práci v těchto skvělých společnostech:"
 
 #: apps/client/src/pages/home/sections/support/index.tsx:12
 msgid "Reactive Resume is a free and open-source project crafted mostly by me, and your support would be greatly appreciated. If you're inclined to contribute, and only if you can afford to, consider making a donation through any of the listed platforms. Additionally, donations to Reactive Resume through Open Collective are tax-exempt, as the project is fiscally hosted by Open Collective Europe."
 msgstr "Reaktivní Resume je bezplatný a otevřený projekt vytvořený většinou mnou a vaše podpora by byla velmi oceněna. Pokud máte sklon přispět, a pouze pokud si to můžete dovolit, zvažte poskytnutí daru prostřednictvím některé z uvedených platforem. Kromě toho dary pro Reactive Resume prostřednictvím Open Collective jsou osvobozeny od daní, protože projekt je daňově hostován Open Collective Europe."
 
-#: apps/client/src/pages/home/sections/features/index.tsx:107
+#: apps/client/src/pages/home/sections/features/index.tsx:109
 msgid "Reactive Resume is a passion project of over 3 years of hard work, and with that comes a number of re-iterated ideas and features that have been built to (near) perfection."
 msgstr "Reactive Resume je vášnivý projekt více než 3 roky tvrdé práce, a s tím přichází řada reiterovaných myšlenek a rysů, které byly postaveny na (near) dokonalosti."
 
@@ -1198,7 +1189,7 @@ msgstr "Obnovení"
 msgid "Resumes Generated"
 msgstr "Obnovení vygenerováno"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:105
+#: apps/client/src/pages/home/sections/features/index.tsx:107
 msgid "Rich in features, not in pricing."
 msgstr "Bohaté funkce, ne v cenách."
 
@@ -1238,7 +1229,7 @@ msgstr "Hledat variantu písma"
 msgid "Search for a language"
 msgstr "Hledat jazyk"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:56
+#: apps/client/src/pages/home/sections/features/index.tsx:58
 msgid "Secure with two-factor authentication"
 msgstr "Zabezpečit s dvoufaktorovým ověřením"
 
@@ -1246,7 +1237,7 @@ msgstr "Zabezpečit s dvoufaktorovým ověřením"
 msgid "Security"
 msgstr "Zabezpečení"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:50
+#: apps/client/src/pages/home/sections/features/index.tsx:51
 msgid "Self-host with Docker"
 msgstr "Samostatně hostitel s Docker"
 
@@ -1294,8 +1285,9 @@ msgstr "Zobrazit čísla stránky"
 msgid "Sidebar"
 msgstr "Sidebar"
 
+#: apps/client/src/pages/auth/_components/local-auth.tsx:86
+#: apps/client/src/pages/auth/_components/wechat-auth.tsx:86
 #: apps/client/src/pages/auth/backup-otp/page.tsx:102
-#: apps/client/src/pages/auth/login/page.tsx:122
 #: apps/client/src/pages/auth/verify-otp/page.tsx:92
 msgid "Sign in"
 msgstr "Přihlásit se"
@@ -1304,30 +1296,30 @@ msgstr "Přihlásit se"
 msgid "Sign in now"
 msgstr "Přihlásit se nyní"
 
-#: apps/client/src/pages/auth/login/page.tsx:55
-#: apps/client/src/pages/auth/login/page.tsx:60
+#: apps/client/src/pages/auth/login/page.tsx:29
+#: apps/client/src/pages/auth/login/page.tsx:34
 msgid "Sign in to your account"
 msgstr "Přihlaste se ke svému účtu"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:55
+#: apps/client/src/pages/home/sections/features/index.tsx:57
 msgid "Sign in with Email"
 msgstr "Přihlásit se pomocí e-mailu"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:53
+#: apps/client/src/pages/home/sections/features/index.tsx:54
 msgid "Sign in with GitHub"
 msgstr "Přihlásit se pomocí GitHub"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:54
+#: apps/client/src/pages/home/sections/features/index.tsx:55
 msgid "Sign in with Google"
 msgstr "Přihlásit se pomocí Google"
+
+#: apps/client/src/pages/home/sections/features/index.tsx:56
+msgid "Sign in with Wechat"
+msgstr ""
 
 #: apps/client/src/pages/auth/register/page.tsx:177
 msgid "Sign up"
 msgstr "Zaregistrovat se"
-
-#: apps/client/src/pages/auth/login/page.tsx:74
-msgid "Signing in via email is currently disabled by the administrator."
-msgstr ""
 
 #: apps/client/src/pages/auth/register/page.tsx:82
 msgid "Signups are currently disabled by the administrator."
@@ -1408,7 +1400,7 @@ msgstr "Podpořte aplikaci tím, že přispějete, co můžete!"
 msgid "Supporting Reactive Resume"
 msgstr "Podpora reaktivního obnovení"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:65
+#: apps/client/src/pages/home/sections/features/index.tsx:67
 msgid "Supports A4/Letter page formats"
 msgstr "Podporuje A4/Letter formáty stránky"
 
@@ -1496,7 +1488,7 @@ msgstr "Přepnout řádek zlomu stránky"
 msgid "Toggle Page Numbers"
 msgstr "Přepnout čísla stránky"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:68
+#: apps/client/src/pages/home/sections/features/index.tsx:70
 msgid "Track views and downloads"
 msgstr "Sledovat zobrazení a stahování"
 
@@ -1615,10 +1607,6 @@ msgstr "Ověřte, že dvoufaktorové ověření bylo správně nastaveno"
 msgid "Verify your email address"
 msgstr "Ověřte svou e-mailovou adresu"
 
-#: apps/client/src/pages/home/sections/hero/index.tsx:26
-msgid "Version 4"
-msgstr "Verze 4"
-
 #: apps/client/src/pages/builder/sidebars/right/sections/statistics.tsx:51
 msgid "Views"
 msgstr "Zobrazení"
@@ -1645,9 +1633,9 @@ msgstr "Ověřujeme vaši e-mailovou adresu pouze proto, abychom se ujistili, ž
 msgid "Website"
 msgstr "Webová stránka"
 
-#: apps/client/src/pages/home/sections/hero/index.tsx:32
-msgid "What's new in the latest version"
-msgstr "Co je nového v nejnovější verzi"
+#: apps/client/src/pages/auth/_components/social-auth.tsx:31
+msgid "Wechat"
+msgstr ""
 
 #: apps/client/src/pages/builder/sidebars/left/dialogs/custom-section.tsx:157
 #: apps/client/src/pages/builder/sidebars/left/dialogs/interests.tsx:68
@@ -1656,7 +1644,8 @@ msgstr "Co je nového v nejnovější verzi"
 msgid "You can add multiple keywords by separating them with a comma or pressing enter."
 msgstr "Můžete přidat více klíčových slov oddělením čárkou nebo stisknutím klávesy enter."
 
-#: apps/client/src/pages/auth/login/page.tsx:94
+#: apps/client/src/pages/auth/_components/local-auth.tsx:60
+#: apps/client/src/pages/auth/_components/wechat-auth.tsx:60
 msgid "You can also enter your username."
 msgstr "Můžete také zadat své uživatelské jméno."
 
@@ -1673,8 +1662,8 @@ msgid "You have the option to <0>obtain your own OpenAI API key</0>. This key em
 msgstr "Máte možnost <0>získat vlastní OpenAI API klíč</0>. Tento klíč vás zmocňuje k pákovému API tak, jak to považujete za vhodné. Alternativně pokud chcete úplně zakázat AI funkce v reaktivním obnovení, můžete jednoduše odstranit klíč z nastavení."
 
 #: apps/client/src/pages/auth/verify-email/page.tsx:50
-msgid "You should have received an email from <0>Reactive Resume</0> with a link to verify your account."
-msgstr "Měli byste obdržet e-mail od <0>Reactive Resume</0> s odkazem na ověření vašeho účtu."
+msgid "You should have received an email from <0>Generative Resume</0> with a link to verify your account."
+msgstr ""
 
 #: apps/client/src/pages/auth/forgot-password/page.tsx:49
 #: apps/client/src/pages/auth/forgot-password/page.tsx:54
@@ -1708,4 +1697,3 @@ msgstr "Přiblížit"
 #: apps/client/src/pages/builder/_components/toolbar.tsx:100
 msgid "Zoom Out"
 msgstr "Oddálit"
-

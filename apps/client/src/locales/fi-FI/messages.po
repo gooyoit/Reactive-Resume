@@ -22,7 +22,7 @@ msgstr ""
 msgid "You have enabled two-factor authentication successfully."
 msgstr "Olet ottanut kaksivaiheisen todennuksen käyttöön onnistuneesti."
 
-#: apps/client/src/pages/home/sections/features/index.tsx:57
+#: apps/client/src/pages/home/sections/features/index.tsx:59
 msgid "{templatesCount} resume templates to choose from"
 msgstr "Valittavana on {templatesCount} ansioluettelomallipohjaa"
 
@@ -54,24 +54,10 @@ msgstr "<0>Kaksivaiheinen todennus on tällä hetkellä poistettu käytöstä.</
 msgid "<0>Two-factor authentication is enabled.</0> You will be asked to enter a code every time you sign in."
 msgstr "<0>Kaksivaiheinen todennus on käytössä.</0> Sinua pyydetään syöttämään koodi joka kerta, kun kirjaudut sisään."
 
-#: apps/client/src/pages/home/page.tsx:24
-#: apps/client/src/pages/home/sections/hero/index.tsx:40
-msgid "A free and open-source resume builder"
-msgstr "Ilmainen ja avoimen lähdekoodin ansioluettelon rakentaja"
-
-#: apps/client/src/pages/home/components/footer.tsx:21
-#: apps/client/src/pages/home/sections/hero/index.tsx:45
-msgid "A free and open-source resume builder that simplifies the process of creating, updating, and sharing your resume."
-msgstr "Ilmainen ja avoimen lähdekoodin ansioluettelon rakentaja, joka yksinkertaistaa ansioluettelon luomisen, päivittämisen ja jakamisen prosessia."
-
 #: apps/client/src/pages/builder/_components/toolbar.tsx:53
 #: apps/client/src/pages/builder/sidebars/right/sections/sharing.tsx:29
 msgid "A link has been copied to your clipboard."
 msgstr "Linkki on kopioitu leikepöydällesi."
-
-#: apps/client/src/components/copyright.tsx:29
-msgid "A passion project by <0>Amruth Pillai</0>"
-msgstr "Intohermo <0>Amruth Pillai</0>"
 
 #: apps/client/src/pages/auth/forgot-password/page.tsx:57
 msgid "A password reset link should have been sent to your inbox, if an account existed with the email you provided."
@@ -80,6 +66,16 @@ msgstr "Salasanan palautuslinkin pitäisi olla lähetetty sähköpostiisi, jos t
 #: apps/client/src/services/errors/translate-error.ts:43
 msgid "A resume with this slug already exists, please pick a different unique identifier."
 msgstr "Ansioluettelo tällä tunnuksella on jo olemassa, valitse uniikki tunnistetunnus."
+
+#: apps/client/src/pages/home/page.tsx:24
+#: apps/client/src/pages/home/sections/hero/index.tsx:40
+msgid "A simple and fast resume builder"
+msgstr ""
+
+#: apps/client/src/pages/home/components/footer.tsx:21
+#: apps/client/src/pages/home/sections/hero/index.tsx:45
+msgid "A simple, fast and AI supported resume builder that simplifies the process of creating, updating, and sharing your resume."
+msgstr ""
 
 #: apps/client/src/services/errors/translate-error.ts:10
 msgid "A user with this email address and/or username already exists."
@@ -133,7 +129,7 @@ msgstr "Onko sinulla jo tili?"
 msgid "An error occurred while validating the file."
 msgstr "Virhe tapahtui tiedoston validoinnissa."
 
-#: apps/client/src/pages/home/sections/features/index.tsx:134
+#: apps/client/src/pages/home/sections/features/index.tsx:136
 msgid "and many more..."
 msgstr "ja monia muita..."
 
@@ -183,7 +179,7 @@ msgstr "Opintoala"
 msgid "Aspect Ratio"
 msgstr "Kuvasuhde"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:51
+#: apps/client/src/pages/home/sections/features/index.tsx:52
 msgid "Available in {languagesCount} languages"
 msgstr "Saatavilla {languagesCount} kielillä"
 
@@ -230,7 +226,6 @@ msgstr "Reunussäde"
 msgid "Built with"
 msgstr "Rakennettu"
 
-#: apps/client/src/components/copyright.tsx:27
 #: apps/client/src/pages/home/sections/contributors/index.tsx:20
 msgid "By the community, for the community."
 msgstr "Yhteisön tekemä, yhteisölle."
@@ -338,7 +333,7 @@ msgstr "Luo uusi tuote"
 msgid "Create a new resume"
 msgstr "Luo uusi ansioluettelo"
 
-#: apps/client/src/pages/auth/login/page.tsx:65
+#: apps/client/src/pages/auth/login/page.tsx:39
 msgctxt "This is a link to create a new account"
 msgid "Create one now"
 msgstr "Luo yksi nyt"
@@ -347,7 +342,7 @@ msgstr "Luo yksi nyt"
 msgid "Create Sample Resume"
 msgstr "Luo esimerkki ansioluettelosta"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:62
+#: apps/client/src/pages/home/sections/features/index.tsx:64
 msgid "Custom resume sections"
 msgstr "Mukautetut ansioluettelon osiot"
 
@@ -355,11 +350,11 @@ msgstr "Mukautetut ansioluettelon osiot"
 msgid "Custom Section"
 msgstr "Mukautettu osio"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:60
+#: apps/client/src/pages/home/sections/features/index.tsx:62
 msgid "Customisable colour palettes"
 msgstr "Mukautettavat väripaletit"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:61
+#: apps/client/src/pages/home/sections/features/index.tsx:63
 msgid "Customisable layouts"
 msgstr "Mukautettavat asettelut"
 
@@ -406,7 +401,7 @@ msgstr "Poista tili"
 msgid "Description"
 msgstr "Kuvaus"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:58
+#: apps/client/src/pages/home/sections/features/index.tsx:60
 msgid "Design single/multi page resumes"
 msgstr "Suunnittele yksittäisiä/multi-sivuisia ansioluetteloita"
 
@@ -429,7 +424,7 @@ msgstr "Hylkää"
 msgid "Documentation"
 msgstr "Dokumentointi"
 
-#: apps/client/src/pages/auth/login/page.tsx:62
+#: apps/client/src/pages/auth/login/page.tsx:36
 msgid "Don't have an account?"
 msgstr "Ei tiliä?"
 
@@ -486,8 +481,9 @@ msgstr "Muokkaa"
 msgid "Effects"
 msgstr "Efektit"
 
+#: apps/client/src/pages/auth/_components/local-auth.tsx:56
+#: apps/client/src/pages/auth/_components/wechat-auth.tsx:56
 #: apps/client/src/pages/auth/forgot-password/page.tsx:82
-#: apps/client/src/pages/auth/login/page.tsx:90
 #: apps/client/src/pages/auth/register/page.tsx:140
 #: apps/client/src/pages/builder/sidebars/left/sections/basics.tsx:54
 #: apps/client/src/pages/dashboard/settings/_sections/account.tsx:180
@@ -547,10 +543,6 @@ msgstr "Tiedosto"
 msgid "Filetype"
 msgstr "Tiedostotyyppi"
 
-#: apps/client/src/pages/home/sections/hero/index.tsx:38
-msgid "Finally,"
-msgstr "Lopuksi,"
-
 #: apps/client/src/components/ai-actions.tsx:90
 msgid "Fix Spelling & Grammar"
 msgstr "Korjaa oikeinkirjoitus ja kielioppi"
@@ -579,7 +571,8 @@ msgstr "Esimerkiksi tietoja siitä, mihin yrityksiin lähetit tämän ansioluett
 msgid "Forget"
 msgstr "Unohda"
 
-#: apps/client/src/pages/auth/login/page.tsx:126
+#: apps/client/src/pages/auth/_components/local-auth.tsx:89
+#: apps/client/src/pages/auth/_components/wechat-auth.tsx:89
 msgid "Forgot Password?"
 msgstr "Unohtuiko salasana?"
 
@@ -596,7 +589,7 @@ msgstr "Muoto"
 msgid "Found a bug, or have an idea for a new feature?"
 msgstr "Löysitkö virheen tai onko sinulla idea uudesta ominaisuudesta?"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:46
+#: apps/client/src/pages/home/sections/features/index.tsx:47
 msgid "Free, forever"
 msgstr "Ilmainen, ikuisesti"
 
@@ -612,6 +605,19 @@ msgstr "Koko nimi"
 #: apps/client/src/pages/dashboard/resumes/_dialogs/resume.tsx:200
 msgid "Generate a random title for your resume"
 msgstr "Luo satunnainen otsikko ansioluettelollesi"
+
+#: apps/client/src/components/copyright.tsx:35
+#: apps/client/src/pages/dashboard/settings/page.tsx:16
+#: apps/client/src/pages/home/components/footer.tsx:18
+#: apps/client/src/pages/home/page.tsx:24
+#: apps/client/src/pages/public/page.tsx:73
+#: apps/client/src/pages/public/page.tsx:94
+msgid "Generative Resume"
+msgstr ""
+
+#: apps/client/src/pages/home/sections/logo-cloud/index.tsx:39
+msgid "Generative Resume has helped people land jobs at these great companies:"
+msgstr ""
 
 #: apps/client/src/pages/home/sections/hero/call-to-action.tsx:32
 msgid "Get Started"
@@ -634,7 +640,7 @@ msgstr "Anna vanhalle ansioluettelollesi uusi nimi."
 msgid "Go to Dashboard"
 msgstr "Siirry hallintapaneeliin"
 
-#: apps/client/src/pages/auth/_components/social-auth.tsx:31
+#: apps/client/src/pages/auth/_components/social-auth.tsx:44
 msgid "Google"
 msgstr "Google"
 
@@ -642,6 +648,7 @@ msgstr "Google"
 msgid "Grayscale"
 msgstr "Harmaasävy"
 
+#: apps/client/src/pages/auth/login/page.tsx:56
 #: apps/client/src/pages/dashboard/resumes/page.tsx:43
 msgid "Grid"
 msgstr "Ruudukko"
@@ -672,7 +679,8 @@ msgstr "Piilota"
 msgid "Hide Icons"
 msgstr "Piilota kuvakkeet"
 
-#: apps/client/src/pages/auth/login/page.tsx:110
+#: apps/client/src/pages/auth/_components/local-auth.tsx:75
+#: apps/client/src/pages/auth/_components/wechat-auth.tsx:75
 #: apps/client/src/pages/auth/register/page.tsx:166
 #: apps/client/src/pages/auth/reset-password/page.tsx:88
 msgid "Hold <0>Ctrl</0> to display your password temporarily."
@@ -682,7 +690,7 @@ msgstr "Paina <0>Ctrl</0> näyttääksesi tilapäisesti salasanasi."
 msgid "Horizontal"
 msgstr "Vaakasuuntainen"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:67
+#: apps/client/src/pages/home/sections/features/index.tsx:69
 msgid "Host your resume publicly"
 msgstr "Julkaise ansioluettelosi julkisesti"
 
@@ -832,15 +840,11 @@ msgstr "Kirje"
 msgid "Level"
 msgstr "Taso"
 
-#: apps/client/src/components/copyright.tsx:16
-msgid "Licensed under <0>MIT</0>"
-msgstr "Lisensoitu <0>MIT</0>"
-
 #: apps/client/src/pages/dashboard/settings/_sections/profile.tsx:86
 msgid "Light"
 msgstr "Vaalea"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:69
+#: apps/client/src/pages/home/sections/features/index.tsx:71
 msgid "Light or dark theme"
 msgstr "Vaalea tai tumma teema"
 
@@ -853,6 +857,7 @@ msgstr "Riviväli"
 msgid "LinkedIn, JSON Resume, etc."
 msgstr "LinkedIn, JSON Resume, jne."
 
+#: apps/client/src/pages/auth/login/page.tsx:60
 #: apps/client/src/pages/dashboard/resumes/page.tsx:47
 msgid "List"
 msgstr "Lista"
@@ -871,7 +876,7 @@ msgstr "Sijainti"
 msgid "Lock"
 msgstr "Lukko"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:64
+#: apps/client/src/pages/home/sections/features/index.tsx:66
 msgid "Lock a resume to prevent editing"
 msgstr "Lukitse ansioluettelo estääksesi muokkaamisen"
 
@@ -892,7 +897,7 @@ msgstr "Oletko kadottanut laitteesi?"
 msgid "Main"
 msgstr "Pää"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:59
+#: apps/client/src/pages/home/sections/features/index.tsx:61
 msgid "Manage multiple resumes"
 msgstr "Hallinnoi useita ansioluetteloita"
 
@@ -914,7 +919,7 @@ msgstr "Maaliskuu 2023 - Tähän asti"
 msgid "Margin"
 msgstr "Marginaali"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:48
+#: apps/client/src/pages/home/sections/features/index.tsx:49
 msgid "MIT License"
 msgstr "MIT-lisenssi"
 
@@ -948,7 +953,7 @@ msgstr "Uusi salasana"
 msgid "No results found"
 msgstr "Ei tuloksia"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:49
+#: apps/client/src/pages/home/sections/features/index.tsx:50
 msgid "No user tracking or advertising"
 msgstr "Ei käyttäjän seurantaa tai mainontaa"
 
@@ -978,7 +983,7 @@ msgstr "Voi ei, palvelin palautti virheen."
 msgid "Open"
 msgstr "Avaa"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:47
+#: apps/client/src/pages/home/sections/features/index.tsx:48
 msgid "Open Source"
 msgstr "Avoin lähdekoodi"
 
@@ -989,7 +994,7 @@ msgid "OpenAI did not return any choices for your text."
 msgstr "OpenAI ei palauttanut mitään valintoja tekstillesi."
 
 #: apps/client/src/pages/dashboard/settings/_sections/openai.tsx:52
-#: apps/client/src/pages/home/sections/features/index.tsx:52
+#: apps/client/src/pages/home/sections/features/index.tsx:53
 msgid "OpenAI Integration"
 msgstr "OpenAI-integrointi"
 
@@ -997,11 +1002,6 @@ msgstr "OpenAI-integrointi"
 #: apps/client/src/pages/builder/sidebars/right/sections/typography.tsx:168
 msgid "Options"
 msgstr "Asetukset"
-
-#: apps/client/src/pages/auth/layout.tsx:47
-msgctxt "The user can either login with email/password, or continue with GitHub or Google."
-msgid "or continue with"
-msgstr "tai jatka"
 
 #: apps/client/src/pages/builder/sidebars/left/dialogs/volunteer.tsx:39
 msgid "Organization"
@@ -1016,7 +1016,8 @@ msgstr "Sivu"
 msgid "Page {0}"
 msgstr "Sivu {0}"
 
-#: apps/client/src/pages/auth/login/page.tsx:105
+#: apps/client/src/pages/auth/_components/local-auth.tsx:70
+#: apps/client/src/pages/auth/_components/wechat-auth.tsx:70
 #: apps/client/src/pages/auth/register/page.tsx:161
 #: apps/client/src/pages/auth/reset-password/page.tsx:83
 #: apps/client/src/pages/dashboard/settings/_sections/security.tsx:76
@@ -1027,7 +1028,7 @@ msgstr "Salasana"
 msgid "PDF"
 msgstr "PDF"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:63
+#: apps/client/src/pages/home/sections/features/index.tsx:65
 msgid "Personal notes for each resume"
 msgstr "Henkilökohtaiset muistiinpanot jokaiselle ansioluettelolle"
 
@@ -1039,7 +1040,7 @@ msgstr "Puhelin"
 msgid "Photograph by Patrick Tomasso"
 msgstr "Valokuva By Patrick Tomasso"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:66
+#: apps/client/src/pages/home/sections/features/index.tsx:68
 msgid "Pick any font from Google Fonts"
 msgstr "Valitse mikä tahansa fontti Google Fontsista"
 
@@ -1073,7 +1074,7 @@ msgstr "Asema"
 msgid "Position"
 msgstr "Asema"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:96
+#: apps/client/src/pages/home/sections/features/index.tsx:98
 msgid "Powered by"
 msgstr "Voimanlähteenä"
 
@@ -1112,34 +1113,24 @@ msgstr "Julkaistut"
 msgid "Raise an issue"
 msgstr "Luo ongelma"
 
-#: apps/client/src/components/copyright.tsx:35
 #: apps/client/src/pages/auth/backup-otp/page.tsx:52
 #: apps/client/src/pages/auth/forgot-password/page.tsx:49
-#: apps/client/src/pages/auth/login/page.tsx:55
+#: apps/client/src/pages/auth/login/page.tsx:29
 #: apps/client/src/pages/auth/register/page.tsx:64
 #: apps/client/src/pages/auth/reset-password/page.tsx:60
 #: apps/client/src/pages/auth/verify-email/page.tsx:43
 #: apps/client/src/pages/auth/verify-otp/page.tsx:52
 #: apps/client/src/pages/builder/page.tsx:43
 #: apps/client/src/pages/dashboard/resumes/page.tsx:20
-#: apps/client/src/pages/dashboard/settings/page.tsx:16
-#: apps/client/src/pages/home/components/footer.tsx:18
 #: apps/client/src/pages/home/meta/privacy-policy/page.tsx:10
-#: apps/client/src/pages/home/page.tsx:24
-#: apps/client/src/pages/public/page.tsx:73
-#: apps/client/src/pages/public/page.tsx:94
 msgid "Reactive Resume"
 msgstr "Reaktiivinen ansioluettelo"
-
-#: apps/client/src/pages/home/sections/logo-cloud/index.tsx:39
-msgid "Reactive Resume has helped people land jobs at these great companies:"
-msgstr "Reaktiivinen ansioluettelo on auttanut ihmisiä työllistymään näihin hienoihin yrityksiin:"
 
 #: apps/client/src/pages/home/sections/support/index.tsx:12
 msgid "Reactive Resume is a free and open-source project crafted mostly by me, and your support would be greatly appreciated. If you're inclined to contribute, and only if you can afford to, consider making a donation through any of the listed platforms. Additionally, donations to Reactive Resume through Open Collective are tax-exempt, as the project is fiscally hosted by Open Collective Europe."
 msgstr "Reaktiivinen ansioluettelo on ilmainen ja avoimen lähdekoodin projekti, jota olen pääosin kehittänyt itse, ja tuki olisi erittäin arvostettua. Jos sinua kiinnostaa osallistua ja vain jos sinulla on varaa, harkitse lahjoituksen tekemistä jonkin luetellun maksualustan kautta. Lisäksi lahjoitukset Reaktiiviselle ansioluettelolle Open Collectiven kautta ovat verovapaita, koska projekti on taloudellisesti majoitettu Open Collective Europeen."
 
-#: apps/client/src/pages/home/sections/features/index.tsx:107
+#: apps/client/src/pages/home/sections/features/index.tsx:109
 msgid "Reactive Resume is a passion project of over 3 years of hard work, and with that comes a number of re-iterated ideas and features that have been built to (near) perfection."
 msgstr "Reaktiivinen ansioluettelo on yli 3 vuoden kova työprojekti, ja sen myötä on syntynyt joukko uudelleen harkittuja ideoita ja ominaisuuksia, jotka on rakennettu (lähes) täydellisyyteen."
 
@@ -1198,7 +1189,7 @@ msgstr "Ansioluettelot"
 msgid "Resumes Generated"
 msgstr "Luodut ansioluettelot"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:105
+#: apps/client/src/pages/home/sections/features/index.tsx:107
 msgid "Rich in features, not in pricing."
 msgstr "Monipuolinen ominaisuuksiltaan, ei hinnoiltaan."
 
@@ -1238,7 +1229,7 @@ msgstr "Etsi fonttivarianttia"
 msgid "Search for a language"
 msgstr "Etsi kieltä"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:56
+#: apps/client/src/pages/home/sections/features/index.tsx:58
 msgid "Secure with two-factor authentication"
 msgstr "Turvaa kaksivaiheisella todennuksella"
 
@@ -1246,7 +1237,7 @@ msgstr "Turvaa kaksivaiheisella todennuksella"
 msgid "Security"
 msgstr "Turvallisuus"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:50
+#: apps/client/src/pages/home/sections/features/index.tsx:51
 msgid "Self-host with Docker"
 msgstr "Itse-isännöidy Dockerilla"
 
@@ -1294,8 +1285,9 @@ msgstr "Näytä Sivunumerot"
 msgid "Sidebar"
 msgstr "Sivupalkki"
 
+#: apps/client/src/pages/auth/_components/local-auth.tsx:86
+#: apps/client/src/pages/auth/_components/wechat-auth.tsx:86
 #: apps/client/src/pages/auth/backup-otp/page.tsx:102
-#: apps/client/src/pages/auth/login/page.tsx:122
 #: apps/client/src/pages/auth/verify-otp/page.tsx:92
 msgid "Sign in"
 msgstr "Kirjaudu sisään"
@@ -1304,30 +1296,30 @@ msgstr "Kirjaudu sisään"
 msgid "Sign in now"
 msgstr "Kirjaudu sisään nyt"
 
-#: apps/client/src/pages/auth/login/page.tsx:55
-#: apps/client/src/pages/auth/login/page.tsx:60
+#: apps/client/src/pages/auth/login/page.tsx:29
+#: apps/client/src/pages/auth/login/page.tsx:34
 msgid "Sign in to your account"
 msgstr "Kirjaudu tilillesi"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:55
+#: apps/client/src/pages/home/sections/features/index.tsx:57
 msgid "Sign in with Email"
 msgstr "Kirjaudu sähköpostilla"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:53
+#: apps/client/src/pages/home/sections/features/index.tsx:54
 msgid "Sign in with GitHub"
 msgstr "Kirjaudu GitHub-tilillä"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:54
+#: apps/client/src/pages/home/sections/features/index.tsx:55
 msgid "Sign in with Google"
 msgstr "Kirjaudu Google-tilillä"
+
+#: apps/client/src/pages/home/sections/features/index.tsx:56
+msgid "Sign in with Wechat"
+msgstr ""
 
 #: apps/client/src/pages/auth/register/page.tsx:177
 msgid "Sign up"
 msgstr "Rekisteröidy"
-
-#: apps/client/src/pages/auth/login/page.tsx:74
-msgid "Signing in via email is currently disabled by the administrator."
-msgstr ""
 
 #: apps/client/src/pages/auth/register/page.tsx:82
 msgid "Signups are currently disabled by the administrator."
@@ -1408,7 +1400,7 @@ msgstr "Tue sovellusta lahjoittamalla mitä voit!"
 msgid "Supporting Reactive Resume"
 msgstr "Reaktiivisen ansioluettelon tukeminen"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:65
+#: apps/client/src/pages/home/sections/features/index.tsx:67
 msgid "Supports A4/Letter page formats"
 msgstr "Tukee A4/Kirje-sivuformaatteja"
 
@@ -1496,7 +1488,7 @@ msgstr "Vaihda Sivunvaihtoviiva"
 msgid "Toggle Page Numbers"
 msgstr "Vaihda Sivunumerot"
 
-#: apps/client/src/pages/home/sections/features/index.tsx:68
+#: apps/client/src/pages/home/sections/features/index.tsx:70
 msgid "Track views and downloads"
 msgstr "Seuraa näkymiä ja latauksia"
 
@@ -1615,10 +1607,6 @@ msgstr "Varmista, että kaksivaiheinen todennus on asetettu oikein"
 msgid "Verify your email address"
 msgstr "Varmista sähköpostiosoitteesi"
 
-#: apps/client/src/pages/home/sections/hero/index.tsx:26
-msgid "Version 4"
-msgstr "Versio 4"
-
 #: apps/client/src/pages/builder/sidebars/right/sections/statistics.tsx:51
 msgid "Views"
 msgstr "Näkymät"
@@ -1645,9 +1633,9 @@ msgstr "Me varmistamme sähköpostiosoitteesi vain varmistaaksemme, että voimme
 msgid "Website"
 msgstr "Verkkosivusto"
 
-#: apps/client/src/pages/home/sections/hero/index.tsx:32
-msgid "What's new in the latest version"
-msgstr "Mitä uutta viimeisimmässä versiossa"
+#: apps/client/src/pages/auth/_components/social-auth.tsx:31
+msgid "Wechat"
+msgstr ""
 
 #: apps/client/src/pages/builder/sidebars/left/dialogs/custom-section.tsx:157
 #: apps/client/src/pages/builder/sidebars/left/dialogs/interests.tsx:68
@@ -1656,7 +1644,8 @@ msgstr "Mitä uutta viimeisimmässä versiossa"
 msgid "You can add multiple keywords by separating them with a comma or pressing enter."
 msgstr "Voit lisätä useita avainsanoja erottelemalla ne pilkulla tai painamalla enter."
 
-#: apps/client/src/pages/auth/login/page.tsx:94
+#: apps/client/src/pages/auth/_components/local-auth.tsx:60
+#: apps/client/src/pages/auth/_components/wechat-auth.tsx:60
 msgid "You can also enter your username."
 msgstr "Voit myös syöttää käyttäjänimesi."
 
@@ -1673,8 +1662,8 @@ msgid "You have the option to <0>obtain your own OpenAI API key</0>. This key em
 msgstr "Sinulla on mahdollisuus <0>hankkia oma OpenAI API-avain</0>. Tämä avain antaa sinulle mahdollisuuden hyödyntää API:a haluamallasi tavalla. Vaihtoehtoisesti, jos haluat poistaa tekoälyominaisuudet kokonaan Reactive Resumesta, voit yksinkertaisesti poistaa avaimen asetuksistasi."
 
 #: apps/client/src/pages/auth/verify-email/page.tsx:50
-msgid "You should have received an email from <0>Reactive Resume</0> with a link to verify your account."
-msgstr "Sinun pitäisi olla saanut sähköpostia <0>Reactive Resumelta</0> linkin kera tilisi vahvistamiseksi."
+msgid "You should have received an email from <0>Generative Resume</0> with a link to verify your account."
+msgstr ""
 
 #: apps/client/src/pages/auth/forgot-password/page.tsx:49
 #: apps/client/src/pages/auth/forgot-password/page.tsx:54
@@ -1708,4 +1697,3 @@ msgstr "Lähennä"
 #: apps/client/src/pages/builder/_components/toolbar.tsx:100
 msgid "Zoom Out"
 msgstr "Loitonna"
-
