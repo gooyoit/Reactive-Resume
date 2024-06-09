@@ -47,12 +47,14 @@ export const LoginPage = () => {
         <CardContent className="space-y-4">
           <Tabs
             value={layout}
-            onValueChange={(value) => setLayout(value as Layout)}
             className="space-y-4"
+            onValueChange={(value) => {
+              setLayout(value as Layout);
+            }}
           >
             <div className="flex items-center justify-between">
               <TabsList>
-              <TabsTrigger value="local" className="size-32 p-0 sm:h-8 sm:w-auto sm:px-16">
+                <TabsTrigger value="local" className="size-32 p-0 sm:h-8 sm:w-auto sm:px-16">
                   <WechatLogo />
                   <span className="ml-2 hidden sm:block">{t`Wechat`}</span>
                 </TabsTrigger>

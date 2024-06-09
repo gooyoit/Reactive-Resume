@@ -343,6 +343,11 @@ msgctxt "This is a link to create a new account"
 msgid "Create one now"
 msgstr "立即創建"
 
+#: apps/client/src/pages/auth/login/page.tsx:65
+msgctxt "wechat"
+msgid "Wehcat"
+msgstr "微信登录"
+
 #: apps/client/src/pages/dashboard/resumes/_dialogs/resume.tsx:257
 msgid "Create Sample Resume"
 msgstr "創建履歷表範本"

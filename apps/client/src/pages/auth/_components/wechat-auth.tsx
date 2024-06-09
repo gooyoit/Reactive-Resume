@@ -27,7 +27,7 @@ export const WechatAuth = () => {
 
   const formRef = useRef<HTMLFormElement>(null);
   const { providers } = useAuthProviders();
-  const emailAuthDisabled = !providers || !providers.includes("email");
+  const emailAuthDisabled = !providers?.includes("email");
   const form = useForm<FormValues>({
     resolver: zodResolver(loginSchema),
     defaultValues: { identifier: "", password: "" },
@@ -36,7 +36,7 @@ export const WechatAuth = () => {
   const onSubmit = async (data: FormValues) => {
     try {
       await login(data);
-    } catch (error) {
+    } catch {
       form.reset();
     }
   };
