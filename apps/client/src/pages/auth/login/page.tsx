@@ -32,6 +32,7 @@ export const LoginPage = () => {
 
       <div className="space-y-1.5">
         <h2 className="text-2xl font-semibold tracking-tight">{t`Sign in to your account`}</h2>
+        {/* <h6 className={cn(emailAuthDisabled && "hidden")}> */}
         <h6>
           <span className="opacity-75">{t`Don't have an account?`}</span>
           <Button asChild variant="link" className="px-1.5">
@@ -51,13 +52,13 @@ export const LoginPage = () => {
           >
             <div className="flex items-center justify-between">
               <TabsList>
+              <TabsTrigger value="local" className="size-32 p-0 sm:h-8 sm:w-auto sm:px-16">
+                  <WechatLogo />
+                  <span className="ml-2 hidden sm:block">{t`Wechat`}</span>
+                </TabsTrigger>
                 <TabsTrigger value="wechat" className="size-32 p-0 sm:h-8 sm:w-auto sm:px-16">
                   <User />
-                  <span className="ml-2 hidden sm:block">{t`Grid`}</span>
-                </TabsTrigger>
-                <TabsTrigger value="local" className="size-32 p-0 sm:h-8 sm:w-auto sm:px-16">
-                  <WechatLogo />
-                  <span className="ml-2 hidden sm:block">{t`List`}</span>
+                  <span className="ml-2 hidden sm:block">{t`Email`}</span>
                 </TabsTrigger>
               </TabsList>
             </div>

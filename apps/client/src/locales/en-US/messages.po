@@ -1301,6 +1301,10 @@ msgstr "Sign in now"
 msgid "Sign in to your account"
 msgstr "Sign in to your account"
 
+#: apps/client/src/pages/auth/login/page.tsx:57
+msgid "Wechat"
+msgstr "Wechat"
+
 #: apps/client/src/pages/home/sections/features/index.tsx:57
 msgid "Sign in with Email"
 msgstr "Sign in with Email"
