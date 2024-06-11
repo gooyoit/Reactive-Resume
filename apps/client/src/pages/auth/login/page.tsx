@@ -15,8 +15,8 @@ import { Link } from "react-router-dom";
 
 // import { useLogin } from "@/client/services/auth";
 // import { useAuthProviders } from "@/client/services/auth/providers";
-import { LocalAuth } from ".././_components/local-auth";
-import { WechatAuth } from ".././_components/wechat-auth";
+import { LocalAuth } from "../_components/local-auth";
+import { WechatQrcodeAuth } from "../_components/wechat-qrcode-auth";
 
 type Layout = "wechat" | "local";
 export const LoginPage = () => {
@@ -54,18 +54,18 @@ export const LoginPage = () => {
           >
             <div className="flex items-center justify-between">
               <TabsList>
-                <TabsTrigger value="local" className="size-32 p-0 sm:h-8 sm:w-auto sm:px-16">
+                <TabsTrigger value="wechat" className="size-32 p-0 sm:h-8 sm:w-auto sm:px-16">
                   <WechatLogo />
                   <span className="ml-2 hidden sm:block">{t`Wechat`}</span>
                 </TabsTrigger>
-                <TabsTrigger value="wechat" className="size-32 p-0 sm:h-8 sm:w-auto sm:px-16">
+                <TabsTrigger value="local" className="size-32 p-0 sm:h-8 sm:w-auto sm:px-16">
                   <User />
-                  <span className="ml-2 hidden sm:block">{t`Email`}</span>
+                  <span className="ml-2 hidden sm:block">{t`Email1`}</span>
                 </TabsTrigger>
               </TabsList>
             </div>
             <TabsContent value="wechat">
-              <WechatAuth />
+              <WechatQrcodeAuth />
             </TabsContent>
             <TabsContent value="local">
               <LocalAuth />

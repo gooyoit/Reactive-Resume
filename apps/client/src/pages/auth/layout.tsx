@@ -8,19 +8,19 @@ import { Logo } from "@/client/components/logo";
 import { ThemeSwitch } from "@/client/components/theme-switch";
 import { useAuthProviders } from "@/client/services/auth/providers";
 
-import { SocialAuth } from "./_components/social-auth";
+// import { SocialAuth } from "./_components/social-auth";
 
-const authRoutes = [{ path: "/auth/login" }, { path: "/auth/register" }];
+// const authRoutes = [{ path: "/auth/login" }, { path: "/auth/register" }];
 
 export const AuthLayout = () => {
-  const location = useLocation();
+  // const location = useLocation();
   const { providers } = useAuthProviders();
-  const isAuthRoute = useMemo(() => matchRoutes(authRoutes, location) !== null, [location]);
+  // const isAuthRoute = useMemo(() => matchRoutes(authRoutes, location) !== null, [location]);
 
   if (!providers) return null;
 
   // Condition (providers.length === 1) hides the divider if providers[] includes only "email"
-  const hideDivider = !providers.includes("email") || providers.length === 1;
+  // const hideDivider = !providers.includes("email") || providers.length === 1;
 
   return (
     // eslint-disable-next-line tailwindcss/enforces-shorthand -- size-screen not implemented yet

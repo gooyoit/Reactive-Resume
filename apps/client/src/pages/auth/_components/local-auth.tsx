@@ -27,7 +27,7 @@ export const LocalAuth = () => {
 
   const formRef = useRef<HTMLFormElement>(null);
   const { providers } = useAuthProviders();
-  const emailAuthDisabled = !providers || !providers.includes("email");
+  const emailAuthDisabled = !providers?.includes("email");
   const form = useForm<FormValues>({
     resolver: zodResolver(loginSchema),
     defaultValues: { identifier: "", password: "" },
