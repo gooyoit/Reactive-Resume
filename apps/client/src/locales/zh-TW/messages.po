@@ -8,7 +8,7 @@ msgstr ""
 "Language: zh\n"
 "Project-Id-Version: reactive-resume\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2024-05-29 08:38\n"
+"PO-Revision-Date: 2024-06-10 05:50\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Traditional\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -56,13 +56,17 @@ msgstr "<0>启用双重认证。</0>每次登入時都會要求您輸入代碼�
 
 #: apps/client/src/pages/home/page.tsx:24
 #: apps/client/src/pages/home/sections/hero/index.tsx:40
-msgid "A free and open-source resume builder"
-msgstr "一個免費且開源的簡歷建立工具"
+#msgid "A free and open-source resume builder"
+#msgstr "一個免費且開源的簡歷建立工具"
+msgid "A simple and fast resume builder"
+msgstr "快速简洁的简历生成器"
 
 #: apps/client/src/pages/home/components/footer.tsx:21
 #: apps/client/src/pages/home/sections/hero/index.tsx:45
-msgid "A free and open-source resume builder that simplifies the process of creating, updating, and sharing your resume."
-msgstr "一個免費且開源的簡歷生成器，簡化了創建、更新和分享您的簡歷的過程。"
+#msgid "A free and open-source resume builder that simplifies the process of creating, updating, and sharing your resume."
+#msgstr "一個免費且開源的簡歷生成器，簡化了創建、更新和分享您的簡歷的過程。"
+msgid "A simple, fast and AI supported resume builder that simplifies the process of creating, updating, and sharing your resume."
+msgstr "一款快速、简洁且支持AI生成的简历生成器，可简化创建、更新和共享简历的过程。"
 
 #: apps/client/src/pages/builder/_components/toolbar.tsx:53
 #: apps/client/src/pages/builder/sidebars/right/sections/sharing.tsx:29
@@ -179,7 +183,7 @@ msgstr "你確定嗎？"
 msgid "Area of Study"
 msgstr "學習領域"
 
-#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:84
+#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:85
 msgid "Aspect Ratio"
 msgstr "長寬比"
 
@@ -218,11 +222,11 @@ msgstr "基本資料"
 msgid "Basics"
 msgstr "基本資料"
 
-#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:194
+#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:197
 msgid "Border"
 msgstr "邊界"
 
-#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:127
+#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:130
 msgid "Border Radius"
 msgstr "邊界半徑"
 
@@ -268,7 +272,7 @@ msgstr "改變了對名稱的看法嗎？給它一個新名字。"
 msgid "Check your email for the confirmation link to update your email address."
 msgstr "檢查您的電子郵件以獲取確認鏈接，以更新您的電子郵件地址。"
 
-#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:147
+#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:150
 msgid "Circle"
 msgstr "圓形"
 
@@ -487,7 +491,7 @@ msgstr ""
 msgid "Edit"
 msgstr "編輯"
 
-#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:172
+#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:175
 msgid "Effects"
 msgstr ""
 
@@ -643,7 +647,7 @@ msgstr ""
 msgid "Google"
 msgstr ""
 
-#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:205
+#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:208
 msgid "Grayscale"
 msgstr ""
 
@@ -665,7 +669,7 @@ msgstr ""
 
 #: apps/client/src/pages/builder/sidebars/left/dialogs/languages.tsx:78
 #: apps/client/src/pages/builder/sidebars/left/dialogs/skills.tsx:92
-#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:183
+#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:186
 msgid "Hidden"
 msgstr ""
 
@@ -683,7 +687,7 @@ msgstr ""
 msgid "Hold <0>Ctrl</0> to display your password temporarily."
 msgstr ""
 
-#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:98
+#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:99
 msgid "Horizontal"
 msgstr ""
 
@@ -1065,7 +1069,7 @@ msgstr ""
 msgid "Please store your backup codes in a secure location. You can use one of these one-time use codes to login in case you lose access to your authenticator app."
 msgstr ""
 
-#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:104
+#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:105
 msgid "Portrait"
 msgstr ""
 
@@ -1207,7 +1211,7 @@ msgstr ""
 msgid "Rich in features, not in pricing."
 msgstr ""
 
-#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:141
+#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:144
 msgid "Rounded"
 msgstr ""
 
@@ -1338,7 +1342,7 @@ msgstr ""
 msgid "Signups are currently disabled by the administrator."
 msgstr ""
 
-#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:70
+#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:71
 msgid "Size (in px)"
 msgstr ""
 
@@ -1358,8 +1362,8 @@ msgstr ""
 msgid "Something went wrong while processing your request. Please try again later or raise an issue on GitHub."
 msgstr ""
 
-#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:92
-#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:135
+#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:93
+#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:138
 msgid "Square"
 msgstr ""
 

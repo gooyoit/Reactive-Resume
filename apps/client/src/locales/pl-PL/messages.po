@@ -8,7 +8,7 @@ msgstr ""
 "Language: pl\n"
 "Project-Id-Version: reactive-resume\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2024-05-29 08:38\n"
+"PO-Revision-Date: 2024-06-10 05:50\n"
 "Last-Translator: \n"
 "Language-Team: Polish\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
@@ -175,7 +175,7 @@ msgstr "Na pewno?"
 msgid "Area of Study"
 msgstr "Kierunek studiów"
 
-#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:84
+#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:85
 msgid "Aspect Ratio"
 msgstr "Współczynnik proporcji"
 
@@ -214,11 +214,11 @@ msgstr "Podstawy"
 msgid "Basics"
 msgstr "Podstawy"
 
-#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:194
+#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:197
 msgid "Border"
 msgstr "Obramowanie"
 
-#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:127
+#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:130
 msgid "Border Radius"
 msgstr "Zaokrąglenie"
 
@@ -263,7 +263,7 @@ msgstr "Zmieniłeś zdanie co do nazwy? Daj nową."
 msgid "Check your email for the confirmation link to update your email address."
 msgstr "Sprawdź, czy w skrzynce e-mail znajduje się link potwierdzający umożliwiający aktualizację adresu e-mail."
 
-#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:147
+#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:150
 msgid "Circle"
 msgstr "Koło"
 
@@ -477,7 +477,7 @@ msgstr "Zduplikuj istniejące CV"
 msgid "Edit"
 msgstr "Edytuj"
 
-#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:172
+#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:175
 msgid "Effects"
 msgstr "Efekty"
 
@@ -644,7 +644,7 @@ msgstr "Przejdź do Pulpitu"
 msgid "Google"
 msgstr "Google"
 
-#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:205
+#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:208
 msgid "Grayscale"
 msgstr "Skala szarości"
 
@@ -667,7 +667,7 @@ msgstr "Tutaj możesz zaktualizować swój profil, aby dostosować i spersonaliz
 
 #: apps/client/src/pages/builder/sidebars/left/dialogs/languages.tsx:78
 #: apps/client/src/pages/builder/sidebars/left/dialogs/skills.tsx:92
-#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:183
+#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:186
 msgid "Hidden"
 msgstr "Ukryte"
 
@@ -686,7 +686,7 @@ msgstr "Ukryj Ikony"
 msgid "Hold <0>Ctrl</0> to display your password temporarily."
 msgstr "Przytrzymaj <0>Ctrl</0> aby tymczasowo wyświetlić hasło."
 
-#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:98
+#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:99
 msgid "Horizontal"
 msgstr "Poziomo"
 
@@ -1061,7 +1061,7 @@ msgstr "Proszę wybrać typ pliku"
 msgid "Please store your backup codes in a secure location. You can use one of these one-time use codes to login in case you lose access to your authenticator app."
 msgstr "Przechowuj kody zapasowe w bezpiecznym miejscu. Możesz użyć jednego z tych jednorazowych kodów do zalogowania się, na wypadek utraty dostępu do aplikacji uwierzytelniającej."
 
-#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:104
+#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:105
 msgid "Portrait"
 msgstr "Portret"
 
@@ -1193,7 +1193,7 @@ msgstr "Wygenerowane CV"
 msgid "Rich in features, not in pricing."
 msgstr "Bogaty w funkcjonalności, nie w rozbudowany cennik."
 
-#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:141
+#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:144
 msgid "Rounded"
 msgstr "Zaokrąklony"
 
@@ -1325,7 +1325,7 @@ msgstr "Zarejestruj się"
 msgid "Signups are currently disabled by the administrator."
 msgstr "Rejestracja jest obecnie wyłączona przez administratora."
 
-#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:70
+#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:71
 msgid "Size (in px)"
 msgstr "Rozmiar (w pikselach)"
 
@@ -1345,8 +1345,8 @@ msgstr "Coś poszło nie tak podczas drukowania Twojego CV. Spróbuj ponownie p�
 msgid "Something went wrong while processing your request. Please try again later or raise an issue on GitHub."
 msgstr "Coś poszło nie tak podczas pobierania podglądu CV. Spróbuj ponownie później lub zgłoś problem w GitHub."
 
-#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:92
-#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:135
+#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:93
+#: apps/client/src/pages/builder/sidebars/left/sections/picture/options.tsx:138
 msgid "Square"
 msgstr "Kwadrat"
 

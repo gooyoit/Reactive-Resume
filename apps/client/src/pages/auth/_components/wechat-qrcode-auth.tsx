@@ -1,13 +1,19 @@
 export const WechatQrcodeAuth = () => {
+  const authUrl = "/api/auth/wechat";
   return (
-    <div className="">
+    <div
+      className="w-full sm:h-80"
+      style={{ overflow: "hidden", position: "relative", height: "329px" }}
+    >
       <iframe
+        className="w-full"
+        scrolling="no"
         title="wechat_login"
-        className=""
         width="100%"
-        height="359"
+        height="340"
+        style={{ top: "-40px", position: "relative" }}
         sandbox="allow-scripts allow-same-origin allow-top-navigation"
-        src="/api/auth/wechat"
+        src={authUrl}
       ></iframe>
     </div>
   );

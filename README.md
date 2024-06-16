@@ -8,7 +8,7 @@
 
 # Reactive Resume
 
-A simple, fast and AI supported resume builder that simplifies the process of creating, updating, and sharing your resume.
+A simple, fast and AI supported resume generator that simplifies the process of creating, updating, and sharing your resume.
 
 ### [Go to App](https://rxresu.me/) | [Docs](https://docs.rxresu.me/)
 

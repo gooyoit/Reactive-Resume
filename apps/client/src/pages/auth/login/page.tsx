@@ -43,11 +43,11 @@ export const LoginPage = () => {
           </Button>
         </h6>
       </div>
-      <Card className="space-y-1">
-        <CardContent className="space-y-4">
+      <Card className="p-4 sm:max-h-96">
+        <CardContent className="space-y-1 sm:max-h-80">
           <Tabs
             value={layout}
-            className="space-y-4"
+            className="space-y-0.5"
             onValueChange={(value) => {
               setLayout(value as Layout);
             }}
@@ -60,7 +60,7 @@ export const LoginPage = () => {
                 </TabsTrigger>
                 <TabsTrigger value="local" className="size-32 p-0 sm:h-8 sm:w-auto sm:px-16">
                   <User />
-                  <span className="ml-2 hidden sm:block">{t`Email1`}</span>
+                  <span className="ml-2 hidden sm:block">{t`Email`}</span>
                 </TabsTrigger>
               </TabsList>
             </div>

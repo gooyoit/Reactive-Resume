@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export const Banner = () => {
   return (
-    <a href="https://gooyoit.com/Reactive-Resume" target="_blank" rel="noreferrer">
+    <a href="https://docs.gen-resume.com" target="_blank" rel="noreferrer">
       <motion.div
         whileHover={{ height: 48 }}
         initial={{ opacity: 0, y: -50, height: 32 }}
