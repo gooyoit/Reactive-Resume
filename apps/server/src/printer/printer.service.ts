@@ -178,10 +178,10 @@ export class PrinterService {
       // Embed all the fonts in the PDF
       await Promise.all(fontsBuffer.map((buffer) => pdf.embedFont(buffer)));
 
-      for (let index = 0; index < pagesBuffer.length; index++) {
-        const page = await PDFDocument.load(pagesBuffer[index]);
+      for (const element of pagesBuffer) {
+        const page = await PDFDocument.load(element);
 
-        await this.addTextWatermark(page,"gooyoit")
+        // await this.addTextWatermark(page, "gooyoit");
 
         const [copiedPage] = await pdf.copyPages(page, [0]);
         pdf.addPage(copiedPage);
