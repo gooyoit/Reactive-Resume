@@ -1,10 +1,10 @@
 import { t } from "@lingui/macro";
 import { OpenAI } from "openai";
 
-import { useOpenAiStore } from "@/client/stores/openai";
-
 export const openai = () => {
-  const { apiKey } = useOpenAiStore.getState();
+  const apiKey = process.env.OPENAI_API_KEY ?? "";
+  const baseURL =
+    process.env.OPENAI_BASE_URL ?? "https://dashscope.aliyuncs.com/compatible-mode/v1";
 
   if (!apiKey) {
     throw new Error(
@@ -14,7 +14,7 @@ export const openai = () => {
 
   return new OpenAI({
     apiKey,
-    // baseURL: "https://dashscope.aliyuncs.com/compatible-mode/v1",
+    baseURL,
     dangerouslyAllowBrowser: true,
   });
 };

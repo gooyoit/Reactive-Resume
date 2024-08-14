@@ -77,6 +77,9 @@ export const configSchema = z.object({
   WECHAT_APP_ID: z.string().optional(),
   WECHAT_APP_SECRET: z.string().optional(),
   WECHAT_CALLBACK_URL: z.string().url().optional(),
+
+  OPENAI_API_KEY: z.string().optional(),
+  OPENAI_BASE_URL: z.string().optional(),
 });
 
 export type Config = z.infer<typeof configSchema>;

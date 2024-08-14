@@ -29,20 +29,6 @@ export const LoginPage = () => {
           {t`Sign in to your account`} - {t`Reactive Resume`}
         </title>
       </Helmet>
-
-      <div className="space-y-1.5">
-        <h2 className="text-2xl font-semibold tracking-tight">{t`Sign in to your account`}</h2>
-        {/* <h6 className={cn(emailAuthDisabled && "hidden")}> */}
-        <h6>
-          <span className="opacity-75">{t`Don't have an account?`}</span>
-          <Button asChild variant="link" className="px-1.5">
-            <Link to="/auth/register">
-              {t({ message: "Create one now", context: "This is a link to create a new account" })}{" "}
-              <ArrowRight className="ml-1" />
-            </Link>
-          </Button>
-        </h6>
-      </div>
       <Card className="p-4 sm:max-h-96">
         <CardContent className="space-y-1 sm:max-h-80">
           <Tabs
@@ -68,6 +54,21 @@ export const LoginPage = () => {
               <WechatQrcodeAuth />
             </TabsContent>
             <TabsContent value="local">
+              <div className="space-y-1.5">
+                <h2 className="text-2xl font-semibold tracking-tight">{t`Sign in to your account`}</h2>
+                <h6>
+                  <span className="opacity-75">{t`Don't have an account?`}</span>
+                  <Button asChild variant="link" className="px-1.5">
+                    <Link to="/auth/register">
+                      {t({
+                        message: "Create one now",
+                        context: "This is a link to create a new account",
+                      })}{" "}
+                      <ArrowRight className="ml-1" />
+                    </Link>
+                  </Button>
+                </h6>
+              </div>
               <LocalAuth />
             </TabsContent>
           </Tabs>

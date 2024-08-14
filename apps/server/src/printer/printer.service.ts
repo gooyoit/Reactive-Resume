@@ -99,13 +99,13 @@ export class PrinterService {
       const publicUrl = this.configService.getOrThrow<string>("PUBLIC_URL");
       const storageUrl = this.configService.getOrThrow<string>("STORAGE_URL");
 
-      let url = publicUrl;
+      const url = publicUrl;
 
       if ([publicUrl, storageUrl].some((url) => url.includes("localhost"))) {
         // Switch client URL from `localhost` to `host.docker.internal` in development
         // This is required because the browser is running in a container and the client is running on the host machine.
         // url = url.replace("localhost", "host.docker.internal");
- 
+
         await page.setRequestInterception(true);
 
         // Intercept requests of `localhost` to `host.docker.internal` in development
@@ -216,7 +216,7 @@ export class PrinterService {
     const publicUrl = this.configService.getOrThrow<string>("PUBLIC_URL");
     const storageUrl = this.configService.getOrThrow<string>("STORAGE_URL");
 
-    let url = publicUrl;
+    const url = publicUrl;
 
     if ([publicUrl, storageUrl].some((url) => url.includes("localhost"))) {
       // Switch client URL from `localhost` to `host.docker.internal` in development
@@ -266,15 +266,14 @@ export class PrinterService {
   }
 
   // 添加 Text 水印 https://www.jb51.net/article/278064.htm 
-  async addTextWatermark(pdfDoc :PDFDocument, text:string) {
+  async addTextWatermark(pdfDoc: PDFDocument, text: string) {
     // console.log(StandardFonts, 'StandardFonts-->>') // 字体
-    const helveticaFont = await pdfDoc.embedFont(StandardFonts.Helvetica)
-    const pages = pdfDoc.getPages()
-    for(let i = 0; i < pages.length; i++) {
-      let page = pages[i]
-      let { width, height } = page.getSize()
-      for(let i = 0; i < 6; i++) {
-        for(let j = 0; j < 6; j++) {
+    const helveticaFont = await pdfDoc.embedFont(StandardFonts.Helvetica);
+    const pages = pdfDoc.getPages();
+    for (const page of pages) {
+      const { width, height } = page.getSize();
+      for (let i = 0; i < 6; i++) {
+        for (let j = 0; j < 6; j++) {
           page.drawText(text, {
             x: j * 100,
             y: height / 5 + i * 100,
@@ -283,7 +282,7 @@ export class PrinterService {
             color: rgb(0.95, 0.1, 0.1),
             opacity: 0.2,
             rotate: degrees(-30),
-          })
+          });
         }
       }
     }
