@@ -21,6 +21,7 @@ export class OpenaiController {
     }
   }
 
+  @UseGuards(TwoFactorGuard)
   @Post("/changtone")
   async changtone(@Body() openaiDto: OpenaiDto) {
     Logger.log(openaiDto.text);
@@ -32,6 +33,7 @@ export class OpenaiController {
     }
   }
 
+  @UseGuards(TwoFactorGuard)
   @Post("/improvewriting")
   async improvewriting(@Body() data: { text: string }) {
     Logger.log(data.text);

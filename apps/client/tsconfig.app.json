@@ -9,6 +9,7 @@
       "vite/client"
     ]
   },
+  "composite": true,
   "exclude": [
     "src/**/*.spec.ts",
     "src/**/*.test.ts",

@@ -562,7 +562,7 @@ msgstr "最后，"
 
 #: apps/client/src/components/ai-actions.tsx:90
 msgid "Fix Spelling & Grammar"
-msgstr "修正拼写和语法"
+msgstr "内容纠错"
 
 #: apps/client/src/pages/builder/sidebars/right/sections/typography.tsx:93
 msgid "Font Family"
@@ -728,7 +728,7 @@ msgstr "导入现有简历"
 
 #: apps/client/src/components/ai-actions.tsx:85
 msgid "Improve Writing"
-msgstr "提高写作水平"
+msgstr "文案润色"
 
 #: apps/client/src/pages/dashboard/settings/_dialogs/two-factor.tsx:188
 msgid "In case you are unable to scan this QR Code, you can also copy-paste this link into your authenticator app."

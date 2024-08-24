@@ -14,7 +14,6 @@ export const openai = () => {
 
   return new OpenAI({
     apiKey,
-    // baseURL: "https://dashscope.aliyuncs.com/compatible-mode/v1",
     dangerouslyAllowBrowser: true,
   });
 };
