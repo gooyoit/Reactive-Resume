@@ -1,25 +1,22 @@
 import { t } from "@lingui/macro";
 import { Lock } from "@phosphor-icons/react";
-import { VipDto } from "@reactive-resume/dto";
+import { VipCategoryDto } from "@reactive-resume/dto";
 import { ContextMenu, ContextMenuTrigger } from "@reactive-resume/ui";
 import { cn } from "@reactive-resume/utils";
-import dayjs from "dayjs";
 import { AnimatePresence, motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-
-import { useDialog } from "@/client/stores/dialog";
 
 import { BaseCard } from "./base-card";
 
 type Props = {
-  vip: VipDto;
+  vipCategory: VipCategoryDto;
 };
 
-export const CateGoryCard = ({ vip }: Props) => {
+export const CategoryCard = ({ vipCategory }: Props) => {
   const navigate = useNavigate();
 
   const onChoose = () => {
-    navigate(`/builder/${vip.id}`);
+    navigate(`/builder/${vipCategory.id}`);
   };
   return (
     <ContextMenu>
@@ -44,8 +41,8 @@ export const CateGoryCard = ({ vip }: Props) => {
               "bg-gradient-to-t from-background/80 to-transparent",
             )}
           >
-            <h4 className="line-clamp-2 font-medium">{vip.text}</h4>
-            <p className="line-clamp-1 text-xs opacity-75">{t`Last updated {vip.price}`}</p>
+            <h4 className="line-clamp-2 font-medium">{vipCategory.text}</h4>
+            <p className="line-clamp-1 text-xs opacity-75">{t`Last updated {vipCategory.price}`}</p>
           </div>
         </BaseCard>
       </ContextMenuTrigger>

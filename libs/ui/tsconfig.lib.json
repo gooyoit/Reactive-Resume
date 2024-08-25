@@ -9,6 +9,7 @@
       "vite/client"
     ]
   },
+  "composite": true,
   "exclude": [
     "**/*.spec.ts",
     "**/*.test.ts",

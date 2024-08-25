@@ -25,7 +25,7 @@ const formSchema = z.object({
 
 type FormValues = z.infer<typeof formSchema>;
 
-export const ProfileSettings = () => {
+export const VipPay = () => {
   const { user } = useUser();
   const { theme, setTheme } = useTheme();
   const { updateUser, loading } = useUpdateUser();

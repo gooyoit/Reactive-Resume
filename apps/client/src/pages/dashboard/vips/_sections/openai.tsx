@@ -28,7 +28,7 @@ const formSchema = z.object({
 
 type FormValues = z.infer<typeof formSchema>;
 
-export const OpenAISettings = () => {
+export const VipAi = () => {
   const { apiKey, setApiKey } = useOpenAiStore();
   const isEnabled = !!apiKey;
 

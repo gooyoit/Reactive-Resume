@@ -3,15 +3,15 @@ import { ScrollArea, Separator } from "@reactive-resume/ui";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 
-import { OpenAISettings } from "../settings/_sections/openai";
-import { SecuritySettings } from "./_sections/benefits";
-import { ProfileSettings } from "./_sections/pay";
+import { VipCategory } from "./_sections/category";
+import { VipAi } from "./_sections/openai";
+import { VipPay } from "./_sections/pay";
 
-export const SettingsPage = () => (
+export const VipPage = () => (
   <>
     <Helmet>
       <title>
-        {t`Settings`} - {t`Generative Resume`}
+        {t`Vip`} - {t`Generative Resume`}
       </title>
     </Helmet>
 
@@ -21,20 +21,18 @@ export const SettingsPage = () => (
         animate={{ opacity: 1, x: 0 }}
         className="text-4xl font-bold tracking-tight"
       >
-        {t`Settings`}
+        {t`Vip`}
       </motion.h1>
 
       <ScrollArea hideScrollbar className="h-[calc(100vh-140px)] lg:h-[calc(100vh-88px)]">
         <div className="space-y-6">
-          <AccountSettings />
           <Separator />
-          <SecuritySettings />
+          <VipCategory />
           <Separator />
-          <ProfileSettings />
+          <VipAi />
           <Separator />
-          <OpenAISettings />
+          <VipPay />
           <Separator />
-          <DangerZoneSettings />
         </div>
       </ScrollArea>
     </div>
