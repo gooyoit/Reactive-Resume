@@ -5,7 +5,6 @@ import { Helmet } from "react-helmet-async";
 
 import { VipCategory } from "./_sections/category";
 import { VipAi } from "./_sections/openai";
-import { VipPay } from "./_sections/pay";
 
 export const VipPage = () => (
   <>
@@ -30,8 +29,6 @@ export const VipPage = () => (
           <VipCategory />
           <Separator />
           <VipAi />
-          <Separator />
-          <VipPay />
           <Separator />
         </div>
       </ScrollArea>

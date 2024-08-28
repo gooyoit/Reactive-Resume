@@ -19,21 +19,31 @@ enum Visibility {
   private
 }
 
+enum VipCategories {
+  day
+  month
+  renewal_month
+  year
+  renewal_year
+  forever
+}
+
 model User {
-  id               String   @id @default(cuid())
+  id               String      @id @default(cuid())
   name             String
   picture          String?
-  username         String   @unique
-  email            String   @unique
+  username         String      @unique
+  email            String      @unique
   phone            String?
-  locale           String   @default("zh-CN")
-  emailVerified    Boolean  @default(false)
-  twoFactorEnabled Boolean  @default(false)
-  createdAt        DateTime @default(now())
-  updatedAt        DateTime @updatedAt
+  locale           String      @default("zh-CN")
+  emailVerified    Boolean     @default(false)
+  twoFactorEnabled Boolean     @default(false)
+  createdAt        DateTime    @default(now())
+  updatedAt        DateTime    @updatedAt
   provider         Provider
   secrets          Secrets?
   resumes          Resume[]
+  VipMember        VipMember[]
 }
 
 model Secrets {
@@ -52,17 +62,18 @@ model Secrets {
 }
 
 model Resume {
-  id         String      @id @default(cuid())
-  title      String
-  slug       String
-  data       Json        @default("{}")
-  visibility Visibility  @default(private)
-  locked     Boolean     @default(false)
-  statistics Statistics?
-  userId     String
-  user       User        @relation(fields: [userId], references: [id], onDelete: Cascade)
-  createdAt  DateTime    @default(now())
-  updatedAt  DateTime    @updatedAt
+  id          String       @id @default(cuid())
+  title       String
+  slug        String
+  data        Json         @default("{}")
+  visibility  Visibility   @default(private)
+  locked      Boolean      @default(false)
+  statistics  Statistics?
+  userId      String
+  user        User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+  VipBenefits VipBenefits?
 
   @@unique([userId, id])
   @@unique([userId, slug])
@@ -79,4 +90,52 @@ model Statistics {
   updatedAt DateTime @updatedAt
 
   @@unique([resumeId, id])
+}
+
+model VipCategory {
+  id        String        @id @default(cuid())
+  category  VipCategories
+  name      String
+  tag       String?
+  price     Float         @default(0.0)
+  realPrice Float?
+  countUnit String        @default("d")
+  descs     String?
+  status    Boolean       @default(false)
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
+}
+
+model VipMember {
+  id          String        @id @default(cuid())
+  userId      String
+  user        User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  category    VipCategories
+  price       Float         @default(0)
+  discounted  Boolean       @default(false)
+  beginAt     DateTime      @default(now())
+  endAt       DateTime
+  descs       String?
+  status      Boolean       @default(false)
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+  VipBenefits VipBenefits[]
+
+  @@unique([userId, id])
+}
+
+model VipBenefits {
+  id        String        @id @default(cuid())
+  memberId  String
+  member    VipMember     @relation(fields: [memberId], references: [id], onDelete: Cascade)
+  category  VipCategories
+  downloads Int           @default(0)
+  resumeId  String        @unique
+  resume    Resume        @relation(fields: [resumeId], references: [id], onDelete: Cascade)
+  descs     String?
+  status    Boolean       @default(false)
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
+
+  @@unique([resumeId, memberId])
 }

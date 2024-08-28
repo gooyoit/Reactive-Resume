@@ -21,6 +21,10 @@ export default defineConfig({
     host: true,
     port: 5173,
     fs: { allow: [searchForWorkspaceRoot(process.cwd())] },
+    open: true, // 自动打开浏览器
+    hmr: {
+      overlay: true, // 在浏览器中显示错误覆盖层
+    },
   },
 
   optimizeDeps: {

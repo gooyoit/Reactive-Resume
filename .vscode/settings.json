@@ -11,6 +11,5 @@
     ]
   },
   "i18n-ally.localesPaths": ["apps/client/src/locales"],
-  "vitest.disableWorkspaceWarning": true,
-  "typescript.autoBuild": true
+  "vitest.disableWorkspaceWarning": true
 }

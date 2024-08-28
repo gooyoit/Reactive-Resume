@@ -13,8 +13,7 @@ import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-// import { useLogin } from "@/client/services/auth";
-// import { useAuthProviders } from "@/client/services/auth/providers";
+
 import { LocalAuth } from "../_components/local-auth";
 import { WechatQrcodeAuth } from "../_components/wechat-qrcode-auth";
 

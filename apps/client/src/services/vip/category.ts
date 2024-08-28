@@ -7,7 +7,7 @@ import { axios } from "@/client/libs/axios";
 
 export const fetchVipCategories = async () => {
   const response = await axios.get<VipCategoryDto[], AxiosResponse<VipCategoryDto[]>>(
-    "/categories",
+    "/vip/categories",
   );
 
   return response.data;
