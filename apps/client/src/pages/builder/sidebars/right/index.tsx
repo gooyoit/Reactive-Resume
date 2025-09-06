@@ -32,6 +32,8 @@ export const RightSidebar = () => {
         <div ref={containterRef} className="grid gap-y-6 p-6 @container/right">
           <TemplateSection />
           <Separator />
+          <SharingSection />
+          <Separator />
           <LayoutSection />
           <Separator />
           <TypographySection />
@@ -41,8 +43,6 @@ export const RightSidebar = () => {
           <CssSection />
           <Separator />
           <PageSection />
-          <Separator />
-          <SharingSection />
           <Separator />
           <StatisticsSection />
           <Separator />

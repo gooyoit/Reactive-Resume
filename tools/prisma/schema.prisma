@@ -12,6 +12,7 @@ enum Provider {
   github
   google
   openid
+  wechat
 }
 
 enum Visibility {

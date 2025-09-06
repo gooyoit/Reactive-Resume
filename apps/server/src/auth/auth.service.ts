@@ -220,6 +220,14 @@ export class AuthService {
       providers.push("openid");
     }
 
+    if (
+      this.configService.get("WECHAT_CLIENT_ID") &&
+      this.configService.get("WECHAT_CLIENT_SECRET") &&
+      this.configService.get("WECHAT_CALLBACK_URL")
+    ) {
+      providers.push("wechat");
+    }
+
     return providers;
   }
 

@@ -89,6 +89,34 @@ msgstr "此电子邮件/用户名已被使用。"
 msgid "A4"
 msgstr "A4"
 
+#: apps/client/src/pages/auth/login/page.tsx:120
+msgid "Or continue with"
+msgstr "或者使用以下方式"
+
+#: apps/client/src/pages/auth/login/page.tsx:125
+msgid "Sign in with WeChat"
+msgstr "使用微信登录"
+
+#: apps/client/src/pages/auth/login/page.tsx:125
+msgid "Hide WeChat Login"
+msgstr "隐藏微信登录"
+
+#: apps/client/src/pages/auth/login/page.tsx:130
+msgid "QR Code Login"
+msgstr "扫码登录"
+
+#: apps/client/src/pages/auth/login/page.tsx:130
+msgid "Hide QR Code"
+msgstr "隐藏二维码"
+
+#: apps/client/src/pages/auth/login/page.tsx:138
+msgid "Web Login"
+msgstr "网页登录"
+
+#: apps/client/src/pages/auth/_components/social-auth.tsx:45
+msgid "WeChat"
+msgstr "微信"
+
 #. Helper text to let the user know what filetypes are accepted. {accept} can be .pdf or .json.
 #: apps/client/src/pages/dashboard/resumes/_dialogs/import.tsx:270
 msgid "Accepts only {accept} files"

@@ -15,7 +15,27 @@ import { Config } from "@/server/config/schema";
       isGlobal: true,
       inject: [ConfigService],
       useFactory: (configService: ConfigService<Config>) => ({
-        prismaOptions: { datasourceUrl: configService.get("DATABASE_URL") },
+        prismaOptions: {
+          datasourceUrl: configService.get("DATABASE_URL"),
+          // 连接池配置
+          log: ["error", "warn"],
+          // 增加连接池超时时间
+          __internal: {
+            engine: {
+              connectionLimit: 10,
+              pool: {
+                min: 2,
+                max: 10,
+                acquireTimeoutMillis: 30_000, // 30秒
+                createTimeoutMillis: 30_000,
+                destroyTimeoutMillis: 5000,
+                idleTimeoutMillis: 30_000,
+                reapIntervalMillis: 1000,
+                createRetryIntervalMillis: 200,
+              },
+            },
+          },
+        },
         middlewares: [
           loggingMiddleware({
             logLevel: "debug", // only in development

@@ -1,29 +1,47 @@
-import { Injectable, InternalServerErrorException } from "@nestjs/common";
+import { Injectable, InternalServerErrorException, Logger } from "@nestjs/common";
 import { Prisma, User } from "@prisma/client";
 import { UserWithSecrets } from "@reactive-resume/dto";
 import { ErrorMessage } from "@reactive-resume/utils";
+import retry from "async-retry";
 import { PrismaService } from "nestjs-prisma";
 
 import { StorageService } from "../storage/storage.service";
 
 @Injectable()
 export class UserService {
+  private readonly logger = new Logger(UserService.name);
+
   constructor(
     private readonly prisma: PrismaService,
     private readonly storageService: StorageService,
   ) {}
 
-  async findOneById(id: string): Promise<UserWithSecrets> {
-    const user = await this.prisma.user.findUniqueOrThrow({
-      where: { id },
-      include: { secrets: true },
-    });
+  findOneById(id: string): Promise<UserWithSecrets> {
+    return retry(
+      async () => {
+        const user = await this.prisma.user.findUniqueOrThrow({
+          where: { id },
+          include: { secrets: true },
+        });
 
-    if (!user.secrets) {
-      throw new InternalServerErrorException(ErrorMessage.SecretsNotFound);
-    }
+        if (!user.secrets) {
+          throw new InternalServerErrorException(ErrorMessage.SecretsNotFound);
+        }
 
-    return user;
+        return user;
+      },
+      {
+        retries: 3,
+        factor: 2,
+        minTimeout: 1000,
+        maxTimeout: 5000,
+        onRetry: (error, attempt) => {
+          this.logger.warn(
+            `Database connection retry attempt ${attempt}: ${(error as Error).message}`,
+          );
+        },
+      },
+    );
   }
 
   async findOneByIdentifier(identifier: string): Promise<UserWithSecrets | null> {

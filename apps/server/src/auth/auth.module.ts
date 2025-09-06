@@ -17,6 +17,7 @@ import { LocalStrategy } from "./strategy/local.strategy";
 import { OpenIDStrategy } from "./strategy/openid.strategy";
 import { RefreshStrategy } from "./strategy/refresh.strategy";
 import { TwoFactorStrategy } from "./strategy/two-factor.strategy";
+import { WechatStrategy } from "./strategy/wechat.strategy";
 
 @Module({})
 export class AuthModule {
@@ -90,6 +91,23 @@ export class AuthModule {
                 userInfoURL,
                 userService,
               );
+            } catch {
+              return new DummyStrategy();
+            }
+          },
+        },
+
+        // WeChat Strategy
+        {
+          provide: WechatStrategy,
+          inject: [ConfigService, UserService],
+          useFactory: (configService: ConfigService<Config>, userService: UserService) => {
+            try {
+              const appId = configService.getOrThrow("WECHAT_CLIENT_ID");
+              const appSecret = configService.getOrThrow("WECHAT_CLIENT_SECRET");
+              const callbackURL = configService.getOrThrow("WECHAT_CALLBACK_URL");
+
+              return new WechatStrategy(appId, appSecret, callbackURL, userService);
             } catch {
               return new DummyStrategy();
             }

@@ -103,10 +103,10 @@ export class PrinterService {
       if ([publicUrl, storageUrl].some((url) => /https?:\/\/localhost(:\d+)?/.test(url))) {
         // Switch client URL from `http[s]://localhost[:port]` to `http[s]://host.docker.internal[:port]` in development
         // This is required because the browser is running in a container and the client is running on the host machine.
-        url = url.replace(
-          /localhost(:\d+)?/,
-          (_match, port) => `host.docker.internal${port ?? ""}`,
-        );
+        // url = url.replace(
+        //   /localhost(:\d+)?/,
+        //   (_match, port) => `host.docker.internal${port ?? ""}`,
+        // );
 
         await page.setRequestInterception(true);
 

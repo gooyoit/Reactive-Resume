@@ -1,5 +1,5 @@
 import { t } from "@lingui/macro";
-import { Fingerprint, GithubLogo, GoogleLogo } from "@phosphor-icons/react";
+import { Fingerprint, GithubLogo, GoogleLogo, WechatLogo } from "@phosphor-icons/react";
 import { Button } from "@reactive-resume/ui";
 
 import { useAuthProviders } from "@/client/services/auth/providers";
@@ -42,6 +42,19 @@ export const SocialAuth = () => {
           <a href="/api/auth/openid">
             <Fingerprint className="mr-3 size-4" />
             {import.meta.env.VITE_OPENID_NAME}
+          </a>
+        </Button>
+      )}
+
+      {providers.includes("wechat") && (
+        <Button
+          asChild
+          size="lg"
+          className="w-full !bg-[#07C160] !text-white hover:!bg-[#07C160]/80"
+        >
+          <a href="/auth/wechat">
+            <WechatLogo className="mr-3 size-4" />
+            {t`WeChat`}
           </a>
         </Button>
       )}

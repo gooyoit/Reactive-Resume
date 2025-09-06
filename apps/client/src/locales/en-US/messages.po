@@ -89,6 +89,34 @@ msgstr "A user with this email address and/or username already exists."
 msgid "A4"
 msgstr "A4"
 
+#: apps/client/src/pages/auth/login/page.tsx:120
+msgid "Or continue with"
+msgstr "Or continue with"
+
+#: apps/client/src/pages/auth/login/page.tsx:125
+msgid "Sign in with WeChat"
+msgstr "Sign in with WeChat"
+
+#: apps/client/src/pages/auth/login/page.tsx:125
+msgid "Hide WeChat Login"
+msgstr "Hide WeChat Login"
+
+#: apps/client/src/pages/auth/login/page.tsx:130
+msgid "QR Code Login"
+msgstr "QR Code Login"
+
+#: apps/client/src/pages/auth/login/page.tsx:130
+msgid "Hide QR Code"
+msgstr "Hide QR Code"
+
+#: apps/client/src/pages/auth/login/page.tsx:138
+msgid "Web Login"
+msgstr "Web Login"
+
+#: apps/client/src/pages/auth/_components/social-auth.tsx:45
+msgid "WeChat"
+msgstr "WeChat"
+
 #. Helper text to let the user know what filetypes are accepted. {accept} can be .pdf or .json.
 #: apps/client/src/pages/dashboard/resumes/_dialogs/import.tsx:270
 msgid "Accepts only {accept} files"

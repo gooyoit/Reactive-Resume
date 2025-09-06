@@ -79,10 +79,15 @@ export const configSchema = z.object({
   OPENID_CALLBACK_URL: z.string().url().optional(),
   OPENID_CLIENT_ID: z.string().optional(),
   OPENID_CLIENT_SECRET: z.string().optional(),
-  OPENID_ISSUER: z.string().optional(),
+  OPENID_ISSUER: z.string().url().optional(),
   OPENID_SCOPE: z.string().optional(),
   OPENID_TOKEN_URL: z.string().url().optional(),
   OPENID_USER_INFO_URL: z.string().url().optional(),
+
+  // WeChat (Optional)
+  WECHAT_CLIENT_ID: z.string().optional(),
+  WECHAT_CLIENT_SECRET: z.string().optional(),
+  WECHAT_CALLBACK_URL: z.string().url().optional()
 });
 
 export type Config = z.infer<typeof configSchema>;

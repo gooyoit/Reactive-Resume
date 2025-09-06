@@ -12,6 +12,7 @@ import {
   UseGuards,
 } from "@nestjs/common";
 import { ConfigService } from "@nestjs/config";
+import { AuthGuard } from "@nestjs/passport";
 import { ApiTags } from "@nestjs/swagger";
 import {
   authResponseSchema,
@@ -113,6 +114,17 @@ export class AuthController {
     return this.authService.getAuthProviders();
   }
 
+  // Public config for WeChat QR (no secrets)
+  @Get("wechat/config")
+  getWeChatPublicConfig() {
+    const appId = this.configService.get<string>("WECHAT_CLIENT_ID");
+    const redirectUri =
+      this.configService.get<string>("WECHAT_CALLBACK_URL") ??
+      `${this.configService.get<string>("PUBLIC_URL")}/auth/wechat/callback`;
+
+    return { appId, redirectUri };
+  }
+
   // OAuth Flows
   @ApiTags("OAuth", "GitHub")
   @Get("github")
@@ -159,6 +171,24 @@ export class AuthController {
   @Get("openid/callback")
   @UseGuards(OpenIDGuard)
   async openidCallback(
+    @User() user: UserWithSecrets,
+    @Res({ passthrough: true }) response: Response,
+  ) {
+    return this.handleAuthenticationResponse(user, response, false, true);
+  }
+
+  // WeChat OAuth Flows
+  @ApiTags("OAuth", "WeChat")
+  @Get("wechat")
+  @UseGuards(AuthGuard("wechat"))
+  wechatLogin() {
+    return;
+  }
+
+  @ApiTags("OAuth", "WeChat")
+  @Get("wechat/callback")
+  @UseGuards(AuthGuard("wechat"))
+  async wechatCallback(
     @User() user: UserWithSecrets,
     @Res({ passthrough: true }) response: Response,
   ) {
