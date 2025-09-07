@@ -34,19 +34,19 @@ export const RightSidebar = () => {
           <Separator />
           <SharingSection />
           <Separator />
+          <StatisticsSection />
+          <Separator />
+          <ExportSection />
+          <Separator />
+          <ThemeSection />
+          <Separator />
           <LayoutSection />
           <Separator />
           <TypographySection />
           <Separator />
-          <ThemeSection />
-          <Separator />
           <CssSection />
           <Separator />
           <PageSection />
-          <Separator />
-          <StatisticsSection />
-          <Separator />
-          <ExportSection />
           <Separator />
           <NotesSection />
           <Separator />

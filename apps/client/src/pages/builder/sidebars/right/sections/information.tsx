@@ -1,4 +1,4 @@
-import { t, Trans } from "@lingui/macro";
+  import { t, Trans } from "@lingui/macro";
 import { Book, EnvelopeSimpleOpen, GithubLogo, HandHeart } from "@phosphor-icons/react";
 import {
   buttonVariants,
@@ -37,7 +37,7 @@ const DonateCard = () => (
         target="_blank"
       >
         <HandHeart size={14} weight="bold" className="mr-2" />
-        <span className="line-clamp-1">{t`Donate to Reactive Resume`}</span>
+        <span className="line-clamp-1">{t`Crowdfunding  to Reactive Resume`}</span>
       </a>
     </CardFooter>
   </Card>

@@ -6,7 +6,7 @@ import { Strategy } from "passport-wechat";
 
 import { UserService } from "@/server/user/user.service";
 
-interface WechatProfile {
+type WechatProfile = {
   openid: string;
   nickname?: string;
   sex?: number;
@@ -16,7 +16,7 @@ interface WechatProfile {
   headimgurl?: string;
   privilege?: string[];
   unionid?: string;
-}
+};
 
 @Injectable()
 export class WechatStrategy extends PassportStrategy(Strategy, "wechat") {
@@ -36,8 +36,8 @@ export class WechatStrategy extends PassportStrategy(Strategy, "wechat") {
   }
 
   async validate(
-    accessToken: string,
-    refreshToken: string,
+    _accessToken: string,
+    _refreshToken: string,
     profile: WechatProfile,
     done: (err?: string | Error | null, user?: Express.User, info?: unknown) => void,
   ) {
@@ -46,11 +46,11 @@ export class WechatStrategy extends PassportStrategy(Strategy, "wechat") {
 
       // 生成唯一标识符
       const uniqueId = generateRandomName({ length: 2, style: "lowerCase", separator: "-" });
-      
+
       // 微信用户没有邮箱，使用openid生成唯一邮箱
       const email = `${openid}@wechat.com`;
       const picture = headimgurl;
-      const displayName = nickname || `微信用户_${uniqueId}`;
+      const displayName = nickname ?? `微信用户_${uniqueId}`;
 
       let user: User | null = null;
 
@@ -58,11 +58,11 @@ export class WechatStrategy extends PassportStrategy(Strategy, "wechat") {
         // 首先尝试通过openid查找用户
         user = await this.userService.findOneByIdentifier(openid);
 
-        if (!user) {
-          // 如果没找到，尝试通过unionid查找（如果有的话）
-          if (unionid) {
-            user = await this.userService.findOneByIdentifier(unionid);
-          }
+        if (
+          !user && // 如果没找到，尝试通过unionid查找（如果有的话）
+          unionid
+        ) {
+          user = await this.userService.findOneByIdentifier(unionid);
         }
 
         if (user) {
@@ -70,7 +70,7 @@ export class WechatStrategy extends PassportStrategy(Strategy, "wechat") {
           await this.userService.updateByEmail(user.email, {
             updatedAt: new Date(),
           });
-          
+
           done(null, user);
           return;
         }

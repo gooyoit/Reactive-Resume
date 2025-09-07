@@ -460,7 +460,7 @@ msgid "Don't see your language? <0>Help translate the app.</0>"
 msgstr "귀하의 언어가 표시되지 않습니까? <0>앱 번역을 도와주세요.</0>"
 
 #: apps/client/src/pages/builder/sidebars/right/sections/information.tsx:40
-msgid "Donate to Reactive Resume"
+msgid "Crowdfunding  to Reactive Resume"
 msgstr "이 프로젝트에 기부하기"
 
 #: apps/client/src/pages/builder/sidebars/right/sections/export.tsx:56

@@ -4,6 +4,7 @@ import { HelmetProvider } from "react-helmet-async";
 import { Outlet } from "react-router";
 
 import { helmetContext } from "../constants/helmet";
+import { usePrintBlocker } from "../hooks/use-print-blocker";
 import { queryClient } from "../libs/query-client";
 import { AuthRefreshProvider } from "./auth-refresh";
 import { DialogProvider } from "./dialog";
@@ -11,22 +12,27 @@ import { LocaleProvider } from "./locale";
 import { ThemeProvider } from "./theme";
 import { Toaster } from "./toaster";
 
-export const Providers = () => (
-  <LocaleProvider>
-    <HelmetProvider context={helmetContext}>
-      <QueryClientProvider client={queryClient}>
-        <AuthRefreshProvider>
-          <ThemeProvider>
-            <TooltipProvider>
-              <DialogProvider>
-                <Outlet />
+export const Providers = () => {
+  // 全局禁用打印功能
+  usePrintBlocker();
 
-                <Toaster />
-              </DialogProvider>
-            </TooltipProvider>
-          </ThemeProvider>
-        </AuthRefreshProvider>
-      </QueryClientProvider>
-    </HelmetProvider>
-  </LocaleProvider>
-);
+  return (
+    <LocaleProvider>
+      <HelmetProvider context={helmetContext}>
+        <QueryClientProvider client={queryClient}>
+          <AuthRefreshProvider>
+            <ThemeProvider>
+              <TooltipProvider>
+                <DialogProvider>
+                  <Outlet />
+
+                  <Toaster />
+                </DialogProvider>
+              </TooltipProvider>
+            </ThemeProvider>
+          </AuthRefreshProvider>
+        </QueryClientProvider>
+      </HelmetProvider>
+    </LocaleProvider>
+  );
+};

@@ -488,8 +488,8 @@ msgid "Don't see your language? <0>Help translate the app.</0>"
 msgstr "Don't see your language? <0>Help translate the app.</0>"
 
 #: apps/client/src/pages/builder/sidebars/right/sections/information.tsx:40
-msgid "Donate to Reactive Resume"
-msgstr "Donate to Reactive Resume"
+msgid "Crowdfunding  to Reactive Resume"
+msgstr "Crowdfunding  to Reactive Resume"
 
 #: apps/client/src/pages/builder/sidebars/right/sections/export.tsx:56
 msgid "Download a JSON snapshot of your resume. This file can be used to import your resume in the future, or can even be shared with others to collaborate."

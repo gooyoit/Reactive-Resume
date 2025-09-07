@@ -18,7 +18,9 @@ import { Button, Separator, Toggle, Tooltip } from "@reactive-resume/ui";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
+import { PaymentDialog } from "@/client/components/payment-dialog";
 import { useToast } from "@/client/hooks/use-toast";
+import { useCheckDownloadLimit } from "@/client/services/payment";
 import { usePrintResume } from "@/client/services/resume";
 import { useBuilderStore } from "@/client/stores/builder";
 import { useResumeStore, useTemporalResumeStore } from "@/client/stores/resume";
@@ -32,6 +34,7 @@ export const BuilderToolbar = () => {
   const { toast } = useToast();
 
   const [panMode, setPanMode] = useState<boolean>(true);
+  const [showPaymentDialog, setShowPaymentDialog] = useState(false);
 
   const setValue = useResumeStore((state) => state.setValue);
   const undo = useTemporalResumeStore((state) => state.undo);
@@ -43,11 +46,53 @@ export const BuilderToolbar = () => {
   const pageOptions = useResumeStore((state) => state.resume.data.metadata.page.options);
 
   const { printResume, loading } = usePrintResume();
+  const { data: downloadLimit, refetch: refetchDownloadLimit } = useCheckDownloadLimit(id);
 
   const onPrint = async () => {
-    const { url } = await printResume({ id });
+    try {
+      // 检查是否可以下载
+      if (!downloadLimit?.canDownload) {
+        setShowPaymentDialog(true);
+        return;
+      }
 
-    openInNewTab(url);
+      const { url } = await printResume({ id });
+      openInNewTab(url);
+
+      // 刷新下载限制状态
+      void refetchDownloadLimit();
+
+      // 显示剩余下载次数
+      const remaining = downloadLimit.remainingDownloads - 1;
+      if (remaining > 0) {
+        toast({
+          variant: "success",
+          title: t`PDF download successful`,
+          description: t`You have ${remaining} downloads remaining.`,
+        });
+      } else {
+        toast({
+          variant: "success",
+          title: t`PDF download successful`,
+          description: t`This was your last available download for this resume.`,
+        });
+      }
+    } catch (error) {
+      // 如果是403错误，显示付费弹窗
+      if (error instanceof Error && error.message.includes("付费")) {
+        setShowPaymentDialog(true);
+      }
+    }
+  };
+
+  const handlePaymentSuccess = () => {
+    setShowPaymentDialog(false);
+    void refetchDownloadLimit();
+    toast({
+      variant: "success",
+      title: t`Payment successful`,
+      description: t`You can now download PDF files for this resume.`,
+    });
   };
 
   const onCopy = async () => {
@@ -185,6 +230,14 @@ export const BuilderToolbar = () => {
           </Button>
         </Tooltip>
       </div>
+
+      {/* Payment Dialog */}
+      <PaymentDialog
+        open={showPaymentDialog}
+        resumeId={id}
+        onOpenChange={setShowPaymentDialog}
+        onPaymentSuccess={handlePaymentSuccess}
+      />
     </motion.div>
   );
 };

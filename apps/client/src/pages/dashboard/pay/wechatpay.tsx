@@ -1,12 +1,16 @@
+import { t } from "@lingui/macro";
 import React, { useEffect, useState } from "react";
+
+import { useToast } from "@/client/hooks/use-toast";
 
 type WeChatPayProps = {
   realPrice: number;
   selectedCardId: string | null;
-}
+};
 
 export const WeChatPay: React.FC<WeChatPayProps> = ({ realPrice, selectedCardId }) => {
   const [qrCodeUrl, setQrCodeUrl] = useState("");
+  const { toast } = useToast();
 
   useEffect(() => {
     if (selectedCardId) {
@@ -16,8 +20,12 @@ export const WeChatPay: React.FC<WeChatPayProps> = ({ realPrice, selectedCardId 
         .then((data) => {
           setQrCodeUrl(data.qrCodeUrl);
         })
-        .catch((error: unknown) => {
-          console.error(error);
+        .catch((_error: unknown) => {
+          toast({
+            variant: "error",
+            title: t`Payment Error`,
+            description: t`Failed to load WeChat Pay QR code. Please try again.`,
+          });
         });
     }
   }, [realPrice, selectedCardId]);
@@ -28,7 +36,7 @@ export const WeChatPay: React.FC<WeChatPayProps> = ({ realPrice, selectedCardId 
     <div className="rounded-lg bg-white p-6 shadow-lg">
       <h3 className="mb-4 text-lg font-medium">微信支付</h3>
       <img src={qrCodeUrl} alt="WeChat Pay QR Code" className="mx-auto mb-4" />
-      <p className="text-center text-lg">支付金额: ¥{realPrice}</p>
+      <p className="text-center text-lg">{t`Payment Amount: ¥${realPrice}`}</p>
       <div className="mt-4 border-t pt-2 text-xs text-gray-500">
         <p>请扫码支付。</p>
         <p>

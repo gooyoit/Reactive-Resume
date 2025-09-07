@@ -13,6 +13,7 @@ import { DatabaseModule } from "./database/database.module";
 import { FeatureModule } from "./feature/feature.module";
 import { HealthModule } from "./health/health.module";
 import { MailModule } from "./mail/mail.module";
+import { PaymentModule } from "./payment/payment.module";
 import { PrinterModule } from "./printer/printer.module";
 import { ResumeModule } from "./resume/resume.module";
 import { StorageModule } from "./storage/storage.module";
@@ -34,6 +35,7 @@ import { UserModule } from "./user/user.module";
     ResumeModule,
     StorageModule,
     PrinterModule,
+    PaymentModule,
     FeatureModule,
     TranslationModule,
     ContributorsModule,

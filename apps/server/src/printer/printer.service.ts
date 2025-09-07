@@ -98,7 +98,7 @@ export class PrinterService {
       const publicUrl = this.configService.getOrThrow<string>("PUBLIC_URL");
       const storageUrl = this.configService.getOrThrow<string>("STORAGE_URL");
 
-      let url = publicUrl;
+      const url = publicUrl;
 
       if ([publicUrl, storageUrl].some((url) => /https?:\/\/localhost(:\d+)?/.test(url))) {
         // Switch client URL from `http[s]://localhost[:port]` to `http[s]://host.docker.internal[:port]` in development

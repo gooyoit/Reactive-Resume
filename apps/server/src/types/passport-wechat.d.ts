@@ -1,15 +1,15 @@
-declare module 'passport-wechat' {
-  import { Strategy as PassportStrategy } from 'passport';
+declare module "passport-wechat" {
+  import { Strategy as PassportStrategy } from "passport";
 
-  interface WechatStrategyOptions {
+  type WechatStrategyOptions = {
     appID: string;
     appSecret: string;
     callbackURL: string;
     scope?: string;
     state?: string;
-  }
+  };
 
-  interface WechatProfile {
+  type WechatProfile = {
     openid: string;
     nickname?: string;
     sex?: number;
@@ -19,7 +19,7 @@ declare module 'passport-wechat' {
     headimgurl?: string;
     privilege?: string[];
     unionid?: string;
-  }
+  };
 
   export class Strategy extends PassportStrategy {
     constructor(
@@ -28,7 +28,7 @@ declare module 'passport-wechat' {
         accessToken: string,
         refreshToken: string,
         profile: WechatProfile,
-        done: (error: any, user?: any, info?: any) => void,
+        done: (error: unknown, user?: Express.User, info?: unknown) => void,
       ) => void,
     );
   }

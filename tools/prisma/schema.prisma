@@ -29,11 +29,14 @@ model User {
   locale           String   @default("en-US")
   emailVerified    Boolean  @default(false)
   twoFactorEnabled Boolean  @default(false)
+  freeDownloads    Int      @default(0) // 免费下载次数，默认0次，需要管理员设置
   createdAt        DateTime @default(now())
   updatedAt        DateTime @updatedAt
   provider         Provider
   secrets          Secrets?
   resumes          Resume[]
+  orders           Order[]
+  downloads        Download[]
 }
 
 model Secrets {
@@ -79,4 +82,44 @@ model Statistics {
   updatedAt DateTime @updatedAt
 
   @@unique([resumeId, id])
+}
+
+enum OrderStatus {
+  pending
+  paid
+  cancelled
+  refunded
+}
+
+model Order {
+  id            String      @id @default(cuid())
+  outTradeNo    String      @unique // 商户订单号
+  transactionId String?     @unique // 微信支付交易号
+  amount        Int         // 金额，单位分
+  status        OrderStatus @default(pending)
+  resumeId      String      // 关联的简历ID，不使用外键避免Resume表被污染
+  userId        String
+  user          User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  downloads     Download[]
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+
+  @@index([userId, resumeId])
+  @@index([resumeId]) // 用于查询某个简历的所有订单
+}
+
+model Download {
+  id        String   @id @default(cuid())
+  orderId   String?  // 可选，免费下载时为null
+  userId    String
+  resumeId  String   // 冗余字段，便于统计某个简历的总下载次数
+  isFree    Boolean  @default(false) // 标记是否为免费下载
+  order     Order?   @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+
+  @@index([orderId])
+  @@index([userId, resumeId]) // 用于查询用户对某个简历的下载记录
+  @@index([userId, isFree]) // 用于查询用户的免费下载记录
+  @@index([resumeId]) // 用于统计某个简历的总下载次数
 }

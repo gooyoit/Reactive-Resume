@@ -87,7 +87,15 @@ export const configSchema = z.object({
   // WeChat (Optional)
   WECHAT_CLIENT_ID: z.string().optional(),
   WECHAT_CLIENT_SECRET: z.string().optional(),
-  WECHAT_CALLBACK_URL: z.string().url().optional()
+  WECHAT_CALLBACK_URL: z.string().url().optional(),
+
+  // WeChat Pay (Optional)
+  WECHAT_PAY_APPID: z.string().optional(),
+  WECHAT_PAY_MCHID: z.string().optional(),
+  WECHAT_PAY_SERIAL_NO: z.string().optional(), // 证书序列号
+  WECHAT_PAY_PRIVATE_KEY_PATH: z.string().optional(), // 私钥文件路径或私钥内容(PEM格式)
+  WECHAT_PAY_APIV3_KEY: z.string().optional(), // APIv3密钥
+  WECHAT_PAY_NOTIFY_URL: z.string().url().optional(), // 支付通知回调URL
 });
 
 export type Config = z.infer<typeof configSchema>;

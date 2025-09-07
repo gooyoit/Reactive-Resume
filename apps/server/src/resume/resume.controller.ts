@@ -3,6 +3,7 @@ import {
   Body,
   Controller,
   Delete,
+  ForbiddenException,
   Get,
   InternalServerErrorException,
   Logger,
@@ -24,6 +25,7 @@ import { resumeDataSchema } from "@reactive-resume/schema";
 import { ErrorMessage } from "@reactive-resume/utils";
 import { zodToJsonSchema } from "zod-to-json-schema";
 
+import { PaymentService } from "@/server/payment/payment.service";
 import { User } from "@/server/user/decorators/user.decorator";
 
 import { OptionalGuard } from "../auth/guards/optional.guard";
@@ -35,7 +37,10 @@ import { ResumeService } from "./resume.service";
 @ApiTags("Resume")
 @Controller("resume")
 export class ResumeController {
-  constructor(private readonly resumeService: ResumeService) {}
+  constructor(
+    private readonly resumeService: ResumeService,
+    private readonly paymentService: PaymentService,
+  ) {}
 
   @Get("schema")
   getSchema() {
@@ -124,14 +129,30 @@ export class ResumeController {
   }
 
   @Get("/print/:id")
-  @UseGuards(OptionalGuard, ResumeGuard)
-  async printResume(@User("id") userId: string | undefined, @Resume() resume: ResumeDto) {
+  @UseGuards(TwoFactorGuard, ResumeGuard)
+  async printResume(@User() user: UserEntity, @Resume() resume: ResumeDto) {
     try {
-      const url = await this.resumeService.printResume(resume, userId);
+      // 检查下载限制
+      const downloadLimit = await this.paymentService.checkDownloadLimit(user.id, {
+        resumeId: resume.id,
+      });
 
-      return { url };
+      if (!downloadLimit.canDownload) {
+        throw new ForbiddenException("PDF下载需要付费，请先购买下载权限");
+      }
+
+      // 执行下载
+      const url = await this.resumeService.printResume(resume, user.id);
+
+      // 记录下载次数（免费下载时orderId为undefined）
+      await this.paymentService.recordDownload(user.id, resume.id, downloadLimit.orderId);
+
+      return { url, remainingDownloads: downloadLimit.remainingDownloads - 1 };
     } catch (error) {
       Logger.error(error);
+      if (error instanceof ForbiddenException) {
+        throw error;
+      }
       throw new InternalServerErrorException(error);
     }
   }

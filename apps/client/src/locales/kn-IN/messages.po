@@ -460,7 +460,7 @@ msgid "Don't see your language? <0>Help translate the app.</0>"
 msgstr "ನಿಮ್ಮ ಭಾಷೆ ಕಾಣುತ್ತಿಲ್ಲವೇ? <0>ಅಪ್ಲಿಕೇಶನ್ ಅನ್ನು ಭಾಷಾಂತರಿಸಲು ಸಹಾಯ ಮಾಡಿ.</0>"
 
 #: apps/client/src/pages/builder/sidebars/right/sections/information.tsx:40
-msgid "Donate to Reactive Resume"
+msgid "Crowdfunding  to Reactive Resume"
 msgstr "ರಿಯಾಕ್ಟಿವ್ ರೆಸ್ಯೂಮ್‌ಗೆ ದೇಣಿಗೆ ನೀಡಿ"
 
 #: apps/client/src/pages/builder/sidebars/right/sections/export.tsx:56

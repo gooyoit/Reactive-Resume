@@ -6,3 +6,26 @@
 * {
   @apply border-border/50;
 }
+
+/* Disable browser print functionality */
+@media print {
+  body::before {
+    content: "打印功能已禁用，请使用应用内的PDF下载功能";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    z-index: 9999;
+    background: white;
+    padding: 20px;
+    border: 2px solid #333;
+    border-radius: 8px;
+  }
+  
+  body * {
+    visibility: hidden !important;
+  }
+}
