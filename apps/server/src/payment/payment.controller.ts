@@ -85,4 +85,29 @@ export class PaymentController {
       return { code: "FAIL", message: error instanceof Error ? error.message : "处理失败" };
     }
   }
+
+  // 分享支付相关端点
+  @Post("create-share-order")
+  async createShareOrder(
+    @Body() body: { shareToken: string; paymentType: "owner" | "viewer"; userId?: string },
+  ): Promise<OrderResponseDto> {
+    return this.paymentService.createShareOrder(body.shareToken, body.paymentType, body.userId);
+  }
+
+  @Get("check-share-access")
+  async checkShareAccess(@Query("shareToken") shareToken: string): Promise<{
+    hasAccess: boolean;
+    accessType: "none" | "owner_paid" | "viewer_paid";
+    remainingDownloads?: number;
+  }> {
+    return this.paymentService.checkShareAccess(shareToken);
+  }
+
+  @Post("record-share-download")
+  async recordShareDownload(
+    @Body() body: { shareToken: string; downloaderId?: string },
+  ): Promise<{ success: boolean }> {
+    await this.paymentService.recordShareDownload(body.shareToken, body.downloaderId);
+    return { success: true };
+  }
 }

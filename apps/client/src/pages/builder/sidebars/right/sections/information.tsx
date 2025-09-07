@@ -1,4 +1,4 @@
-  import { t, Trans } from "@lingui/macro";
+import { t, Trans } from "@lingui/macro";
 import { Book, EnvelopeSimpleOpen, GithubLogo, HandHeart } from "@phosphor-icons/react";
 import {
   buttonVariants,

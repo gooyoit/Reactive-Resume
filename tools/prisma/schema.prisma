@@ -37,6 +37,7 @@ model User {
   resumes          Resume[]
   orders           Order[]
   downloads        Download[]
+  shares           Share[]
 }
 
 model Secrets {
@@ -91,35 +92,72 @@ enum OrderStatus {
   refunded
 }
 
+enum OrderType {
+  owner  // 简历所有者付费下载
+  share  // 分享链接付费
+}
+
+enum DownloadType {
+  owner                 // 简历所有者下载
+  share_paid_by_owner   // 分享链接，所有者付费
+  share_paid_by_viewer  // 分享链接，查看者付费
+}
+
 model Order {
   id            String      @id @default(cuid())
   outTradeNo    String      @unique // 商户订单号
   transactionId String?     @unique // 微信支付交易号
   amount        Int         // 金额，单位分
   status        OrderStatus @default(pending)
+  type          OrderType   @default(owner) // 订单类型
   resumeId      String      // 关联的简历ID，不使用外键避免Resume表被污染
-  userId        String
-  user          User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId        String?     // 可选，分享链接查看者付费时可能为空
+  shareId       String?     // 关联的分享ID，仅在分享订单时有值
+  user          User?       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  share         Share?      @relation(fields: [shareId], references: [id])
   downloads     Download[]
   createdAt     DateTime    @default(now())
   updatedAt     DateTime    @updatedAt
 
   @@index([userId, resumeId])
   @@index([resumeId]) // 用于查询某个简历的所有订单
+  @@index([shareId]) // 用于查询分享相关订单
 }
 
 model Download {
-  id        String   @id @default(cuid())
-  orderId   String?  // 可选，免费下载时为null
-  userId    String
-  resumeId  String   // 冗余字段，便于统计某个简历的总下载次数
-  isFree    Boolean  @default(false) // 标记是否为免费下载
-  order     Order?   @relation(fields: [orderId], references: [id], onDelete: Cascade)
-  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  createdAt DateTime @default(now())
+  id        String       @id @default(cuid())
+  orderId   String?      // 可选，免费下载时为null
+  userId    String?      // 可选，分享链接访问者可能不登录
+  resumeId  String       // 冗余字段，便于统计某个简历的总下载次数
+  shareId   String?      // 关联的分享ID，仅在分享下载时有值
+  isFree    Boolean      @default(false) // 标记是否为免费下载
+  type      DownloadType @default(owner) // 下载类型
+  order     Order?       @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  user      User?        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  share     Share?       @relation(fields: [shareId], references: [id])
+  createdAt DateTime     @default(now())
 
   @@index([orderId])
   @@index([userId, resumeId]) // 用于查询用户对某个简历的下载记录
   @@index([userId, isFree]) // 用于查询用户的免费下载记录
   @@index([resumeId]) // 用于统计某个简历的总下载次数
+  @@index([shareId]) // 用于查询分享相关下载记录
+}
+
+model Share {
+  id         String     @id @default(cuid())
+  shareToken String     @unique // 分享令牌，唯一标识
+  resumeId   String     // 关联的简历ID，不使用外键避免Resume表被污染
+  ownerId    String     // 分享者（简历所有者）ID
+  isActive   Boolean    @default(true) // 分享链接是否激活
+  expiresAt  DateTime?  // 过期时间，可选
+  owner      User       @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+  orders     Order[]    // 相关订单
+  downloads  Download[] // 相关下载记录
+  createdAt  DateTime   @default(now())
+  updatedAt  DateTime   @updatedAt
+
+  @@index([ownerId]) // 用于查询用户的分享记录
+  @@index([resumeId]) // 用于查询某个简历的分享记录  
+  @@index([shareToken]) // 用于根据token快速查找
 }

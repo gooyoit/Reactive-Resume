@@ -17,13 +17,14 @@ import { HomeLayout } from "../pages/home/layout";
 import { HomePage } from "../pages/home/page";
 import { ErrorPage } from "../pages/public/error";
 import { publicLoader, PublicResumePage } from "../pages/public/page";
+import { sharedLoader, SharedResumePage } from "../pages/shared/page";
 import { Providers } from "../providers";
 import { AuthGuard } from "./guards/auth";
 import { GuestGuard } from "./guards/guest";
 import { authLoader } from "./loaders/auth";
 
 export const routes = createRoutesFromElements(
-  <Route element={<Providers />}>
+  <Route element={<Providers />} HydrateFallback={() => <div>Loading...</div>}>
     <Route errorElement={<ErrorPage />}>
       <Route element={<HomeLayout />}>
         <Route path="/" element={<HomePage />} />
@@ -85,8 +86,17 @@ export const routes = createRoutesFromElements(
       <Route path=":username">
         <Route path=":slug" loader={publicLoader} element={<PublicResumePage />} />
       </Route>
+
+      {/* Shared Resume Routes */}
+      <Route path="shared">
+        <Route path=":shareToken" loader={sharedLoader} element={<SharedResumePage />} />
+      </Route>
     </Route>
   </Route>,
 );
 
-export const router = createBrowserRouter(routes);
+export const router = createBrowserRouter(routes, {
+  future: {
+    v7_normalizeFormMethod: true,
+  },
+});

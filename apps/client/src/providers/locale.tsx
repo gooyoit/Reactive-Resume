@@ -18,15 +18,30 @@ export const LocaleProvider = ({ children }: Props) => {
   const userLocale = useAuthStore((state) => state.user?.locale ?? defaultLocale);
 
   useEffect(() => {
-    const detectedLocale =
-      detect(fromUrl("locale"), fromStorage("locale"), userLocale, defaultLocale) ?? defaultLocale;
+    // Priority order: URL > LocalStorage > UserProfile > Default
+    let detectedLocale = defaultLocale;
 
-    // Activate the locale only if it's supported
-    if (languages.some((lang) => lang.locale === detectedLocale)) {
-      void dynamicActivate(detectedLocale);
+    // Check URL parameter first
+    const urlLocale = detect(fromUrl("locale"));
+    if (urlLocale && languages.some((lang) => lang.locale === urlLocale)) {
+      detectedLocale = urlLocale;
     } else {
-      void dynamicActivate(defaultLocale);
+      // Check local storage
+      const storageLocale = detect(fromStorage("locale"));
+      if (storageLocale && languages.some((lang) => lang.locale === storageLocale)) {
+        detectedLocale = storageLocale;
+      } else if (
+        userLocale &&
+        userLocale !== defaultLocale &&
+        languages.some((lang) => lang.locale === userLocale)
+      ) {
+        // Only use userLocale if it's actually set (not the fallback) and is supported
+        detectedLocale = userLocale;
+      }
     }
+
+    // Activate the detected locale
+    void dynamicActivate(detectedLocale);
   }, [userLocale]);
 
   return <I18nProvider i18n={i18n}>{children}</I18nProvider>;

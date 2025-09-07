@@ -14,6 +14,32 @@ import { queryClient } from "./query-client";
 
 export const axios = _axios.create({ baseURL: "/api", withCredentials: true });
 
+// Add Safari-specific cache busting interceptor
+axios.interceptors.request.use((config) => {
+  // Detect Safari browser
+  const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+  if (isSafari) {
+    // Add cache busting for Safari
+    const cacheBuster = Date.now();
+    const randomSalt = Math.random().toString(36).slice(2, 8);
+
+    // Add cache busting to URL
+    const separator = config.url?.includes("?") ? "&" : "?";
+    config.url = `${config.url}${separator}_safari=${cacheBuster}&_rand=${randomSalt}`;
+
+    // Add headers to prevent caching
+    if (config.headers) {
+      config.headers["Cache-Control"] = "no-cache, no-store, must-revalidate, max-age=0";
+      config.headers.Pragma = "no-cache";
+      config.headers["If-Modified-Since"] = "0";
+      config.headers["If-None-Match"] = "";
+    }
+  }
+
+  return config;
+});
+
 // Intercept responses to transform ISO dates to JS date objects
 axios.interceptors.response.use(
   (response) => {

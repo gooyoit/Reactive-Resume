@@ -21,6 +21,7 @@ export class PaymentService {
   private readonly wechatPay: WechatPay;
   private readonly DOWNLOAD_LIMIT = 9;
   private readonly PAYMENT_AMOUNT = 680; // 6.8元 = 680分
+  private readonly SHARE_PAYMENT_AMOUNT = 50; // 0.5元 = 50分
 
   constructor(
     private readonly configService: ConfigService<Config>,
@@ -46,9 +47,6 @@ export class PaymentService {
         // 是文件路径，读取文件内容
         try {
           privateKey = readFileSync(privateKeyPath, "utf8");
-          this.logger.log(`Loading private key from file: ${privateKeyPath}`);
-          this.logger.log(`Private key starts with: ${privateKey.substring(0, 50)}...`);
-          this.logger.log(`Private key length: ${privateKey.length}`);
         } catch (error) {
           this.logger.error(`Failed to read private key file: ${privateKeyPath}`, error);
           throw error;
@@ -298,5 +296,188 @@ export class PaymentService {
       this.logger.error("Failed to handle payment notify", error);
       throw error;
     }
+  }
+
+  // 2.0版本分享支付功能
+  async createShareOrder(
+    shareToken: string,
+    paymentType: "owner" | "viewer",
+    userId?: string,
+  ): Promise<OrderResponseDto> {
+    if (!this.wechatPay) {
+      throw new Error("WeChat Pay service is not available");
+    }
+
+    // 获取分享信息
+    const share = await this.prismaService.share.findUnique({
+      where: { shareToken },
+      include: {
+        owner: {
+          select: { id: true, name: true },
+        },
+      },
+    });
+
+    if (!share?.isActive) {
+      throw new Error("Share not found or expired");
+    }
+
+    // 根据支付类型确定金额和描述
+    const amount = paymentType === "owner" ? this.PAYMENT_AMOUNT : this.SHARE_PAYMENT_AMOUNT;
+    const description =
+      paymentType === "owner" ? "简历分享访问服务(所有者付费)" : "简历单次预览服务(访问者付费)";
+
+    // 生成商户订单号
+    const outTradeNo = `SHARE_${paymentType.toUpperCase()}_${Date.now()}_${share.id.slice(-6)}`;
+
+    try { 
+      // 创建订单记录
+      const order = await this.prismaService.order.create({
+        data: {
+          outTradeNo,
+          amount,
+          resumeId: share.resumeId,
+          userId: paymentType === "owner" ? share.ownerId : (userId ?? null),
+          shareId: share.id,
+          status: "pending",
+          type: paymentType === "owner" ? "owner" : "share",
+        },
+      });
+
+      // 调用微信支付Native下单API
+      const appId = this.configService.get("WECHAT_PAY_APPID");
+      const mchId = this.configService.get("WECHAT_PAY_MCHID");
+      const notifyUrl = this.configService.get("WECHAT_PAY_NOTIFY_URL");
+
+      if (!appId || !mchId || !notifyUrl) {
+        throw new Error("WeChat Pay configuration is incomplete");
+      }
+
+      const result = await this.wechatPay.transactions_native({
+        appid: appId,
+        mchid: mchId,
+        description,
+        out_trade_no: outTradeNo,
+        notify_url: notifyUrl,
+        amount: {
+          total: amount,
+        },
+        attach: `shareId:${share.id}|resumeId:${share.resumeId}|paymentType:${paymentType}`,
+      });
+
+      this.logger.log(`Share order created: ${outTradeNo}`, result);
+
+      return {
+        id: order.id,
+        outTradeNo: order.outTradeNo,
+        codeUrl: (result as unknown as { code_url: string }).code_url,
+        amount: order.amount,
+        status: order.status,
+        createdAt: order.createdAt,
+      };
+    } catch (error) {
+      this.logger.error(`Failed to create share order: ${outTradeNo}`, error);
+      throw error;
+    }
+  }
+
+  async checkShareAccess(shareToken: string): Promise<{
+    hasAccess: boolean;
+    accessType: "none" | "owner_paid" | "viewer_paid";
+    remainingDownloads?: number;
+  }> {
+    const share = await this.prismaService.share.findUnique({
+      where: { shareToken },
+      include: {
+        orders: {
+          where: { status: "paid" },
+          include: {
+            downloads: true,
+          },
+        },
+      },
+    });
+
+    if (!share?.isActive) {
+      return { hasAccess: false, accessType: "none" };
+    }
+
+    // 检查是否有已支付的订单
+    const paidOwnerOrder = share.orders.find((order) => order.type === "owner");
+    const paidViewerOrder = share.orders.find((order) => order.type === "share");
+
+    if (paidOwnerOrder) {
+      // 所有者付费，检查下载次数限制
+      const downloadCount = paidOwnerOrder.downloads.length;
+      const remaining = this.DOWNLOAD_LIMIT - downloadCount;
+
+      return {
+        hasAccess: remaining > 0,
+        accessType: "owner_paid",
+        remainingDownloads: Math.max(0, remaining),
+      };
+    }
+
+    if (paidViewerOrder) {
+      // 访问者付费，只允许1次下载
+      const downloadCount = paidViewerOrder.downloads.length;
+
+      return {
+        hasAccess: downloadCount === 0,
+        accessType: "viewer_paid",
+        remainingDownloads: downloadCount === 0 ? 1 : 0,
+      };
+    }
+
+    return { hasAccess: false, accessType: "none" };
+  }
+
+  async recordShareDownload(shareToken: string, downloaderId?: string): Promise<void> {
+    const accessInfo = await this.checkShareAccess(shareToken);
+
+    if (!accessInfo.hasAccess) {
+      throw new Error("No access to download this shared resume");
+    }
+
+    const share = await this.prismaService.share.findUnique({
+      where: { shareToken },
+      include: {
+        orders: {
+          where: { status: "paid" },
+          orderBy: { createdAt: "desc" },
+        },
+      },
+    });
+
+    if (!share) {
+      throw new Error("Share not found");
+    }
+
+    // 找到相应的已支付订单
+    const order =
+      accessInfo.accessType === "owner_paid"
+        ? share.orders.find((o) => o.type === "owner")
+        : share.orders.find((o) => o.type === "share");
+
+    if (!order) {
+      throw new Error("No valid paid order found");
+    }
+
+    // 创建下载记录
+    await this.prismaService.download.create({
+      data: {
+        orderId: order.id,
+        userId: downloaderId ?? null,
+        resumeId: share.resumeId,
+        shareId: share.id,
+        type:
+          accessInfo.accessType === "owner_paid" ? "share_paid_by_owner" : "share_paid_by_viewer",
+        isFree: false,
+      },
+    });
+
+    this.logger.log(
+      `Share download recorded: share=${shareToken}, downloader=${downloaderId ?? "anonymous"}, type=${accessInfo.accessType}`,
+    );
   }
 }

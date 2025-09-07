@@ -1,6 +1,6 @@
 import { t } from "@lingui/macro";
 import { WechatLogo } from "@phosphor-icons/react";
-import { Button, Dialog, DialogContent, DialogHeader, DialogTitle } from "@reactive-resume/ui";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@reactive-resume/ui";
 import { QRCodeSVG } from "qrcode.react";
 import { useEffect, useState } from "react";
 

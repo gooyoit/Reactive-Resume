@@ -117,9 +117,16 @@ export const publicLoader: LoaderFunction<ResumeDto> = async ({ params }) => {
     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     const slug = params.slug!;
 
+    // Safari cache busting - add timestamp to query key
+    const cacheBuster = Date.now();
+    const queryKey = ["resume", { username, slug, safari: cacheBuster }];
+
     return await queryClient.fetchQuery({
-      queryKey: ["resume", { username, slug }],
+      queryKey,
       queryFn: () => findResumeByUsernameSlug({ username, slug }),
+      // Force fresh data for Safari
+      staleTime: 0,
+      gcTime: 0, // Previously cacheTime in v4
     });
   } catch {
     return redirect("/");

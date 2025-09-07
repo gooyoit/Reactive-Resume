@@ -11,6 +11,9 @@ export default defineConfig({
   build: {
     sourcemap: true,
     emptyOutDir: true,
+    rollupOptions: {
+      external: ["sanitize-html"], // External Node.js modules for browser compatibility
+    },
   },
 
   define: {
@@ -18,9 +21,13 @@ export default defineConfig({
   },
 
   server: {
-    host: true,
+    host: "0.0.0.0",
     port: 5173,
     fs: { allow: [searchForWorkspaceRoot(process.cwd())] },
+    strictPort: true,
+    hmr: {
+      port: 5173,
+    },
   },
 
   optimizeDeps: {
@@ -29,6 +36,7 @@ export default defineConfig({
         ".po": "text",
       },
     },
+    exclude: ["sanitize-html"], // Exclude sanitize-html from pre-bundling
   },
 
   plugins: [

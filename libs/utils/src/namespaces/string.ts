@@ -1,8 +1,30 @@
-import sanitizeHtml from "sanitize-html";
 import type { Config as UniqueNamesConfig } from "unique-names-generator";
 import { adjectives, animals, uniqueNamesGenerator } from "unique-names-generator";
 
 import type { LayoutLocator, SortablePayload } from "./types";
+
+// Browser-safe sanitization function
+const browserSanitize = (html: string): string => {
+  if (typeof window !== "undefined" && window.document) {
+    // Use browser's built-in DOM parser for basic sanitization
+    const div = document.createElement("div");
+    div.innerHTML = html;
+
+    // Remove script tags and other dangerous elements
+    const scripts = div.querySelectorAll("script, object, embed, iframe, frame, frameset");
+    Array.from(scripts).forEach((script) => script.remove());
+
+    return div.innerHTML;
+  }
+
+  // If no DOM available, just escape basic HTML entities
+  return html
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+};
 
 export const getInitials = (name: string) => {
   // eslint-disable-next-line unicorn/better-regex
@@ -57,94 +79,107 @@ export const parseLayoutLocator = (payload: SortablePayload | null): LayoutLocat
   return { page, column, section };
 };
 
-export const sanitize = (html: string, options?: sanitizeHtml.IOptions) => {
-  const allowedTags = (options?.allowedTags ?? []) as string[];
+export const sanitize = (html: string, options?: any): string => {
+  // Check if we're in a server environment
+  if (typeof window === "undefined") {
+    // Server-side: try to use sanitize-html if available
+    try {
+      // Dynamic require to avoid bundling in browser
+      const sanitizeHtml = require("sanitize-html");
+      const allowedTags = (options?.allowedTags ?? []) as string[];
 
-  return sanitizeHtml(html, {
-    ...options,
-    allowedTags: [
-      ...allowedTags,
-      "a",
-      "abbr",
-      "address",
-      "article",
-      "aside",
-      "b",
-      "bdi",
-      "bdo",
-      "blockquote",
-      "br",
-      "caption",
-      "cite",
-      "code",
-      "col",
-      "colgroup",
-      "data",
-      "dd",
-      "dfn",
-      "div",
-      "dl",
-      "dt",
-      "em",
-      "figcaption",
-      "figure",
-      "footer",
-      "h1",
-      "h2",
-      "h3",
-      "h4",
-      "h5",
-      "h6",
-      "header",
-      "hgroup",
-      "hr",
-      "i",
-      "img",
-      "kbd",
-      "li",
-      "main",
-      "main",
-      "mark",
-      "nav",
-      "ol",
-      "p",
-      "pre",
-      "q",
-      "rb",
-      "rp",
-      "rt",
-      "rtc",
-      "ruby",
-      "s",
-      "samp",
-      "section",
-      "small",
-      "span",
-      "strong",
-      "sub",
-      "sup",
-      "table",
-      "tbody",
-      "td",
-      "tfoot",
-      "th",
-      "thead",
-      "time",
-      "tr",
-      "u",
-      "ul",
-      "var",
-      "wbr",
-    ],
-    allowedAttributes: {
-      ...options?.allowedAttributes,
-      "*": ["class", "style"],
-      a: ["href", "target"],
-      img: ["src", "alt"],
-    },
-    allowedStyles: {
-      ...options?.allowedStyles,
-      "*": { "text-align": [/^left$/, /^right$/, /^center$/, /^justify$/] },
-    },
-  });
+      return sanitizeHtml(html, {
+        ...options,
+        allowedTags: [
+          ...allowedTags,
+          "a",
+          "abbr",
+          "address",
+          "article",
+          "aside",
+          "b",
+          "bdi",
+          "bdo",
+          "blockquote",
+          "br",
+          "caption",
+          "cite",
+          "code",
+          "col",
+          "colgroup",
+          "data",
+          "dd",
+          "dfn",
+          "div",
+          "dl",
+          "dt",
+          "em",
+          "figcaption",
+          "figure",
+          "footer",
+          "h1",
+          "h2",
+          "h3",
+          "h4",
+          "h5",
+          "h6",
+          "header",
+          "hgroup",
+          "hr",
+          "i",
+          "img",
+          "kbd",
+          "li",
+          "main",
+          "mark",
+          "nav",
+          "ol",
+          "p",
+          "pre",
+          "q",
+          "rb",
+          "rp",
+          "rt",
+          "rtc",
+          "ruby",
+          "s",
+          "samp",
+          "section",
+          "small",
+          "span",
+          "strong",
+          "sub",
+          "sup",
+          "table",
+          "tbody",
+          "td",
+          "tfoot",
+          "th",
+          "thead",
+          "time",
+          "tr",
+          "u",
+          "ul",
+          "var",
+          "wbr",
+        ],
+        allowedAttributes: {
+          ...options?.allowedAttributes,
+          "*": ["class", "style"],
+          a: ["href", "target"],
+          img: ["src", "alt"],
+        },
+        allowedStyles: {
+          ...options?.allowedStyles,
+          "*": { "text-align": [/^left$/, /^right$/, /^center$/, /^justify$/] },
+        },
+      });
+    } catch (error) {
+      console.warn("sanitize-html not available, using browser fallback:", error);
+      return browserSanitize(html);
+    }
+  }
+
+  // Browser-side: use browser-safe sanitization
+  return browserSanitize(html);
 };

@@ -10,6 +10,7 @@ import {
   Param,
   Patch,
   Post,
+  Res,
   UseGuards,
 } from "@nestjs/common";
 import { ApiTags } from "@nestjs/swagger";
@@ -23,6 +24,7 @@ import {
 } from "@reactive-resume/dto";
 import { resumeDataSchema } from "@reactive-resume/schema";
 import { ErrorMessage } from "@reactive-resume/utils";
+import type { Response } from "express";
 import { zodToJsonSchema } from "zod-to-json-schema";
 
 import { PaymentService } from "@/server/payment/payment.service";
@@ -102,7 +104,23 @@ export class ResumeController {
     @Param("username") username: string,
     @Param("slug") slug: string,
     @User("id") userId: string,
+    @Res({ passthrough: true }) response: Response,
   ) {
+    // Aggressive cache control headers to prevent Safari caching issues
+    response.setHeader(
+      "Cache-Control",
+      "no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0",
+    );
+    response.setHeader("Pragma", "no-cache");
+    response.setHeader("Expires", "0");
+    response.setHeader("Surrogate-Control", "no-store");
+    response.setHeader("Vary", "Authorization, Accept, User-Agent");
+    response.setHeader("Last-Modified", new Date().toUTCString());
+    // Remove ETag to prevent 304 responses
+    response.removeHeader("ETag");
+    // Add timestamp to prevent caching
+    response.setHeader("X-Timestamp", Date.now().toString());
+
     return this.resumeService.findOneByUsernameSlug(username, slug, userId);
   }
 
